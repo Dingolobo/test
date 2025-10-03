@@ -1,4 +1,4 @@
-name: Fetch EPG with Playwright
+name: Fetch EPG with Playwright and Retries
 
 on:
   schedule:
@@ -24,5 +24,5 @@ jobs:
           pip install playwright
           playwright install
 
-      - name: Run EPG fetch script
-        run: python izzi.py
+      - name: Run EPG fetch script with retries
+        run: python fetch_epg.py
