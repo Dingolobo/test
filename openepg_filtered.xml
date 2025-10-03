@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tv generator-info-name="Filtered EPG Script" generator-info-url="https://github.com/tu-usuario/tu-repo"><channel id="skymas/edye">
+		<display-name>MX | EDYE</display-name>
+		<icon src="https://logos.xbots.com.mx/edye.png" />
+	</channel>
+	</tv>
