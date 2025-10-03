@@ -2,9 +2,8 @@ import xml.etree.ElementTree as ET
 
 # Lista de IDs que quieres filtrar
 CANAL_IDS = [
-    "skymas/edye",
-    "otro/canal1",
-    "otro/canal2"
+    "SkySports16.mx",
+    "SkySports24.mx",
 ]
 
 INPUT_FILE = "openepg.xml"
