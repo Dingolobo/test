@@ -10,10 +10,21 @@ async def fetch_epg_with_playwright():
         context = await browser.new_context()
         page = await context.new_page()
 
-        # Navegar a la página para que se establezcan cookies y tokens
+        # Navegar a la página para cargar cookies y DOM
         await page.goto(PAGE_URL)
 
-        # Ejecutar fetch dentro del contexto del navegador
+        # Extraer el token CSRF desde la meta tag
+        csrf_token = await page.evaluate('''() => {
+            const meta = document.querySelector('meta[name="_csrf"]');
+            return meta ? meta.getAttribute('content') : "";
+        }''')
+
+        if not csrf_token:
+            print("No se encontró el token CSRF")
+            await browser.close()
+            return None
+
+        # Ejecutar fetch con el token CSRF y cookies
         epg_data = await page.evaluate(f'''
             () => fetch("{FETCH_URL}", {{
                 method: "POST",
@@ -21,7 +32,7 @@ async def fetch_epg_with_playwright():
                     "accept": "application/json",
                     "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                     "x-requested-with": "XMLHttpRequest",
-                    "x-csrf-token": window.__IZZI_CSRF_TOKEN || document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || "",
+                    "x-csrf-token": "{csrf_token}",
                     "origin": "https://www.izzi.mx",
                     "referer": "{PAGE_URL}",
                 }},
