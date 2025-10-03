@@ -1,10 +1,16 @@
 import xml.etree.ElementTree as ET
 
-CANAL_ID = "SkySports16.mx"
+# Lista de IDs que quieres filtrar
+CANAL_IDS = [
+    "skymas/edye",
+    "otro/canal1",
+    "otro/canal2"
+]
+
 INPUT_FILE = "openepg.xml"
 OUTPUT_FILE = "openepg_filtered.xml"
 
-def filtrar_canal():
+def filtrar_canales():
     try:
         tree = ET.parse(INPUT_FILE)
         root = tree.getroot()
@@ -14,17 +20,27 @@ def filtrar_canal():
         tv.set('generator-info-name', 'Filtered EPG Script')
         tv.set('generator-info-url', 'https://github.com/tu-usuario/tu-repo')
 
-        # Buscar y agregar solo el canal con id CANAL_ID
-        canal = root.find(f"./channel[@id='{CANAL_ID}']")
-        if canal is not None:
-            tv.append(canal)
-        else:
-            print(f"Canal con id '{CANAL_ID}' no encontrado en el XML.")
+        # Agregar canales que estén en la lista CANAL_IDS
+        canales_encontrados = 0
+        for canal_id in CANAL_IDS:
+            canal = root.find(f"./channel[@id='{canal_id}']")
+            if canal is not None:
+                tv.append(canal)
+                canales_encontrados += 1
+            else:
+                print(f"Canal con id '{canal_id}' no encontrado en el XML.")
 
-        # Agregar solo los programas que correspondan a ese canal
-        programas = root.findall(f"./programme[@channel='{CANAL_ID}']")
+        print(f"Canales encontrados y agregados: {canales_encontrados}/{len(CANAL_IDS)}")
+
+        # Agregar programas que correspondan a cualquiera de los canales en CANAL_IDS
+        programas = root.findall("./programme")
+        programas_agregados = 0
         for prog in programas:
-            tv.append(prog)
+            if prog.get('channel') in CANAL_IDS:
+                tv.append(prog)
+                programas_agregados += 1
+
+        print(f"Programas agregados: {programas_agregados}")
 
         # Guardar XML filtrado con declaración y encoding UTF-8
         tree_filtrado = ET.ElementTree(tv)
@@ -37,4 +53,5 @@ def filtrar_canal():
         print(f"Archivo {INPUT_FILE} no encontrado.")
 
 if __name__ == "__main__":
-    filtrar_canal()
+    filtrar_canales()
+
