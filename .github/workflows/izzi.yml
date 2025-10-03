@@ -16,8 +16,7 @@ jobs:
     - name: Descargar segundo XML
       run: |
         - name: Descargar segundo XML
-  run: |
-    curl -v -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -L -o openepg.xml "http://live.detodotvplay.com/xmltv.php?username=Risario8&password=Pineda13"
+        curl -v -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -L -o openepg.xml "http://live.detodotvplay.com/xmltv.php?username=Risario8&password=Pineda13"
 
     - name: Configurar git para push con token personal
       run: |
