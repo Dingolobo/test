@@ -25,4 +25,4 @@ jobs:
           playwright install
 
       - name: Run EPG fetch script with retries
-        run: python fetch_epg.py
+        run: python izzi.py
