@@ -5,7 +5,7 @@ PAGE_URL = "https://www.izzi.mx/webApps/entretenimiento/guia"
 FETCH_URL = "https://www.izzi.mx/webApps/entretenimiento/guia/getguia"
 
 MAX_RETRIES = 2
-WAIT_FOR_META_TIMEOUT = 10000  # ms
+WAIT_FOR_META_TIMEOUT = 15000  # ms
 
 async def fetch_epg_with_retries():
     for attempt in range(1, MAX_RETRIES + 2):  # intentos: 1, 2, ..., MAX_RETRIES+1
