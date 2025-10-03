@@ -1,64 +1,40 @@
 import asyncio
-import requests
 from playwright.async_api import async_playwright
 
-URL = "https://www.izzi.mx/webApps/entretenimiento/guia/getguia"
 PAGE_URL = "https://www.izzi.mx/webApps/entretenimiento/guia"
+FETCH_URL = "https://www.izzi.mx/webApps/entretenimiento/guia/getguia"
 
-async def get_csrf_and_cookies():
+async def fetch_epg_with_playwright():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
+
+        # Navegar a la página para que se establezcan cookies y tokens
         await page.goto(PAGE_URL)
 
-        # Extraer el valor del token x-csrf-token desde las cookies o localStorage
-        # Aquí un ejemplo para extraerlo de las cookies:
-        cookies = await context.cookies()
-        csrf_token = None
-        for cookie in cookies:
-            if cookie['name'] == 'x-csrf-token':
-                csrf_token = cookie['value']
-                break
-
-        # Si no está en cookies, intentar extraerlo del DOM o localStorage
-        if not csrf_token:
-            # Ejemplo: si está en localStorage
-            csrf_token = await page.evaluate("localStorage.getItem('x-csrf-token')")
-
-        # Extraer cookies para requests
-        cookie_header = "; ".join([f"{c['name']}={c['value']}" for c in cookies])
+        # Ejecutar fetch dentro del contexto del navegador
+        epg_data = await page.evaluate(f'''
+            () => fetch("{FETCH_URL}", {{
+                method: "POST",
+                headers: {{
+                    "accept": "application/json",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "x-requested-with": "XMLHttpRequest",
+                    "x-csrf-token": window.__IZZI_CSRF_TOKEN || document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || "",
+                    "origin": "https://www.izzi.mx",
+                    "referer": "{PAGE_URL}",
+                }},
+                body: "",
+                credentials: "include"
+            }}).then(res => res.json())
+        ''')
 
         await browser.close()
-        return csrf_token, cookie_header
-
-def fetch_epg(csrf_token, cookie_header):
-    headers = {
-        "accept": "application/json",
-        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "origin": "https://www.izzi.mx",
-        "referer": PAGE_URL,
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
-        "x-csrf-token": csrf_token,
-        "x-requested-with": "XMLHttpRequest",
-        "cookie": cookie_header,
-        "cache-control": "no-cache",
-    }
-    data = ""  # Ajusta si es necesario
-
-    response = requests.post(URL, headers=headers, data=data)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error {response.status_code}: {response.text}")
-        return None
+        return epg_data
 
 async def main():
-    csrf_token, cookie_header = await get_csrf_and_cookies()
-    if not csrf_token:
-        print("No se pudo obtener el token CSRF")
-        return
-    epg = fetch_epg(csrf_token, cookie_header)
+    epg = await fetch_epg_with_playwright()
     if epg:
         for day in epg:
             print(f"Fecha: {day['date']}")
