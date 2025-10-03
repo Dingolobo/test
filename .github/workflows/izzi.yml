@@ -15,7 +15,7 @@ jobs:
 
     - name: Descargar segundo XML
       run: |
-        wget --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36" -O openepg.xml http://live.detodotvplay.com/xmltv.php?username=Risario8&password=Pineda13
+        curl -o openepg.xml http://live.detodotvplay.com/xmltv.php?username=Risario8&password=Pineda13
 
     - name: Configurar git para push con token personal
       run: |
