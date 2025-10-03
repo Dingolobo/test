@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-CANAL_ID = "skymas/edye"
+CANAL_ID = "SkySports16.mx"
 INPUT_FILE = "openepg.xml"
 OUTPUT_FILE = "openepg_filtered.xml"
 
