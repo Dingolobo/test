@@ -1,81 +1,30 @@
-import asyncio
-from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeoutError
+name: Fetch iptv detodotv to XML
 
-PAGE_URL = "https://www.izzi.mx/webApps/entretenimiento/guia"
-FETCH_URL = "https://www.izzi.mx/webApps/entretenimiento/guia/getguia"
+on:
+  schedule:
+    - cron: '0 11 * * *'  # Ejecuta a medianoche UTC todos los días
+  workflow_dispatch:      # Permite ejecución manual desde GitHub
 
-MAX_RETRIES = 2
-WAIT_FOR_META_TIMEOUT = 15000  # ms
+jobs:
+  update-xml:
+    runs-on: ubuntu-latest
 
-async def fetch_epg_with_retries():
-    for attempt in range(1, MAX_RETRIES + 2):  # intentos: 1, 2, ..., MAX_RETRIES+1
-        print(f"Intento {attempt} de {MAX_RETRIES + 1}")
-        epg = await fetch_epg_once()
-        if epg is not None:
-            return epg
-        print("Reintentando...\n")
-    print("No se pudo obtener la guía EPG después de varios intentos.")
-    return None
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
 
-async def fetch_epg_once():
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context()
-        page = await context.new_page()
+    - name: Descargar guia XML
+      run: |
+        wget --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36" -O epg.xml http://live.detodotvplay.com/xmltv.php?username=Risario8&password=Pineda13
 
-        try:
-            await page.goto(PAGE_URL)
-            # Esperar hasta 10 segundos a que la meta tag _csrf esté en el DOM
-            await page.wait_for_selector('meta[name="_csrf"]', timeout=WAIT_FOR_META_TIMEOUT)
-            csrf_token = await page.evaluate('''() => {
-                const meta = document.querySelector('meta[name="_csrf"]');
-                return meta ? meta.getAttribute('content') : "";
-            }''')
-            if not csrf_token:
-                print("Token CSRF no encontrado en la meta tag.")
-                await browser.close()
-                return None
+    - name: Configurar git para push con token personal
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Dingolobo/xmldata.git
 
-            # Ejecutar fetch con el token CSRF y cookies
-            epg_data = await page.evaluate(f'''
-                () => fetch("{FETCH_URL}", {{
-                    method: "POST",
-                    headers: {{
-                        "accept": "application/json",
-                        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                        "x-requested-with": "XMLHttpRequest",
-                        "x-csrf-token": "{csrf_token}",
-                        "origin": "https://www.izzi.mx",
-                        "referer": "{PAGE_URL}",
-                    }},
-                    body: "",
-                    credentials: "include"
-                }}).then(res => {{
-                    if (!res.ok) throw new Error("HTTP " + res.status);
-                    return res.json();
-                }})
-            ''')
-            await browser.close()
-            return epg_data
-
-        except PlaywrightTimeoutError:
-            print(f"Timeout esperando la meta tag _csrf (esperado {WAIT_FOR_META_TIMEOUT} ms).")
-            await browser.close()
-            return None
-        except Exception as e:
-            print(f"Error durante fetch: {e}")
-            await browser.close()
-            return None
-
-async def main():
-    epg = await fetch_epg_with_retries()
-    if epg:
-        for day in epg:
-            print(f"Fecha: {day['date']}")
-            for event in day['schedule']:
-                print(f"  Título: {event['title']}")
-                print(f"  Descripción: {event['description']}")
-                print()
-
-if __name__ == "__main__":
-    asyncio.run(main())
+    - name: Commit y push cambios
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add epg.xml
+        git commit -m "Actualizar guía EPG procesada" || echo "No hay cambios para commitear"
+        git push origin main
