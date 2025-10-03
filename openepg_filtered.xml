@@ -3,6 +3,10 @@
 		<display-name>SKY SPORTS LALIGA ᴴᴰ</display-name>
 		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-laliga-hd.png" />
 	</channel>
+	<channel id="SkySports24.mx">
+		<display-name>SKY SPORTS BUNDESLIGA ᴴᴰ</display-name>
+		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-bundesliga-hd.png" />
+	</channel>
 	<programme start="20251003003000 -0300" stop="20251003023000 -0300" start_timestamp="1759462200" stop_timestamp="1759469400" channel="SkySports16.mx">
 		<title>Barcelona Vs. Real Sociedad</title>
 		<desc>Desde el estadio Camp Nou ubicado en la ciudad de Barcelona, España, se enfrentan los equipos Fútbol Club Barcelona versus la Real Sociedad de Fútbol.(n)</desc>
@@ -74,6 +78,78 @@ En Vivo</title>
 	</programme>
 	<programme start="20251004010000 -0300" stop="20251004030000 -0300" start_timestamp="1759550400" stop_timestamp="1759557600" channel="SkySports16.mx">
 		<title>Atlético de Madrid vs. Real Mad</title>
+		<desc />
+	</programme>
+	<programme start="20251003010000 -0300" stop="20251003030000 -0300" start_timestamp="1759464000" stop_timestamp="1759471200" channel="SkySports24.mx">
+		<title>Eintracht Frankfurt vs. Unión B</title>
+		<desc />
+	</programme>
+	<programme start="20251003030000 -0300" stop="20251003033000 -0300" start_timestamp="1759471200" stop_timestamp="1759473000" channel="SkySports24.mx">
+		<title>Bundesliga weekly</title>
+		<desc />
+	</programme>
+	<programme start="20251003033000 -0300" stop="20251003063000 -0300" start_timestamp="1759473000" stop_timestamp="1759483800" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251003063000 -0300" stop="20251003093000 -0300" start_timestamp="1759483800" stop_timestamp="1759494600" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251003093000 -0300" stop="20251003100000 -0300" start_timestamp="1759494600" stop_timestamp="1759496400" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251003100000 -0300" stop="20251003120000 -0300" start_timestamp="1759496400" stop_timestamp="1759503600" channel="SkySports24.mx">
+		<title>SV Elversberg vs. SG Dynamo Dre</title>
+		<desc />
+	</programme>
+	<programme start="20251003120000 -0300" stop="20251003140000 -0300" start_timestamp="1759503600" stop_timestamp="1759510800" channel="SkySports24.mx">
+		<title>Bayer 04 Leverkusen vs. Eintrac</title>
+		<desc />
+	</programme>
+	<programme start="20251003140000 -0300" stop="20251003150000 -0300" start_timestamp="1759510800" stop_timestamp="1759514400" channel="SkySports24.mx">
+		<title>Bundesliga Special Show #11</title>
+		<desc />
+	</programme>
+	<programme start="20251003150000 -0300" stop="20251003151500 -0300" start_timestamp="1759514400" stop_timestamp="1759515300" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251003151500 -0300" stop="20251003153000 -0300" start_timestamp="1759515300" stop_timestamp="1759516200" channel="SkySports24.mx">
+		<title>Previo</title>
+		<desc />
+	</programme>
+	<programme start="20251003153000 -0300" stop="20251003173000 -0300" start_timestamp="1759516200" stop_timestamp="1759523400" channel="SkySports24.mx">
+		<title>TSG Hoffenheim vs. 1. FC Köln</title>
+		<desc />
+	</programme>
+	<programme start="20251003173000 -0300" stop="20251003180000 -0300" start_timestamp="1759523400" stop_timestamp="1759525200" channel="SkySports24.mx">
+		<title>Bundesliga Meister show</title>
+		<desc />
+	</programme>
+	<programme start="20251003180000 -0300" stop="20251003200000 -0300" start_timestamp="1759525200" stop_timestamp="1759532400" channel="SkySports24.mx">
+		<title>TSG Hoffenheim vs. 1. FC Köln</title>
+		<desc />
+	</programme>
+	<programme start="20251003200000 -0300" stop="20251003220000 -0300" start_timestamp="1759532400" stop_timestamp="1759539600" channel="SkySports24.mx">
+		<title>B M'gladbach vs. Werden Bremen</title>
+		<desc />
+	</programme>
+	<programme start="20251003220000 -0300" stop="20251004000000 -0300" start_timestamp="1759539600" stop_timestamp="1759546800" channel="SkySports24.mx">
+		<title>FSV Mainz vs. RB Leipzig</title>
+		<desc />
+	</programme>
+	<programme start="20251004000000 -0300" stop="20251004003000 -0300" start_timestamp="1759546800" stop_timestamp="1759548600" channel="SkySports24.mx">
+		<title>Bundesliga special show #3</title>
+		<desc />
+	</programme>
+	<programme start="20251004003000 -0300" stop="20251004010000 -0300" start_timestamp="1759548600" stop_timestamp="1759550400" channel="SkySports24.mx">
+		<title>Bundesliga special #04 - best</title>
+		<desc />
+	</programme>
+	<programme start="20251004010000 -0300" stop="20251004030000 -0300" start_timestamp="1759550400" stop_timestamp="1759557600" channel="SkySports24.mx">
+		<title>Fortuna Dusseldorf vs. 1. FC Nü</title>
 		<desc />
 	</programme>
 	</tv>
