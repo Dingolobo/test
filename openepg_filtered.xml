@@ -1,6 +1,79 @@
 <?xml version='1.0' encoding='utf-8'?>
-<tv generator-info-name="Filtered EPG Script" generator-info-url="https://github.com/tu-usuario/tu-repo"><channel id="skymas/edye">
-		<display-name>MX | EDYE</display-name>
-		<icon src="https://logos.xbots.com.mx/edye.png" />
+<tv generator-info-name="Filtered EPG Script" generator-info-url="https://github.com/tu-usuario/tu-repo"><channel id="SkySports16.mx">
+		<display-name>SKY SPORTS LALIGA ᴴᴰ</display-name>
+		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-laliga-hd.png" />
 	</channel>
+	<programme start="20251003003000 -0300" stop="20251003023000 -0300" start_timestamp="1759462200" stop_timestamp="1759469400" channel="SkySports16.mx">
+		<title>Barcelona Vs. Real Sociedad</title>
+		<desc>Desde el estadio Camp Nou ubicado en la ciudad de Barcelona, España, se enfrentan los equipos Fútbol Club Barcelona versus la Real Sociedad de Fútbol.(n)</desc>
+	</programme>
+	<programme start="20251003023000 -0300" stop="20251003030000 -0300" start_timestamp="1759469400" stop_timestamp="1759471200" channel="SkySports16.mx">
+		<title>RCD Mallorca vs. Deportivo Alav</title>
+		<desc />
+	</programme>
+	<programme start="20251003030000 -0300" stop="20251003043000 -0300" start_timestamp="1759471200" stop_timestamp="1759476600" channel="SkySports16.mx">
+		<title>RCD Mallorca vs. Deportivo Alav</title>
+		<desc />
+	</programme>
+	<programme start="20251003043000 -0300" stop="20251003063000 -0300" start_timestamp="1759476600" stop_timestamp="1759483800" channel="SkySports16.mx">
+		<title>Valencia vs. Real Oviedo</title>
+		<desc />
+	</programme>
+	<programme start="20251003063000 -0300" stop="20251003070000 -0300" start_timestamp="1759483800" stop_timestamp="1759485600" channel="SkySports16.mx">
+		<title>LALIGA Smash</title>
+		<desc />
+	</programme>
+	<programme start="20251003070000 -0300" stop="20251003084500 -0300" start_timestamp="1759485600" stop_timestamp="1759491900" channel="SkySports16.mx">
+		<title>Sky Sports 16</title>
+		<desc />
+	</programme>
+	<programme start="20251003084500 -0300" stop="20251003104500 -0300" start_timestamp="1759491900" stop_timestamp="1759499100" channel="SkySports16.mx">
+		<title>Elche vs. RC Celta de Vigo</title>
+		<desc />
+	</programme>
+	<programme start="20251003104500 -0300" stop="20251003124500 -0300" start_timestamp="1759499100" stop_timestamp="1759506300" channel="SkySports16.mx">
+		<title>Real Betis vs. CA Osasuna</title>
+		<desc />
+	</programme>
+	<programme start="20251003124500 -0300" stop="20251003134500 -0300" start_timestamp="1759506300" stop_timestamp="1759509900" channel="SkySports16.mx">
+		<title>Jornadas Laliga</title>
+		<desc />
+	</programme>
+	<programme start="20251003134500 -0300" stop="20251003154500 -0300" start_timestamp="1759509900" stop_timestamp="1759517100" channel="SkySports16.mx">
+		<title>Atlético de Madrid vs. Real Mad</title>
+		<desc />
+	</programme>
+	<programme start="20251003154500 -0300" stop="20251003160000 -0300" start_timestamp="1759517100" stop_timestamp="1759518000" channel="SkySports16.mx">
+		<title>Previo</title>
+		<desc />
+	</programme>
+	<programme start="20251003160000 -0300" stop="20251003180000 -0300" start_timestamp="1759518000" stop_timestamp="1759525200" channel="SkySports16.mx">
+		<title>CA Osasuna vs. Getafe
+En Vivo</title>
+		<desc />
+	</programme>
+	<programme start="20251003180000 -0300" stop="20251003183000 -0300" start_timestamp="1759525200" stop_timestamp="1759527000" channel="SkySports16.mx">
+		<title>LaLiga Preview</title>
+		<desc />
+	</programme>
+	<programme start="20251003183000 -0300" stop="20251003203000 -0300" start_timestamp="1759527000" stop_timestamp="1759534200" channel="SkySports16.mx">
+		<title>Villarreal vs. Athletic Club</title>
+		<desc />
+	</programme>
+	<programme start="20251003203000 -0300" stop="20251003223000 -0300" start_timestamp="1759534200" stop_timestamp="1759541400" channel="SkySports16.mx">
+		<title>Barcelona Vs. Real Sociedad</title>
+		<desc>Desde el estadio Camp Nou ubicado en la ciudad de Barcelona, España, se enfrentan los equipos Fútbol Club Barcelona versus la Real Sociedad de Fútbol.(n)</desc>
+	</programme>
+	<programme start="20251003223000 -0300" stop="20251003230000 -0300" start_timestamp="1759541400" stop_timestamp="1759543200" channel="SkySports16.mx">
+		<title>LaLiga Preview</title>
+		<desc />
+	</programme>
+	<programme start="20251003230000 -0300" stop="20251004010000 -0300" start_timestamp="1759543200" stop_timestamp="1759550400" channel="SkySports16.mx">
+		<title>CA Osasuna vs. Getafe</title>
+		<desc />
+	</programme>
+	<programme start="20251004010000 -0300" stop="20251004030000 -0300" start_timestamp="1759550400" stop_timestamp="1759557600" channel="SkySports16.mx">
+		<title>Atlético de Madrid vs. Real Mad</title>
+		<desc />
+	</programme>
 	</tv>
