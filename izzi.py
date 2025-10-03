@@ -1,4 +1,4 @@
-name: Fetch iptv detodotv to XML
+name: iptv detodotv to XML
 
 on:
   schedule:
