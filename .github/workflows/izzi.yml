@@ -23,4 +23,4 @@ jobs:
 
       - name: Run EPG fetch script
         run: |
-          python fetch_epg.py
+          python izzi.py
