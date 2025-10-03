@@ -1,0 +1,26 @@
+name: Fetch EPG Data
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Ejecuta diariamente a las 2:00 AM UTC
+  workflow_dispatch:     # Permite ejecución manual desde la interfaz de GitHub
+
+jobs:
+  fetch-epg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run EPG fetch script
+        run: |
+          python fetch_epg.py
