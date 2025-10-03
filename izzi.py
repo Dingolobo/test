@@ -1,30 +1,40 @@
-name: iptv detodotv to XML
+import xml.etree.ElementTree as ET
 
-on:
-  schedule:
-    - cron: '0 11 * * *'  # Ejecuta a medianoche UTC todos los días
-  workflow_dispatch:      # Permite ejecución manual desde GitHub
+CANAL_ID = "skymas/edye"
+INPUT_FILE = "openepg.xml"
+OUTPUT_FILE = "openepg_filtered.xml"
 
-jobs:
-  update-xml:
-    runs-on: ubuntu-latest
+def filtrar_canal():
+    try:
+        tree = ET.parse(INPUT_FILE)
+        root = tree.getroot()
 
-    steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+        # Crear nuevo XML raíz
+        tv = ET.Element('tv')
+        tv.set('generator-info-name', 'Filtered EPG Script')
+        tv.set('generator-info-url', 'https://github.com/tu-usuario/tu-repo')
 
-    - name: Descargar guia XML
-      run: |
-        wget --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36" -O epg.xml http://live.detodotvplay.com/xmltv.php?username=Risario8&password=Pineda13
+        # Buscar y agregar solo el canal con id CANAL_ID
+        canal = root.find(f"./channel[@id='{CANAL_ID}']")
+        if canal is not None:
+            tv.append(canal)
+        else:
+            print(f"Canal con id '{CANAL_ID}' no encontrado en el XML.")
 
-    - name: Configurar git para push con token personal
-      run: |
-        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Dingolobo/xmldata.git
+        # Agregar solo los programas que correspondan a ese canal
+        programas = root.findall(f"./programme[@channel='{CANAL_ID}']")
+        for prog in programas:
+            tv.append(prog)
 
-    - name: Commit y push cambios
-      run: |
-        git config user.name "github-actions"
-        git config user.email "actions@github.com"
-        git add epg.xml
-        git commit -m "Actualizar guía EPG procesada" || echo "No hay cambios para commitear"
-        git push origin main
+        # Guardar XML filtrado con declaración y encoding UTF-8
+        tree_filtrado = ET.ElementTree(tv)
+        tree_filtrado.write(OUTPUT_FILE, encoding='utf-8', xml_declaration=True)
+        print(f"Archivo filtrado guardado en {OUTPUT_FILE}")
+
+    except ET.ParseError as e:
+        print(f"Error al parsear XML: {e}")
+    except FileNotFoundError:
+        print(f"Archivo {INPUT_FILE} no encontrado.")
+
+if __name__ == "__main__":
+    filtrar_canal()
