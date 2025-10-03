@@ -15,7 +15,7 @@ jobs:
 
     - name: Descargar XML completo
       run: |
-        curl -v -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -L -o openepg.xml "https://nxt.plus/xmltv.php?username=batusaix&password=javier"
+        curl -v -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -L -o openepg.xml "https://nxt.plus:8443/xmltv.php?username=batusaix&password=javier"
 
     - name: Instalar Python y dependencias
       run: |
