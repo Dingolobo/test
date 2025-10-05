@@ -7,40 +7,4 @@
 		<display-name>SKY SPORTS BUNDESLIGA ᴴᴰ</display-name>
 		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-bundesliga-hd.png" />
 	</channel>
-	<programme start="20251003203000 -0300" stop="20251003223000 -0300" start_timestamp="1759534200" stop_timestamp="1759541400" channel="SkySports16.mx">
-		<title>Barcelona Vs. Real Sociedad</title>
-		<desc>Desde el estadio Camp Nou ubicado en la ciudad de Barcelona, España, se enfrentan los equipos Fútbol Club Barcelona versus la Real Sociedad de Fútbol.(n)</desc>
-	</programme>
-	<programme start="20251003223000 -0300" stop="20251003230000 -0300" start_timestamp="1759541400" stop_timestamp="1759543200" channel="SkySports16.mx">
-		<title>LaLiga Preview</title>
-		<desc />
-	</programme>
-	<programme start="20251003230000 -0300" stop="20251004010000 -0300" start_timestamp="1759543200" stop_timestamp="1759550400" channel="SkySports16.mx">
-		<title>CA Osasuna vs. Getafe</title>
-		<desc />
-	</programme>
-	<programme start="20251004010000 -0300" stop="20251004030000 -0300" start_timestamp="1759550400" stop_timestamp="1759557600" channel="SkySports16.mx">
-		<title>Atlético de Madrid vs. Real Mad</title>
-		<desc />
-	</programme>
-	<programme start="20251003200000 -0300" stop="20251003220000 -0300" start_timestamp="1759532400" stop_timestamp="1759539600" channel="SkySports24.mx">
-		<title>B M'gladbach vs. Werden Bremen</title>
-		<desc />
-	</programme>
-	<programme start="20251003220000 -0300" stop="20251004000000 -0300" start_timestamp="1759539600" stop_timestamp="1759546800" channel="SkySports24.mx">
-		<title>FSV Mainz vs. RB Leipzig</title>
-		<desc />
-	</programme>
-	<programme start="20251004000000 -0300" stop="20251004003000 -0300" start_timestamp="1759546800" stop_timestamp="1759548600" channel="SkySports24.mx">
-		<title>Bundesliga special show #3</title>
-		<desc />
-	</programme>
-	<programme start="20251004003000 -0300" stop="20251004010000 -0300" start_timestamp="1759548600" stop_timestamp="1759550400" channel="SkySports24.mx">
-		<title>Bundesliga special #04 - best</title>
-		<desc />
-	</programme>
-	<programme start="20251004010000 -0300" stop="20251004030000 -0300" start_timestamp="1759550400" stop_timestamp="1759557600" channel="SkySports24.mx">
-		<title>Fortuna Dusseldorf vs. 1. FC Nü</title>
-		<desc />
-	</programme>
 	</tv>
