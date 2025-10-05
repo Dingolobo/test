@@ -19,6 +19,9 @@ def json_to_xmltv(data):
         # Agregar el logo del canal como icono si está disponible
         thumbnail = channel.get('thumbnail', '')
         if thumbnail:
+            # Modificar la URL del thumbnail para cambiar el parámetro w=55 a w=256
+            # Esto maneja tanto ?w=55 como &w=55 en la query string
+            thumbnail = thumbnail.replace('w=55', 'w=256')
             icon = ET.SubElement(ch, 'icon', src=thumbnail)
 
         for event in channel.get('events', []):
