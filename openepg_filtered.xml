@@ -7,4 +7,112 @@
 		<display-name>SKY SPORTS BUNDESLIGA ᴴᴰ</display-name>
 		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-bundesliga-hd.png" />
 	</channel>
+	<programme start="20251006050000 -0300" stop="20251006070000 -0300" start_timestamp="1759737600" stop_timestamp="1759744800" channel="SkySports16.mx">
+		<title>Real Oviedo vs. Levante</title>
+		<desc />
+	</programme>
+	<programme start="20251006070000 -0300" stop="20251006090000 -0300" start_timestamp="1759744800" stop_timestamp="1759752000" channel="SkySports16.mx">
+		<title>Sky Sports 16</title>
+		<desc />
+	</programme>
+	<programme start="20251006090000 -0300" stop="20251006110000 -0300" start_timestamp="1759752000" stop_timestamp="1759759200" channel="SkySports16.mx">
+		<title>Real Sociedad vs. Rayo Vallecan</title>
+		<desc />
+	</programme>
+	<programme start="20251006110000 -0300" stop="20251006120000 -0300" start_timestamp="1759759200" stop_timestamp="1759762800" channel="SkySports16.mx">
+		<title>Jornadas Laliga</title>
+		<desc />
+	</programme>
+	<programme start="20251006120000 -0300" stop="20251006140000 -0300" start_timestamp="1759762800" stop_timestamp="1759770000" channel="SkySports16.mx">
+		<title>CA Osasuna vs. Getafe</title>
+		<desc />
+	</programme>
+	<programme start="20251006140000 -0300" stop="20251006160000 -0300" start_timestamp="1759770000" stop_timestamp="1759777200" channel="SkySports16.mx">
+		<title>Real Oviedo vs. Levante</title>
+		<desc />
+	</programme>
+	<programme start="20251006160000 -0300" stop="20251006170000 -0300" start_timestamp="1759777200" stop_timestamp="1759780800" channel="SkySports16.mx">
+		<title>Jornadas Laliga</title>
+		<desc />
+	</programme>
+	<programme start="20251006170000 -0300" stop="20251006190000 -0300" start_timestamp="1759780800" stop_timestamp="1759788000" channel="SkySports16.mx">
+		<title>Real Madrid vs. Villarreal C</title>
+		<desc />
+	</programme>
+	<programme start="20251006190000 -0300" stop="20251006210000 -0300" start_timestamp="1759788000" stop_timestamp="1759795200" channel="SkySports16.mx">
+		<title>Real Sociedad vs. Rayo Vallecan</title>
+		<desc />
+	</programme>
+	<programme start="20251006210000 -0300" stop="20251006230000 -0300" start_timestamp="1759795200" stop_timestamp="1759802400" channel="SkySports16.mx">
+		<title>Athletic Club de Bilbao vs. RCD</title>
+		<desc />
+	</programme>
+	<programme start="20251006230000 -0300" stop="20251007010000 -0300" start_timestamp="1759802400" stop_timestamp="1759809600" channel="SkySports16.mx">
+		<title>Sevilla vs. Barcelona</title>
+		<desc />
+	</programme>
+	<programme start="20251007010000 -0300" stop="20251007020000 -0300" start_timestamp="1759809600" stop_timestamp="1759813200" channel="SkySports16.mx">
+		<title>Jornadas Laliga</title>
+		<desc />
+	</programme>
+	<programme start="20251007020000 -0300" stop="20251007030000 -0300" start_timestamp="1759813200" stop_timestamp="1759816800" channel="SkySports16.mx">
+		<title>Espanyol vs. Real Betis</title>
+		<desc />
+	</programme>
+	<programme start="20251006033000 -0300" stop="20251006063000 -0300" start_timestamp="1759732200" stop_timestamp="1759743000" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251006063000 -0300" stop="20251006093000 -0300" start_timestamp="1759743000" stop_timestamp="1759753800" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251006093000 -0300" stop="20251006100000 -0300" start_timestamp="1759753800" stop_timestamp="1759755600" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251006100000 -0300" stop="20251006120000 -0300" start_timestamp="1759755600" stop_timestamp="1759762800" channel="SkySports24.mx">
+		<title>1. FC Magdeburg vs. SV Elversbe</title>
+		<desc />
+	</programme>
+	<programme start="20251006120000 -0300" stop="20251006130000 -0300" start_timestamp="1759762800" stop_timestamp="1759766400" channel="SkySports24.mx">
+		<title>Bundesliga Post</title>
+		<desc />
+	</programme>
+	<programme start="20251006130000 -0300" stop="20251006150000 -0300" start_timestamp="1759766400" stop_timestamp="1759773600" channel="SkySports24.mx">
+		<title>Hamburger SV vs. FSV Mainz</title>
+		<desc />
+	</programme>
+	<programme start="20251006150000 -0300" stop="20251006170000 -0300" start_timestamp="1759773600" stop_timestamp="1759780800" channel="SkySports24.mx">
+		<title>VfB Stuttgart vs. 1. FC Heidenh</title>
+		<desc />
+	</programme>
+	<programme start="20251006170000 -0300" stop="20251006190000 -0300" start_timestamp="1759780800" stop_timestamp="1759788000" channel="SkySports24.mx">
+		<title>Borussia Dortmund vs. RB Leipzi</title>
+		<desc />
+	</programme>
+	<programme start="20251006190000 -0300" stop="20251006210000 -0300" start_timestamp="1759788000" stop_timestamp="1759795200" channel="SkySports24.mx">
+		<title>Bayer 04 Leverkusen vs. Unión B</title>
+		<desc />
+	</programme>
+	<programme start="20251006210000 -0300" stop="20251006230000 -0300" start_timestamp="1759795200" stop_timestamp="1759802400" channel="SkySports24.mx">
+		<title>SV Werder Bremen vs. FC St. Pau</title>
+		<desc />
+	</programme>
+	<programme start="20251006230000 -0300" stop="20251007000000 -0300" start_timestamp="1759802400" stop_timestamp="1759806000" channel="SkySports24.mx">
+		<title>Bundesliga Highlights Show</title>
+		<desc />
+	</programme>
+	<programme start="20251007000000 -0300" stop="20251007003000 -0300" start_timestamp="1759806000" stop_timestamp="1759807800" channel="SkySports24.mx">
+		<title>Bundesliga Discover a Club</title>
+		<desc />
+	</programme>
+	<programme start="20251007003000 -0300" stop="20251007013000 -0300" start_timestamp="1759807800" stop_timestamp="1759811400" channel="SkySports24.mx">
+		<title>Bundesliga Highlights Show</title>
+		<desc />
+	</programme>
+	<programme start="20251007013000 -0300" stop="20251007030000 -0300" start_timestamp="1759811400" stop_timestamp="1759816800" channel="SkySports24.mx">
+		<title>Borussia M'gladbach vs. SC Frei</title>
+		<desc />
+	</programme>
 	</tv>
