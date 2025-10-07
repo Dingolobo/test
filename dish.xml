@@ -2,624 +2,831 @@
 <tv>
   <channel id="186893">
     <display-name>TVMIGRAS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/186893/GNLZZGG00248E43.png?w=256"/>
   </channel>
   <channel id="148508">
     <display-name>AMASHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/148508/s116157_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="75278">
     <display-name>ADNNOTHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/75278/GNLZZGG002BFC89.png?w=256"/>
   </channel>
   <channel id="24519">
     <display-name>XHDF</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/24519/s116153_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="101096">
     <display-name>IMAGTV</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101096/s101096_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="110436">
     <display-name>XHTDMXT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/110436/s91505_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="16464">
     <display-name>XHIMT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16464/s116154_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="15178">
     <display-name>XEIPN</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15178/s116166_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="98192">
     <display-name>CANL14</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/98192/GNLZZGG0023XQ01.png?w=256"/>
   </channel>
   <channel id="48293">
     <display-name>XHUNAM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/48293/s116169_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="15232">
     <display-name>XEIMT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15232/s116168_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="15384">
     <display-name>ADNNOT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15384/GNLZZGG002BFC89.png?w=256"/>
   </channel>
   <channel id="20548">
     <display-name>CONG</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/20548/s20548_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="100599">
     <display-name>MUNDS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/100599/s79968_ll_h15_af.png?w=256"/>
   </channel>
   <channel id="100594">
     <display-name>CORAZH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/100594/s61404_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="64835">
     <display-name>CABTELE</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/64835/s64835_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="119198">
     <display-name>KANALL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/119198/s112558_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="71621">
     <display-name>PASNLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/71621/s71621_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="92197">
     <display-name>AZCLIC</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/92197/s92197_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="101373">
     <display-name>XHIMTTDT2</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101373/s116157_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="120256">
     <display-name>GAMEPLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/120256/s120256_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="95687">
     <display-name>CINEM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/95687/s95687_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="97501">
     <display-name>CLACI</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/97501/s106711_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="142035">
     <display-name>RCLSD</display-name>
+    <icon src="https://zap2it.tmsimg.com/sources/generic/generic_sources_h3.png?w=256"/>
   </channel>
   <channel id="15688">
     <display-name>STARMEX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15688/s75423_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="109982">
     <display-name>MVSTVDI</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/109982/s15213_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="16799">
     <display-name>UNTVM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16799/s53218_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="19385">
     <display-name>SETLC</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/19385/s19385_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="16213">
     <display-name>WBL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16213/s16213_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="90653">
     <display-name>AMCMEX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90653/s90653_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="107366">
     <display-name>TNTSMS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/107366/s91993_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="140026">
     <display-name>TNOVES</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/140026/s140026_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="90917">
     <display-name>ATRESSD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90917/s90917_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="16800">
     <display-name>ANT3I</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16800/s16800_ll_h9_ab.png?w=256"/>
   </channel>
   <channel id="27741">
     <display-name>EUROPA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/27741/s27741_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="17484">
     <display-name>AXNL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/17484/s17484_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="46442">
     <display-name>FXL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/46442/s46442_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="60801">
     <display-name>SPACEM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/60801/s16499_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="56727">
     <display-name>USALA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/56727/s56727_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="18955">
     <display-name>AEMX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/18955/s10035_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="148503">
     <display-name>ADSMX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/148503/s148503_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="25793">
     <display-name>IDM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/25793/s25743_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="59582">
     <display-name>DHEALM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/59582/s24424_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="74420">
     <display-name>TLCMEX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/74420/s73822_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="100602">
     <display-name>GOURNSD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/100602/s25553_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="90682">
     <display-name>LIFEMEX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90682/s89197_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="34412">
     <display-name>CHICUS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/34412/s17457_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="82970">
     <display-name>HOLALA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/82970/s82970_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="30259">
     <display-name>ETVLN</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/30259/s30259_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="106112">
     <display-name>COMCCE</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/106112/s76326_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="12712">
     <display-name>MTVL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/12712/s12712_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="67787">
     <display-name>MTVHTLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/67787/s67787_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="47403">
     <display-name>EXATV</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/47403/s47403_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="105747">
     <display-name>LAMEJOR</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/105747/s105747_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="25615">
     <display-name>VROLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/25615/s25615_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="90209">
     <display-name>NIKMLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90209/s90209_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="120767">
     <display-name>MTV00S</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/120767/s56245_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="15969">
     <display-name>HTVLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15969/s15969_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="32749">
     <display-name>TRIT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/32749/s32749_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="89260">
     <display-name>XEIPNTDT2</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/89260/s116170_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="19234">
     <display-name>DISNL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/19234/s19234_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="61311">
     <display-name>DISNJMX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/61311/s60506_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="123193">
     <display-name>DREAMWS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/123193/s123192_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="16707">
     <display-name>NIKL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16707/s16707_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="16141">
     <display-name>TOONL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16141/s59562_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="60295">
     <display-name>NICKJLM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/60295/s60295_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="45955">
     <display-name>DKNLM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/45955/s16680_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="123604">
     <display-name>BABYFS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/123604/s50338_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="56036">
     <display-name>BABYTVL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/56036/s56036_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="102008">
     <display-name>XEIMT2SD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/102008/s116168_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="87915">
     <display-name>APRENMAS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/87915/s87915_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="25788">
     <display-name>DISCCH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/25788/s15798_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="25068">
     <display-name>NGCLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/25068/s25068_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="96445">
     <display-name>ANIPLMX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/96445/s18649_ll_h15_af.png?w=256"/>
   </channel>
   <channel id="40137">
     <display-name>HCLM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/40137/s40137_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="89610">
     <display-name>H2LAT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/89610/s80374_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="16325">
     <display-name>CAS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16325/s16325_ll_h6_aa.png?w=256"/>
   </channel>
   <channel id="132423">
     <display-name>DSTRESP</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/132423/s132423_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="78763">
     <display-name>FIGHTBX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/78763/s78763_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="83458">
     <display-name>FFBOX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/83458/s83458_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="124934">
     <display-name>OUTMXSD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/124934/s14776_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="72625">
     <display-name>PXSP</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/72625/s72625_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="125039">
     <display-name>GINXUSD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/125039/s118698_ll_h9_ab.png?w=256"/>
   </channel>
   <channel id="102301">
     <display-name>GAMETN</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/102301/s102301_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="142411">
     <display-name>AZTDEPS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/142411/s141773_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="62043">
     <display-name>TYCINTL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/62043/s16275_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="115713">
     <display-name>CLARDIS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/115713/s72291_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="150272">
     <display-name>HISPOS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/150272/s144778_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="37747">
     <display-name>ESPN2MX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/37747/s88735_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="121144">
     <display-name>ESP4MXS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/121144/s65930_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="89128">
     <display-name>TRCSPSI</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/89128/s89128_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="19158">
     <display-name>ESPNM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/19158/s17725_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="61033">
     <display-name>GOLFLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/61033/s61033_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="79042">
     <display-name>ESPN3N</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/79042/s73833_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="46608">
     <display-name>DTURBOL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/46608/s46608_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="84532">
     <display-name>NBATVIS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/84532/s62829_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="34710">
     <display-name>NFLNET</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/34710/s34710_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="57580">
     <display-name>TVCDEP</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/57580/s57580_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="34863">
     <display-name>AYM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/34863/s34863_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="27773">
     <display-name>CNNEM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/27773/s17054_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="15192">
     <display-name>CNNIL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15192/s15192_ll_h9_aa.png?w=256"/>
   </channel>
   <channel id="34344">
     <display-name>TFORM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/34344/s34344_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="61719">
     <display-name>MILENIO</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/61719/s61719_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="16292">
     <display-name>MNMX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16292/s16292_ll_h9_ab.png?w=256"/>
   </channel>
   <channel id="50577">
     <display-name>JUSTV</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/50577/s50577_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="19384">
     <display-name>TNTLC</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/19384/s71148_ll_h15_ag.png?w=256"/>
   </channel>
   <channel id="18329">
     <display-name>MCINL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/18329/s18329_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="16794">
     <display-name>CINELW</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16794/s16794_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="18169">
     <display-name>MPREL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/18169/s18169_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="16435">
     <display-name>CCL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16435/s105609_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="15296">
     <display-name>CINL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/15296/s15296_ll_h9_ab.png?w=256"/>
   </channel>
   <channel id="88305">
     <display-name>FABMEX</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/88305/s87687_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="29017">
     <display-name>STULM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/29017/s29017_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="91029">
     <display-name>PARAMNT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/91029/s91120_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="16795">
     <display-name>HBOLW</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16795/s12288_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="68140">
     <display-name>HBO2LA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/68140/s68140_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="34879">
     <display-name>HBOFAM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/34879/s34879_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="75537">
     <display-name>HBOPPA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/75537/s34725_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="74450">
     <display-name>HBOSLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/74450/s80120_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="68119">
     <display-name>MUNLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/68119/s70081_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="80199">
     <display-name>HBOXLA</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80199/s80211_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="16788">
     <display-name>PLAYL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16788/s16788_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="16498">
     <display-name>VNUS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/16498/s16498_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="72143">
     <display-name>SEXTRME</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/72143/s72143_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="52628">
     <display-name>XHDFTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/52628/s116153_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="45831">
     <display-name>XEWTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/45831/s116151_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="101111">
     <display-name>IMGTVHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101111/s101096_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="52762">
     <display-name>XHGCTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/52762/s116152_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="109817">
     <display-name>XHTDMXTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/109817/s91505_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="85572">
     <display-name>XHIMTTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/85572/s116154_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="87620">
     <display-name>XEIPNTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/87620/s116166_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="87914">
     <display-name>XHSPRTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/87914/GNLZZGG0023XQ01.png?w=256"/>
   </channel>
   <channel id="87595">
     <display-name>XEIMTTDT</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/87595/s116168_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="79968">
     <display-name>AZINTL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/79968/s79968_ll_h15_af.png?w=256"/>
   </channel>
   <channel id="61404">
     <display-name>CORAZ</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/61404/s61404_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="140179">
     <display-name>CABTLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/140179/s102862_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="130329">
     <display-name>KNLLSD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/130329/s112558_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="91978">
     <display-name>PASNLAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/91978/s71621_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="111305">
     <display-name>AZCLICH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/111305/s92197_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="105154">
     <display-name>CINEMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/105154/s95687_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="106711">
     <display-name>CLACIHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/106711/s106711_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="138947">
     <display-name>RCL</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/138947/s138947_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="88534">
     <display-name>STARMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/88534/s88534_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="107379">
     <display-name>MVSTVDH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/107379/s15213_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="77534">
     <display-name>UNTVMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/77534/s53218_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="70312">
     <display-name>SETLCHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/70312/s70312_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="80808">
     <display-name>WBLH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80808/s16213_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="90852">
     <display-name>AMCMXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90852/s90653_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="90898">
     <display-name>ATRES</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90898/s90917_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="72534">
     <display-name>AXNHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/72534/s72534_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="77617">
     <display-name>FXLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/77617/s105689_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="66349">
     <display-name>SPACMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/66349/s68021_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="101327">
     <display-name>USALAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101327/s56727_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="87004">
     <display-name>AEMXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/87004/s10035_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="109896">
     <display-name>IDMEXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/109896/s25743_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="97928">
     <display-name>DHEAMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/97928/s97571_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="66488">
     <display-name>DWRLDHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/66488/s66488_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="107373">
     <display-name>TLCMXH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/107373/s73822_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="45910">
     <display-name>GOURMETN</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/45910/s25553_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="92054">
     <display-name>HOLALAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/92054/s82970_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="101734">
     <display-name>ETVLNHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101734/s30259_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="106113">
     <display-name>COMCCEH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/106113/s100848_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="84432">
     <display-name>MTVLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/84432/s12712_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="66419">
     <display-name>MTVLVHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/66419/s66419_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="79589">
     <display-name>DISNLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/79589/s79589_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="123872">
     <display-name>DREAMWM</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/123872/s123192_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="77783">
     <display-name>NIKLAHS</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/77783/s77783_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="89909">
     <display-name>DKNLMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/89909/s16680_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="96307">
     <display-name>DISCCHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/96307/s15798_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="65940">
     <display-name>DTHLAHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/65940/s65940_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="88533">
     <display-name>NGCLAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/88533/s25068_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="107374">
     <display-name>APMXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/107374/s18649_ll_h15_af.png?w=256"/>
   </channel>
   <channel id="70669">
     <display-name>HCLMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/70669/s40137_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="79806">
     <display-name>FIGHTBH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/79806/s79806_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="100309">
     <display-name>FFBOXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/100309/s100309_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="124935">
     <display-name>OUTMXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/124935/s46737_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="84072">
     <display-name>PXSPHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/84072/s72625_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="118698">
     <display-name>GINXUSI</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/118698/s118698_ll_h9_ab.png?w=256"/>
   </channel>
   <channel id="141773">
     <display-name>AZTDEP</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/141773/s141773_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="112117">
     <display-name>TYCINTH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/112117/s16275_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="115714">
     <display-name>CLARDIH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/115714/s72291_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="144778">
     <display-name>HISPO</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/144778/s144778_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="96876">
     <display-name>ESPN2MH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/96876/s88735_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="65930">
     <display-name>ESP4MXH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/65930/s65930_ll_h15_ae.png?w=256"/>
   </channel>
   <channel id="101446">
     <display-name>TRCSPHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101446/s101446_ll_h6_aa.png?w=256"/>
   </channel>
   <channel id="110964">
     <display-name>ESPNMH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/110964/s17725_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="101736">
     <display-name>GOLFLAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101736/s61033_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="79049">
     <display-name>ESPN3NH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/79049/s73833_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="107611">
     <display-name>DTRBLAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/107611/s46608_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="112907">
     <display-name>NBADHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/112907/s62829_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="45399">
     <display-name>NFLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/45399/s45399_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="124049">
     <display-name>TVCDEH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/124049/s57580_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="105163">
     <display-name>AYMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/105163/s34863_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="80807">
     <display-name>TNTLAHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80807/s71727_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="107382">
     <display-name>MCINLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/107382/s107382_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="101730">
     <display-name>CINELWH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/101730/s16794_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="116475">
     <display-name>MPRELH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/116475/s116475_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="67687">
     <display-name>CCLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/67687/s105609_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="106731">
     <display-name>FAMEXHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/106731/s87687_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="90605">
     <display-name>STULMHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/90605/s90605_ll_h15_aa.png?w=256"/>
   </channel>
   <channel id="91120">
     <display-name>PARMNHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/91120/s91120_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="84823">
     <display-name>HBOLWHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/84823/s12288_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="80652">
     <display-name>HBO2MHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80652/s68140_ll_h15_ad.png?w=256"/>
   </channel>
   <channel id="80112">
     <display-name>HBOPPHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80112/s34725_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="80120">
     <display-name>HBOSLHD</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80120/s80120_ll_h15_ac.png?w=256"/>
   </channel>
   <channel id="68134">
     <display-name>POPLAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/68134/s68134_ll_h15_ab.png?w=256"/>
   </channel>
   <channel id="80211">
     <display-name>HBOXLAH</display-name>
+    <icon src="https://zap2it.tmsimg.com/h3/NowShowing/80211/s80211_ll_h15_ab.png?w=256"/>
   </channel>
   <programme start="20251007133000 +0000" stop="20251007153000 +0000" channel="186893">
     <title>Mañanera del pueblo</title>
@@ -1905,6 +2112,14 @@
     <title>Antropológicas</title>
     <desc>Se explora el inicio del siglo XX como un periodo de grandes invenciones y el nacimiento de una nueva concepción de la historia en México: una reinvención del Estado.</desc>
   </programme>
+  <programme start="20251008192800 +0000" stop="20251008193000 +0000" channel="98192">
+    <title>Corte informativo</title>
+    <desc/>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="98192">
+    <title>¿Cómo le hago?</title>
+    <desc>Existe un sinfín de dietas para llegar al peso ideal, pero las dietas no bastan. El ejercicio es parte fundamental para bajar de peso. Expertos comparten algunas rutinas y disciplinas para lograrlo.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007153000 +0000" channel="48293">
     <title>El Blues</title>
     <desc>El director Richard Pearce sigue la odisea musical de B.B. King y le rinde homenaje a la ciudad de Memphis.</desc>
@@ -2212,6 +2427,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="15232">
     <title>Me voy pal norte</title>
     <desc>La agricultura es uno de los sectores menos apreciados, con largas jornadas, y la remuneración depende del país donde se trabaja.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="15232">
+    <title>SanaMente</title>
+    <desc>Especialistas y expertos comparten recomendaciones sobre la prevención de enfermedades y la salud integral.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="15384">
     <title>Noticias a ras de tierra</title>
@@ -2869,6 +3088,10 @@
     <title>La isla desafío extremo</title>
     <desc>Dieciocho participantes llegan dispuestos a desafiar sus propios límites por 200 mil dólares. Divididos en equipos, Panteras, Tiburones y Águilas compiten para apoderarse del mejor territorio.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008202000 +0000" channel="64835">
+    <title>La mujer de mi vida</title>
+    <desc>La vida de un hombre de negocios poco agraciado da un giro cuando su mejor amigo lo traiciona e intenta matarlo para apoderarse de su empresa y la familia que nunca tuvo.</desc>
+  </programme>
   <programme start="20251007134000 +0000" stop="20251007143000 +0000" channel="119198">
     <title>Amor y travesuras</title>
     <desc>Ali provoca una pelea entre Arzu y Bullent. Mehmet Aga y Esma están de acuerdo en que viva en Londres y se lleve a su nieto.</desc>
@@ -3012,6 +3235,10 @@
   <programme start="20251008184000 +0000" stop="20251008193000 +0000" channel="119198">
     <title>Amor y travesuras</title>
     <desc>Ali está muy triste tras enterarse de la enfermedad de su hijo, y Maho lo consuela. Basak decide posponer su boda. Ali y Sinem buscan ocultarle a Mehmetcan la verdad a toda costa. Mehmet Aga viaja a Urfa para buscar toda la ayuda posible.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008202000 +0000" channel="119198">
+    <title>Pequeños opuestos</title>
+    <desc>Memo y Can, dos niños con vidas muy diferentes. Cuando los caminos de los dos niños se cruzan, experimentan experiencias emocionales y divertidas, y se revelan grandes secretos.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="71621">
     <title>Bahar</title>
@@ -3329,6 +3556,10 @@
     <title>Caza misterios</title>
     <desc>Se resuelven los misterios de distintos oficios y profesiones a través de entrevistas y cápsulas especiales con expertos, todo de manera.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="92197">
+    <title>Rumbo a la meta</title>
+    <desc/>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="101373">
     <title>Programa pagado</title>
     <desc>Programa que muestra diversos productos para la venta.</desc>
@@ -3500,10 +3731,6 @@
   <programme start="20251008180000 +0000" stop="20251008194500 +0000" channel="101373">
     <title>Película</title>
     <desc>Arte cinematográfico mundial.</desc>
-  </programme>
-  <programme start="20251007134000 +0000" stop="20251007141000 +0000" channel="120256">
-    <title>Dragon Ball</title>
-    <desc>Kultowy serial anime na podstawie mangi legendarnego twórcy Akiro Toriyamy w oryginalnej wersji z 1986 roku i pierwsza części historii, którą pokochał cały świat.</desc>
   </programme>
   <programme start="20251007141000 +0000" stop="20251007142500 +0000" channel="120256">
     <title>Sim Racing Challenge 2022</title>
@@ -3928,6 +4155,10 @@
   <programme start="20251008173000 +0000" stop="20251008193000 +0000" channel="97501">
     <title>Resurrección</title>
     <desc>En un juicio un ex capitán reconoce a la joven que sedujo y abandonó pero aunque ella es condenada a 20 años se casan.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008213000 +0000" channel="97501">
+    <title>Sueño de luces</title>
+    <desc>Un buen día, un adolescente se escapa de casa para cumplir el sueño de convertirse en torero y así poder sacar a sus padres de la pobreza.</desc>
   </programme>
   <programme start="20251007132300 +0000" stop="20251007142100 +0000" channel="142035">
     <title>Perdóname por amarte</title>
@@ -4660,6 +4891,10 @@
   <programme start="20251008190100 +0000" stop="20251008192500 +0000" channel="16213">
     <title>Two and a Half Men</title>
     <desc>Alan acepta la sugerencia de Charlie de ir a la playa para curar su insomnio. Jake le pide a Charlie no salir con la madre de una chica que le gusta.</desc>
+  </programme>
+  <programme start="20251008192500 +0000" stop="20251008194900 +0000" channel="16213">
+    <title>Two and a Half Men</title>
+    <desc>Charlie y Alan tienen una doble cita, por lo que dejan a Jake solo en casa por primera vez. Durante la salida, Charlie se molesta con Alan pues le pide dinero prestado prometiendo que pagará la próxima vez.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="90653">
     <title>Planet Action</title>
@@ -5561,10 +5796,6 @@
     <title>Enemigo público</title>
     <desc>Un abogado es perseguido por agentes del gobierno corruptos, después de que recibe una cinta de video incriminatoria.</desc>
   </programme>
-  <programme start="20251007123300 +0000" stop="20251007140700 +0000" channel="60801">
-    <title>Twist</title>
-    <desc>Luego de un encuentro cercano con la ley, Oliver Twist se escapa a Londres, donde conoce a una pandilla de jóvenes estafadores que, bajo la tutela de Fagin, usan sus habilidades para llevar a cabo el robo del siglo.</desc>
-  </programme>
   <programme start="20251007140700 +0000" stop="20251007161500 +0000" channel="60801">
     <title>Attraction: la guerra ha comenzado</title>
     <desc>Un objeto no identificado de origen extraterrestre es derribado sobre el suelo de Moscú y los habitantes de la capital rusa son evacuados. Un equipo de experimentados militares entrará entonces en contacto con los alienígenas supervivientes.</desc>
@@ -6041,9 +6272,9 @@
     <title>Acusado: Culpable o inocente</title>
     <desc>Una discusión en la carretera deja a un hombre herido de gravedad y a otro camino de la cárcel. El acusado asegura que disparó a la víctima porque este lo atacó primero.</desc>
   </programme>
-  <programme start="20251007134100 +0000" stop="20251007140700 +0000" channel="148503">
-    <title>Dragon Ball Daima</title>
-    <desc>Goku y sus compañeros continúan su viaje. La Gendarmería aparece y vuelve a impedirles el paso, posiblemente debido al Collar Mágico que Panzy lleva en el cuello.</desc>
+  <programme start="20251008193000 +0000" stop="20251008202000 +0000" channel="18955">
+    <title>Acusado: Culpable o inocente</title>
+    <desc>Cuando una niña resulta gravemente herida al caer en una piscina, el hombre encargado de cuidarla acaba detenido.</desc>
   </programme>
   <programme start="20251007140700 +0000" stop="20251007143500 +0000" channel="148503">
     <title>Dragon Ball Z</title>
@@ -6477,6 +6708,10 @@
     <title>Rasgos de un psicópata</title>
     <desc>Un marido amoroso aparece asesinado en su casa de Ohio, y la principal sospechosa es su esposa, que afirma tener pocos recuerdos del crimen. Los detectives descubren que su mala memoria no es más que la manipulación de una psicópata vengativa.</desc>
   </programme>
+  <programme start="20251008192800 +0000" stop="20251008201800 +0000" channel="25793">
+    <title>Rasgos de un psicópata</title>
+    <desc>Una mujer desaparece y su marido se convierte en el principal sospechoso. A falta de un cuerpo o de pruebas de un crimen, los detectives esperan obtener una confesión de un hombre que, según ellos, podría ser un psicópata de sangre fría.</desc>
+  </programme>
   <programme start="20251007140100 +0000" stop="20251007145100 +0000" channel="59582">
     <title>Las renovadoras</title>
     <desc>Mina compra una propiedad en Bates Hendricks, Indianapolis, de una pareja de adultos mayores.</desc>
@@ -6753,6 +6988,10 @@
     <title>La gran familia Derrico</title>
     <desc>Deon y Karen lidian con la reacción emocional de los niños al dejar su casa. Darian planea su futuro. Eric guía a los pequeños en la búsqueda del conejo de Pascua. GG se entera de los resultados de su resonancia magnética.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008211000 +0000" channel="74420">
+    <title>Todo en 90 días: ¿Felices por siempre?</title>
+    <desc>Pao disfruta de su vida en Miami mientras Russ lucha en Oklahoma; Danielle intenta avanzar; Mohamed comienza de nuevo, pero su huésped detiene su progreso; Jorge le revela un secreto a Anfisa; Loren extraña NY.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="100602">
     <title>La Cocina de la Piedra</title>
     <desc>Los mejores platos de la cocina tradicional y auténticamente mexicana, de la mano de Margarita Carrillo. Hoy propone unas deliciosas galletas de pepitas y cacao y un imperdible marquesote de pulque con almendras, con Paulina Abascal como invitada.</desc>
@@ -6980,6 +7219,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="100602">
     <title>La cocina de los clubes</title>
     <desc>Una visita a la cantina del club P.A.C.D, la cual ofrece un menú a tenedor libre con platos típicos donde se destacan los sesos a la provenzal. Asimismo, una visita al Club Gimnasio Chabuco, destacado por su cocina porteña.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="100602">
+    <title>Los fogones tradicionales México</title>
+    <desc>Se recorren los parajes más remotos en busca de los tesoros culinarios de cada región. Los platos que se transmiten de generación en generación preparados por los lugareños en sus propios fogones.</desc>
   </programme>
   <programme start="20251007130000 +0000" stop="20251007144000 +0000" channel="90682">
     <title>Venta mortal</title>
@@ -7272,6 +7515,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="34412">
     <title>El toque de Luz</title>
     <desc>Luz Palau, diseñadora de interiores, transforma espacios y les da su toque para que todos disfruten de su hogar ideal.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="34412">
+    <title>Peinadas y divinas</title>
+    <desc>Los mejores cambios de look y las principales tendencias en peinado, corte y color.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="82970">
     <title>Las reinas del shopping</title>
@@ -7837,6 +8084,10 @@
     <title>Hot in Cleveland</title>
     <desc>Melanie forma banda para competir en una batalla de bandas; Joy atrapa atención de una banda rival.</desc>
   </programme>
+  <programme start="20251008192500 +0000" stop="20251008195000 +0000" channel="106112">
+    <title>Becker</title>
+    <desc>Becker debe tratar con sus vecinos mientras está en su casa en recuperación; Margaret y Linda buscan un médico de reemplazo.</desc>
+  </programme>
   <programme start="20251007135500 +0000" stop="20251007150000 +0000" channel="12712">
     <title>Latino fuerte</title>
     <desc>Un bloque de 100 canciones en español. La música que está moviendo al mundo, en Latino Fuerte.</desc>
@@ -8176,6 +8427,10 @@
   <programme start="20251008192000 +0000" stop="20251008193000 +0000" channel="47403">
     <title>Videos</title>
     <desc>60 minutos con los mejores videos.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008203000 +0000" channel="47403">
+    <title>Chayanne</title>
+    <desc>Chayanne, el papá de México, regresa al Palacio de los Deportes con su gira &quot;Bailemos otra vez&quot;. ExaTV presenta un especial con lo mejor de su videografía.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="105747">
     <title>Videos</title>
@@ -8532,6 +8787,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="25615">
     <title>Música para tus ojos</title>
     <desc>Un programa que muestra los videos musicales de los artistas favoritos del momento.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="25615">
+    <title>Mini conciertos</title>
+    <desc>Programa que muestra una selección de los mejores artistas y videos musicales en vivo a través de Video Rola Mini Conciertos.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="90209">
     <title>Pop Paradise</title>
@@ -9109,9 +9368,9 @@
     <title>Un día en ON</title>
     <desc>Las aventuras de Alan, Staff y Lucy. ¿Cómo llegó Staff al espacio? ¿Qué es lo que más le molesta a Lucy? ¿Qué pasó cuando Alan perdió su magia?</desc>
   </programme>
-  <programme start="20251007135100 +0000" stop="20251007140300 +0000" channel="19234">
-    <title>Phineas y Ferb</title>
-    <desc>Perry ha sido reubicada para ayudar a rastrear un nuevo villano llamado El Regurgitator, pero Candace piensa que su desaparición es su culpa.</desc>
+  <programme start="20251008193000 +0000" stop="20251008194500 +0000" channel="89260">
+    <title>Inteligencia animal</title>
+    <desc>Un viaje al mundo de los animales de Latinoamérica lleno de preguntas, trivias e historias sorprendentes.</desc>
   </programme>
   <programme start="20251007140300 +0000" stop="20251007141500 +0000" channel="19234">
     <title>Tromba Trem</title>
@@ -9376,6 +9635,10 @@
   <programme start="20251008190000 +0000" stop="20251008192800 +0000" channel="19234">
     <title>Jonas</title>
     <desc>Joe y Stella aceptan estar separados. Nick reprueba un examen antes de su gira por sentirse demasiado avergonzado como para pedir ayuda.</desc>
+  </programme>
+  <programme start="20251008192800 +0000" stop="20251008195700 +0000" channel="19234">
+    <title>¡Buena suerte Charlie!</title>
+    <desc>Aniversario de Amy y Bob es interrumpido cuando la sabana favorita de Charlie es extraviada. Teddy causa caos al intentar encontrar la sabana.</desc>
   </programme>
   <programme start="20251007135900 +0000" stop="20251007143000 +0000" channel="61311">
     <title>Mickey Mouse Funhouse</title>
@@ -9668,6 +9931,10 @@
   <programme start="20251008185900 +0000" stop="20251008192700 +0000" channel="61311">
     <title>Mickey Mouse Funhouse</title>
     <desc>El equipo Mickey planta árboles el Día del Árbol y ayuda a salvar al árbol más antiguo del Bosque de Funhouse. Minnie siente frustración cuando no puede encontrar a los Cat-O-Spots en un safari.</desc>
+  </programme>
+  <programme start="20251008192700 +0000" stop="20251008195900 +0000" channel="61311">
+    <title>Spidey y sus sorprendentes amigos</title>
+    <desc>El equipo rescata a la fauna salvaje después de que Doc Ock desencadene una erupción volcánica. Cuando Gobby roba todas las abejas, el equipo Spidey y La Mole deben recuperarlas y salvar Rosh Hashanah.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007142500 +0000" channel="123193">
     <title>El amanecer de los Croods</title>
@@ -9965,9 +10232,9 @@
     <title>Un jefe en pañales: De vuelta a los negocios</title>
     <desc>Los Templeton asisten a la inauguración de un restaurante felinamente sospechoso que obliga a Jefe Bebé a convertir la noche familiar en una larga noche de trabajo.</desc>
   </programme>
-  <programme start="20251007135500 +0000" stop="20251007140500 +0000" channel="16707">
-    <title>Wylde Pak</title>
-    <desc>Lily y Jack deben sacrificar inesperadamente sus propios planes de verano, se inicia una nueva y caótica normalidad, que comienza con un remolque fuera de control que cada uno insiste en salvar a su manera.</desc>
+  <programme start="20251008192500 +0000" stop="20251008195000 +0000" channel="123193">
+    <title>Un jefe en pañales: De vuelta a los negocios</title>
+    <desc>El detective espacial Dekker Botas Lunares, alter ego de Tim, quiere resolver un misterio de Bebé-Corp, y las pistas parecerían apuntar a un empleado de la empresa.</desc>
   </programme>
   <programme start="20251007140500 +0000" stop="20251007142000 +0000" channel="16707">
     <title>Wylde Pak</title>
@@ -10289,9 +10556,9 @@
     <title>Una casa de locos</title>
     <desc>Frente a la oscura predicción de la bola de cristal de Lucy, Lynn intenta tomar las riendas de su vida. Lincoln, Clyde y Kara compiten por la oportunidad de conocer al youtuber ThumbZ y disfrutar de su último juego.</desc>
   </programme>
-  <programme start="20251007135700 +0000" stop="20251007141000 +0000" channel="16141">
-    <title>Drama total: La guardería</title>
-    <desc>Los niños quieren enviar un mensaje al planeta natal de Cody cuando él se enferma para poder salvarlo, pero Courtney no está a favor de este plan.</desc>
+  <programme start="20251008193000 +0000" stop="20251008194500 +0000" channel="16707">
+    <title>Una casa de locos</title>
+    <desc>Lincoln tiene 11 años e intenta sobrevivir a la locura de su casa, en la que vive con sus padres y sus diez peculiares hermanas mayores.</desc>
   </programme>
   <programme start="20251007141000 +0000" stop="20251007142100 +0000" channel="16141">
     <title>Drama total: La guardería</title>
@@ -11553,6 +11820,10 @@
     <title>Mini Beat Power Rockers</title>
     <desc>Una nueva amiga llega a la guardería: una bebé DJ, que es el alma de la fiesta, pero, cuando los Power Rockers quieren unirse, ella no los deja.</desc>
   </programme>
+  <programme start="20251008192300 +0000" stop="20251008194800 +0000" channel="45955">
+    <title>GhostForce</title>
+    <desc>Halloween ha llegado y todos en Nueva York se preparan para la noche más aterradora del año. Los héroes y sus colegas celebran esta ocasión en Baker's, donde Carla organiza una sesión espiritista para invocar al llamado Maestro del Miedo.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="123604">
     <title>Club del Desayuno</title>
     <desc>Un viaje de descubrimiento lleno de diversión les da a los bebés un buen comienzo por la mañana.</desc>
@@ -11780,6 +12051,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="123604">
     <title>Programas nocturnos para el bebé</title>
     <desc>Suave y relajante música de cuna e imágenes relajantes diseñadas para ayudar a preparar al bebé para dormir.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="123604">
+    <title>Mamá y Yo - Cantemos</title>
+    <desc>Una aventura repleta de divertidas canciones, con clásicos que todos los bebés aman y subtítulos para disfrutar plenamente del karaoke.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="56036">
     <title>Explorando con BabyHood</title>
@@ -12017,6 +12292,10 @@
     <title>Los primeros descubrimientos mágicos</title>
     <desc>Los niños y los bebés aprenden y se divierten.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="56036">
+    <title>El patio de la imaginación</title>
+    <desc>Selección especial de programas que invitan a imaginar.</desc>
+  </programme>
   <programme start="20251007133000 +0000" stop="20251007150000 +0000" channel="102008">
     <title>Conferencia matutina del presidente de México</title>
     <desc>Transmisión de la conferencia de la presidenta Claudia Sheinbaum Pardo, en vivo desde el Palacio Nacional.</desc>
@@ -12221,9 +12500,9 @@
     <title>Me voy pal norte</title>
     <desc>Las experiencias de migrantes en busca del sueño americano. Las dificultades que enfrentan en su travesía, como la detención en la frontera, pérdida de familiares en el desierto y la lucha por mantener sus raíces y cultura.</desc>
   </programme>
-  <programme start="20251007140000 +0000" stop="20251007141000 +0000" channel="87915">
-    <title>Exploramundos</title>
-    <desc>El espacio para aprender sobre el fantástico mundo de la ciencia, la imaginación, la tecnología y la actualidad. Acompaña a Verni, Sebas y Eulali a desarrollar espectaculares proyectos educativos. Súmate a la pasión por la investigación.</desc>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="102008">
+    <title>NCC reporte climático</title>
+    <desc>Reporte sobre cambio climático con un enfoque de periodismo de soluciones que muestra la manera en que los sectores académicos y sociales, así como las autoridades, enfrentan los efectos del cambio climático.</desc>
   </programme>
   <programme start="20251007141000 +0000" stop="20251007142000 +0000" channel="87915">
     <title>Exploramundos</title>
@@ -12464,6 +12743,10 @@
   <programme start="20251008183000 +0000" stop="20251008193000 +0000" channel="87915">
     <title>Tocando base</title>
     <desc>Reality documental que sigue a los jugadores de béisbol de los Bravos de León, desde los entrenamientos hasta cada juego por los diferentes estados de la República mexicana.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="87915">
+    <title>Territorios</title>
+    <desc>Las comunidades recuperan espacios e identidad gracias a acciones locales y gubernamentales.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007145100 +0000" channel="25788">
     <title>Fiebre del oro</title>
@@ -12765,37 +13048,49 @@
     <title>Refugio en el granero</title>
     <desc>Dan y Chris cruzan el lago Míchigan para adoptar a dos cerdos mangálica. Un gallo llamado Bart se somete a una cirugía para quitarse un espolón.</desc>
   </programme>
+  <programme start="20251007192000 +0000" stop="20251007201000 +0000" channel="96445">
+    <title>Dra. Dee: Veterinaria de Alaska</title>
+    <desc>La Dr. Dree tiene que ser muy cuidadosa cuando visita una granja para chequear un caballo llamado Red; el Dr. Terry y Nicole se dirigen a una clínica remota; un perro tiene una lesión que parecería cancerosa.</desc>
+  </programme>
   <programme start="20251007192200 +0000" stop="20251007201200 +0000" channel="96445">
     <title>Dra. Dee: Veterinaria de Alaska</title>
     <desc>La Dr. Dree tiene que ser muy cuidadosa cuando visita una granja para chequear un caballo llamado Red; el Dr. Terry y Nicole se dirigen a una clínica remota; un perro tiene una lesión que parecería cancerosa.</desc>
   </programme>
-  <programme start="20251007201200 +0000" stop="20251007210100 +0000" channel="96445">
+  <programme start="20251007201000 +0000" stop="20251007210000 +0000" channel="96445">
     <title>Dra. Dee: Veterinaria de Alaska</title>
     <desc>La Dra. Dee pone a su madre en un avión para ir a la clínica veterinaria en Manley Hot Springs; un Rottweiler podría tener cáncer de hueso; un conejo sufre por un enorme absceso.</desc>
   </programme>
-  <programme start="20251007210100 +0000" stop="20251007215200 +0000" channel="96445">
+  <programme start="20251007210000 +0000" stop="20251007215000 +0000" channel="96445">
     <title>El zoológico de San Diego</title>
     <desc>Mkhaya, el bebé elefante más pequeño de la manada, aprende a utilizar su trompa. Alba, la osa andina, es una posible madre primeriza. Los veterinarios del zoológico revisan a Mandazzi el gorila. Jeff busca a la escurridiza culebra parchada.</desc>
   </programme>
-  <programme start="20251007215200 +0000" stop="20251007224200 +0000" channel="96445">
+  <programme start="20251007215000 +0000" stop="20251007224000 +0000" channel="96445">
     <title>Guardianes de Luisiana</title>
     <desc>Un anciano desaparece en una zona silvestre y los agentes se apresuran para encontrarlo antes de que caiga la noche. Además, una pista lleva a los agentes a un botín de pesca y a unos pescadores que se niegan a confesar.</desc>
   </programme>
-  <programme start="20251007224200 +0000" stop="20251007233200 +0000" channel="96445">
+  <programme start="20251007224000 +0000" stop="20251007233000 +0000" channel="96445">
     <title>El genio de las piscinas</title>
     <desc>Anthony está en Lexington, Kentucky, creando una alberca de aventuras completada con una pared de rocas para escalar y una tirolesa para una familia llena de adrenalina.</desc>
   </programme>
-  <programme start="20251007233200 +0000" stop="20251008002200 +0000" channel="96445">
+  <programme start="20251007233000 +0000" stop="20251008002000 +0000" channel="96445">
     <title>Guaridas con estilo</title>
     <desc>Antonio transforma un espacio para cabras enanas africanas en el mejor patio de juegos, equipado con una torre para escalar, una plataforma de observación y una casa de tres pisos fácil de limpiar.</desc>
   </programme>
-  <programme start="20251008002200 +0000" stop="20251008011200 +0000" channel="96445">
+  <programme start="20251008002000 +0000" stop="20251008011000 +0000" channel="96445">
     <title>Invasores</title>
     <desc>Una familia encuentra una serpiente venenosa en su baño; un depredador misterioso se dirige al ganado; un secreto en el nuevo departamento de una madre.</desc>
+  </programme>
+  <programme start="20251008011000 +0000" stop="20251008020000 +0000" channel="96445">
+    <title>The Dodo: en busca de héroes</title>
+    <desc>El dedicado equipo del único centro de rescate de focas en Irlanda comparte historias y anécdotas de las focas que han rescatado.</desc>
   </programme>
   <programme start="20251008011200 +0000" stop="20251008020200 +0000" channel="96445">
     <title>The Dodo: en busca de héroes</title>
     <desc>El dedicado equipo del único centro de rescate de focas en Irlanda comparte historias y anécdotas de las focas que han rescatado.</desc>
+  </programme>
+  <programme start="20251008020000 +0000" stop="20251008025000 +0000" channel="96445">
+    <title>Expedición Mungo</title>
+    <desc>Una enorme criatura prehistórica y crocodiliana conocida como Gbahali mata a personas en Liberia; puede ser simplemente un caso de identidad errónea; podría ser una especie súper-clasificada del cocodrilo más semejante a un dinosaurio.</desc>
   </programme>
   <programme start="20251008020200 +0000" stop="20251008025100 +0000" channel="96445">
     <title>Expedición Mungo</title>
@@ -13181,6 +13476,10 @@
     <title>Persiguiendo a Hitler</title>
     <desc>El equipo descubre dos rutas que diseñó Adolf Hitler para una eventual huida. Además, Bob Baer solicita la ayuda de Nada Bakos, un experto en terrorismo.</desc>
   </programme>
+  <programme start="20251008192200 +0000" stop="20251008201700 +0000" channel="89610">
+    <title>Persiguiendo a Hitler</title>
+    <desc>Mike y James exploran un lago en Austria en busca de documentos secretos nazis escondidos. Mientras tanto, Lenny y Gerrard descubren algo insólito en un hangar de aviones del norte de Alemania.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007180000 +0000" channel="16325">
     <title>Classic Arts Showcase</title>
     <desc>A variety of short films on the arts.</desc>
@@ -13408,6 +13707,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="132423">
     <title>Jason Lozano</title>
     <desc>Un espacio religioso de la mano del pastor Jason Lozano.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="132423">
+    <title>A toda luz</title>
+    <desc>Un espacio lleno de vida, con conversaciones y risas que inspiran. Voces dinámicas y temas relevantes para acercarse más a Dios.</desc>
   </programme>
   <programme start="20251007091500 +0000" stop="20251007144500 +0000" channel="78763">
     <title>LNK Boxing Night 13</title>
@@ -13741,6 +14044,10 @@
     <title>Kite Masters 2019/2020</title>
     <desc>Kite Masters is a series showcasing the latest news from the inspirational world of kite boarding - the action packed sport which continues to take the world by storm. Whether you are a kiteboarder - competitor or recreational, kiteboarding fan.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="83458">
+    <title>Kite Masters 2019/2020</title>
+    <desc>Kite Masters is a series showcasing the latest news from the inspirational world of kite boarding - the action packed sport which continues to take the world by storm. Whether you are a kiteboarder - competitor or recreational, kiteboarding fan.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="124934">
     <title>Whitetail Freaks</title>
     <desc>A newcomer, Greg Davis, hunts for whitetails in Indiana.</desc>
@@ -13972,6 +14279,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="124934">
     <title>Eastman's Hunting TV</title>
     <desc>Hunt Shiras moose with Guy Eastman in northwest Wyoming.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="124934">
+    <title>The Lindsey Way</title>
+    <desc>A special season in Georgia as Charlotte is behind the gun for the first time, and Cash looks to add to his wall on a post rut hunt.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="72625">
     <title>Abriendo pista</title>
@@ -15229,6 +15540,10 @@
     <title>Goat: The Greatest of All Time</title>
     <desc>Who is the greatest goalkeeper of all time?</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="89128">
+    <title>Top 20</title>
+    <desc>An exclusive collation of the news and the champions causing a buzz on planet sport.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="19158">
     <title>SportsCenter</title>
     <desc>El noticiero de ESPN con la más amplia cobertura y noticias de los eventos deportivos.</desc>
@@ -15492,6 +15807,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="61033">
     <title>School of Golf</title>
     <desc>Martin Hall y Blair O'Neal enseñan claves de configuración, cambios de swing y ejercicios creativos para encontrar más greens. Martin revela un truco de swing que ha ayudado a Rory McIlroy a convertirse en uno de los mejores.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008203000 +0000" channel="61033">
+    <title>Golf Today</title>
+    <desc>Un conversación especial del mundo del golf, de la mano de los expertos.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007160000 +0000" channel="79042">
     <title>First Take</title>
@@ -16625,10 +16944,6 @@
     <title>Milenio Noticias con Tania Díaz</title>
     <desc>Noticias a nivel nacional e internacional que despiertan el interés general.</desc>
   </programme>
-  <programme start="20251007140000 +0000" stop="20251007141000 +0000" channel="16292">
-    <title>Tema MN</title>
-    <desc>Se presentan los temas más relevantes de México.</desc>
-  </programme>
   <programme start="20251007141000 +0000" stop="20251007150000 +0000" channel="16292">
     <title>Meganoticias informa con Enrique Guzmán</title>
     <desc>Las noticias y los temas que se deben saber para estar bien informado.</desc>
@@ -16916,6 +17231,10 @@
   <programme start="20251008191000 +0000" stop="20251008193000 +0000" channel="16292">
     <title>A debate con Alberto García</title>
     <desc>Los temas de interés entran en debate de la mano de expertos.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="16292">
+    <title>Meganoticias Informa con Jorge Espejel</title>
+    <desc>Las noticias y los temas que debes saber para estar bien informado.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="50577">
     <title>Noticiero científico y cultural iberoamericano</title>
@@ -17212,10 +17531,6 @@
   <programme start="20251008175500 +0000" stop="20251008195100 +0000" channel="16794">
     <title>El camino de regreso</title>
     <desc>Atrapado en un trabajo sin sentido y luchando contra el alcoholismo, un exatleta de secundaria recibe una oportunidad de redención cuando se convierte en el entrenador de baloncesto de su alma máter.</desc>
-  </programme>
-  <programme start="20251007120000 +0000" stop="20251007141000 +0000" channel="18169">
-    <title>Cartas a dios</title>
-    <desc>Un problemático cartero (Jeffrey S.S. Johnson) descubre las cartas que un joven paciente de cáncer le escribió a Dios.</desc>
   </programme>
   <programme start="20251007141000 +0000" stop="20251007162000 +0000" channel="18169">
     <title>Ellas por ellas</title>
@@ -17565,10 +17880,6 @@
     <title>La caída de la Casa Blanca</title>
     <desc>El policía del Capitolio John Cale debe pasar una entrevista para entrar en el Servicio Secreto. Sin saber el resultado, lleva a su hija a visitar la Casa Blanca, pero, durante el recorrido, un grupo paramilitar asalta el edificio.</desc>
   </programme>
-  <programme start="20251007135000 +0000" stop="20251007141000 +0000" channel="91029">
-    <title>Ridiculousness</title>
-    <desc>La invitada especial Karrueche Tran se une a Rob y Steelo. Aparcan en &quot;Unlucky Spaces&quot;, denuncian &quot;Mannequin Misconduct&quot; y revocan invitaciones en &quot;Wedding Wild Cards&quot;.</desc>
-  </programme>
   <programme start="20251007141000 +0000" stop="20251007143500 +0000" channel="91029">
     <title>Ridiculousness</title>
     <desc>Rob y Steelo reciben a Karrueche Tran, haciendo el trabajo y dejando que sus perros se conviertan en alegres mueve colas.</desc>
@@ -17669,6 +17980,10 @@
     <title>Película</title>
     <desc>Arte cinematográfico mundial.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008213000 +0000" channel="91029">
+    <title>Película</title>
+    <desc>Arte cinematográfico mundial.</desc>
+  </programme>
   <programme start="20251007135000 +0000" stop="20251007160400 +0000" channel="16795">
     <title>Parque Jurásico</title>
     <desc>Tres expertos y otras personas son invitados a un parque de diversiones, donde se encuentran dinosaurios creados en base al ADN.</desc>
@@ -17736,6 +18051,10 @@
   <programme start="20251008174200 +0000" stop="20251008192500 +0000" channel="16795">
     <title>Vista por última vez</title>
     <desc>La esposa de Will Spann desaparece en una estación de servicio. Desesperado y dispuesto a todo por encontrarla viva, Will emprende una búsqueda que lo conduce a enfrentarse a las fuerzas del orden y adentrarse en un camino hacia el abismo.</desc>
+  </programme>
+  <programme start="20251008192500 +0000" stop="20251008200200 +0000" channel="16795">
+    <title>Twisted Metal</title>
+    <desc>Un forastero hablador que no recuerda su pasado tiene la oportunidad de una vida mejor si puede entregar un paquete a través de un páramo posapocalíptico.</desc>
   </programme>
   <programme start="20251007133700 +0000" stop="20251007151700 +0000" channel="68140">
     <title>Kung Fu Panda 3</title>
@@ -18817,6 +19136,10 @@
     <title>Cuéntamelo ya</title>
     <desc>Un programa que proporciona información de manera divertida y cordial sobre los famosos, además de entrevistas, cápsulas y mucho más.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008203000 +0000" channel="45831">
+    <title>Como dice el dicho</title>
+    <desc>Se recrean historias y situaciones que se asemejan a los dichos comunes de la cultura popular. Se dramatiza una historia interesante y cautivadora que represente a un dicho específico, elegido para cada episodio.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007153000 +0000" channel="101111">
     <title>De pisa y corre</title>
     <desc>Un espacio que combina información, análisis y entrevistas sobre los temas más relevantes de la agenda nacional e internacional.</desc>
@@ -19084,6 +19407,10 @@
   <programme start="20251008180000 +0000" stop="20251008193000 +0000" channel="52762">
     <title>El show de Tom y Jerry</title>
     <desc>El gato Tom y el ratón Jerry, el dúo más famoso, regresa para experimentar nuevas aventuras y enfrentarse en nuevas batallas.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008203000 +0000" channel="52762">
+    <title>Los jóvenes titanes en acción</title>
+    <desc>Esta continuación de la popular serie presenta a Robin, Starfire, Raven, Beast Boy y Cyborg enfrentándose a los problemas habituales de la adolescencia mientras salvan el mundo.</desc>
   </programme>
   <programme start="20251007120000 +0000" stop="20251007160000 +0000" channel="109817">
     <title>Telediario matutino</title>
@@ -19609,6 +19936,14 @@
     <title>Antropológicas</title>
     <desc>Se explora el inicio del siglo XX como un periodo de grandes invenciones y el nacimiento de una nueva concepción de la historia en México: una reinvención del Estado.</desc>
   </programme>
+  <programme start="20251008192800 +0000" stop="20251008193000 +0000" channel="87914">
+    <title>Corte informativo</title>
+    <desc/>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="87914">
+    <title>¿Cómo le hago?</title>
+    <desc>Existe un sinfín de dietas para llegar al peso ideal, pero las dietas no bastan. El ejercicio es parte fundamental para bajar de peso. Expertos comparten algunas rutinas y disciplinas para lograrlo.</desc>
+  </programme>
   <programme start="20251007133000 +0000" stop="20251007150000 +0000" channel="87595">
     <title>Conferencia matutina del presidente de México</title>
     <desc>Transmisión de la conferencia de la presidenta Claudia Sheinbaum Pardo, en vivo desde el Palacio Nacional.</desc>
@@ -19808,6 +20143,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="87595">
     <title>Me voy pal norte</title>
     <desc>La agricultura es uno de los sectores menos apreciados, con largas jornadas, y la remuneración depende del país donde se trabaja.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="87595">
+    <title>SanaMente</title>
+    <desc>Especialistas y expertos comparten recomendaciones sobre la prevención de enfermedades y la salud integral.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="79968">
     <title>Nosotros, ustedes y hechos con los Ruiz Lara</title>
@@ -20153,6 +20492,10 @@
     <title>La isla desafío extremo</title>
     <desc>Dieciocho participantes llegan dispuestos a desafiar sus propios límites por 200 mil dólares. Divididos en equipos, Panteras, Tiburones y Águilas compiten para apoderarse del mejor territorio.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008202000 +0000" channel="140179">
+    <title>La mujer de mi vida</title>
+    <desc>La vida de un hombre de negocios poco agraciado da un giro cuando su mejor amigo lo traiciona e intenta matarlo para apoderarse de su empresa y la familia que nunca tuvo.</desc>
+  </programme>
   <programme start="20251007134000 +0000" stop="20251007143000 +0000" channel="130329">
     <title>Amor y travesuras</title>
     <desc>Ali provoca una pelea entre Arzu y Bullent. Mehmet Aga y Esma están de acuerdo en que viva en Londres y se lleve a su nieto.</desc>
@@ -20296,6 +20639,10 @@
   <programme start="20251008184000 +0000" stop="20251008193000 +0000" channel="130329">
     <title>Amor y travesuras</title>
     <desc>Ali está muy triste tras enterarse de la enfermedad de su hijo, y Maho lo consuela. Basak decide posponer su boda. Ali y Sinem buscan ocultarle a Mehmetcan la verdad a toda costa. Mehmet Aga viaja a Urfa para buscar toda la ayuda posible.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008202000 +0000" channel="130329">
+    <title>Pequeños opuestos</title>
+    <desc>Memo y Can, dos niños con vidas muy diferentes. Cuando los caminos de los dos niños se cruzan, experimentan experiencias emocionales y divertidas, y se revelan grandes secretos.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="91978">
     <title>Bahar</title>
@@ -20613,6 +20960,10 @@
     <title>Caza misterios</title>
     <desc>Se resuelven los misterios de distintos oficios y profesiones a través de entrevistas y cápsulas especiales con expertos, todo de manera.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="111305">
+    <title>Rumbo a la meta</title>
+    <desc/>
+  </programme>
   <programme start="20251007134500 +0000" stop="20251007153000 +0000" channel="105154">
     <title>Por un Vestido de Novia</title>
     <desc>Dos amigos inseparables tienen la desgracia de enamorarse de la misma malvada mujer.</desc>
@@ -20756,6 +21107,10 @@
   <programme start="20251008173000 +0000" stop="20251008193000 +0000" channel="106711">
     <title>Resurrección</title>
     <desc>En un juicio un ex capitán reconoce a la joven que sedujo y abandonó pero aunque ella es condenada a 20 años se casan.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008213000 +0000" channel="106711">
+    <title>Sueño de luces</title>
+    <desc>Un buen día, un adolescente se escapa de casa para cumplir el sueño de convertirse en torero y así poder sacar a sus padres de la pobreza.</desc>
   </programme>
   <programme start="20251007132300 +0000" stop="20251007142100 +0000" channel="138947">
     <title>Perdóname por amarte</title>
@@ -21489,6 +21844,10 @@
     <title>Two and a Half Men</title>
     <desc>Alan acepta la sugerencia de Charlie de ir a la playa para curar su insomnio. Jake le pide a Charlie no salir con la madre de una chica que le gusta.</desc>
   </programme>
+  <programme start="20251008192500 +0000" stop="20251008194900 +0000" channel="80808">
+    <title>Two and a Half Men</title>
+    <desc>Charlie y Alan tienen una doble cita, por lo que dejan a Jake solo en casa por primera vez. Durante la salida, Charlie se molesta con Alan pues le pide dinero prestado prometiendo que pagará la próxima vez.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="90852">
     <title>Planet Action</title>
     <desc>El detrás de las escenas de las películas de acción más importantes de Hollywood para ver los lugares de rodaje famosos y aprender cómo se crea la magia de las películas de acción.</desc>
@@ -21900,10 +22259,6 @@
   <programme start="20251008182700 +0000" stop="20251008211200 +0000" channel="77617">
     <title>Enemigo público</title>
     <desc>Un abogado es perseguido por agentes del gobierno corruptos, después de que recibe una cinta de video incriminatoria.</desc>
-  </programme>
-  <programme start="20251007123300 +0000" stop="20251007140700 +0000" channel="66349">
-    <title>Twist</title>
-    <desc>Luego de un encuentro cercano con la ley, Oliver Twist se escapa a Londres, donde conoce a una pandilla de jóvenes estafadores que, bajo la tutela de Fagin, usan sus habilidades para llevar a cabo el robo del siglo.</desc>
   </programme>
   <programme start="20251007140700 +0000" stop="20251007161500 +0000" channel="66349">
     <title>Attraction: la guerra ha comenzado</title>
@@ -22381,6 +22736,10 @@
     <title>Acusado: Culpable o inocente</title>
     <desc>Una discusión en la carretera deja a un hombre herido de gravedad y a otro camino de la cárcel. El acusado asegura que disparó a la víctima porque este lo atacó primero.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008202000 +0000" channel="87004">
+    <title>Acusado: Culpable o inocente</title>
+    <desc>Cuando una niña resulta gravemente herida al caer en una piscina, el hombre encargado de cuidarla acaba detenido.</desc>
+  </programme>
   <programme start="20251007133900 +0000" stop="20251007142900 +0000" channel="109896">
     <title>Un asesino a mi lado</title>
     <desc>Un empleado del zoológico desaparece de manera misteriosa. Los investigadores sospechan que el depredador más peligroso del parque no es un animal.</desc>
@@ -22528,6 +22887,10 @@
   <programme start="20251008190300 +0000" stop="20251008192800 +0000" channel="109896">
     <title>Rasgos de un psicópata</title>
     <desc>Un marido amoroso aparece asesinado en su casa de Ohio, y la principal sospechosa es su esposa, que afirma tener pocos recuerdos del crimen. Los detectives descubren que su mala memoria no es más que la manipulación de una psicópata vengativa.</desc>
+  </programme>
+  <programme start="20251008192800 +0000" stop="20251008201800 +0000" channel="109896">
+    <title>Rasgos de un psicópata</title>
+    <desc>Una mujer desaparece y su marido se convierte en el principal sospechoso. A falta de un cuerpo o de pruebas de un crimen, los detectives esperan obtener una confesión de un hombre que, según ellos, podría ser un psicópata de sangre fría.</desc>
   </programme>
   <programme start="20251007140100 +0000" stop="20251007145100 +0000" channel="97928">
     <title>Las renovadoras</title>
@@ -22929,6 +23292,10 @@
     <title>A puertas abiertas por el mundo</title>
     <desc>Un vistazo a Río de Janeiro, la tierra de increíbles playas y paisajes, donde se visitarán tres hogares para conocer un poco más sobre cómo viven sus habitantes.</desc>
   </programme>
+  <programme start="20251008192400 +0000" stop="20251008194800 +0000" channel="66488">
+    <title>A puertas abiertas por el mundo</title>
+    <desc>Una visita guiada por tres hogares en Tokio, la capital de Japón.</desc>
+  </programme>
   <programme start="20251007133900 +0000" stop="20251007143000 +0000" channel="107373">
     <title>Los Busby</title>
     <desc>Las tensiones surgen cuando Danielle declara que desea trabajar en el estudio más de lo que se esperaba; Hazel regresa al oftalmólogo; invitan a las quintillizas para que sean las maestras de ceremonia del desfile de League City.</desc>
@@ -23068,6 +23435,10 @@
   <programme start="20251008183900 +0000" stop="20251008193000 +0000" channel="107373">
     <title>La gran familia Derrico</title>
     <desc>Deon y Karen lidian con la reacción emocional de los niños al dejar su casa. Darian planea su futuro. Eric guía a los pequeños en la búsqueda del conejo de Pascua. GG se entera de los resultados de su resonancia magnética.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008211000 +0000" channel="107373">
+    <title>Todo en 90 días: ¿Felices por siempre?</title>
+    <desc>Pao disfruta de su vida en Miami mientras Russ lucha en Oklahoma; Danielle intenta avanzar; Mohamed comienza de nuevo, pero su huésped detiene su progreso; Jorge le revela un secreto a Anfisa; Loren extraña NY.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="45910">
     <title>La Cocina de la Piedra</title>
@@ -23296,6 +23667,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="45910">
     <title>La cocina de los clubes</title>
     <desc>Una visita a la cantina del club P.A.C.D, la cual ofrece un menú a tenedor libre con platos típicos donde se destacan los sesos a la provenzal. Asimismo, una visita al Club Gimnasio Chabuco, destacado por su cocina porteña.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="45910">
+    <title>Los fogones tradicionales México</title>
+    <desc>Se recorren los parajes más remotos en busca de los tesoros culinarios de cada región. Los platos que se transmiten de generación en generación preparados por los lugareños en sus propios fogones.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="92054">
     <title>Las reinas del shopping</title>
@@ -23861,6 +24236,10 @@
     <title>Hot in Cleveland</title>
     <desc>Melanie forma banda para competir en una batalla de bandas; Joy atrapa atención de una banda rival.</desc>
   </programme>
+  <programme start="20251008192500 +0000" stop="20251008195000 +0000" channel="106113">
+    <title>Becker</title>
+    <desc>Becker debe tratar con sus vecinos mientras está en su casa en recuperación; Margaret y Linda buscan un médico de reemplazo.</desc>
+  </programme>
   <programme start="20251007135500 +0000" stop="20251007150000 +0000" channel="84432">
     <title>Latino fuerte</title>
     <desc>Un bloque de 100 canciones en español. La música que está moviendo al mundo, en Latino Fuerte.</desc>
@@ -24129,9 +24508,9 @@
     <title>Imagine Dragons: I Want My MTV</title>
     <desc>Imagine Dragons talk about the music videos that have made them into successful artists; the first music video they ever saw on MTV.</desc>
   </programme>
-  <programme start="20251007135100 +0000" stop="20251007140300 +0000" channel="79589">
-    <title>Phineas y Ferb</title>
-    <desc>Perry ha sido reubicada para ayudar a rastrear un nuevo villano llamado El Regurgitator, pero Candace piensa que su desaparición es su culpa.</desc>
+  <programme start="20251008193000 +0000" stop="20251008210000 +0000" channel="66419">
+    <title>HD Hits</title>
+    <desc>Big hits that are bigger in high def.</desc>
   </programme>
   <programme start="20251007140300 +0000" stop="20251007141500 +0000" channel="79589">
     <title>Tromba Trem</title>
@@ -24396,6 +24775,10 @@
   <programme start="20251008190000 +0000" stop="20251008192800 +0000" channel="79589">
     <title>Jonas</title>
     <desc>Joe y Stella aceptan estar separados. Nick reprueba un examen antes de su gira por sentirse demasiado avergonzado como para pedir ayuda.</desc>
+  </programme>
+  <programme start="20251008192800 +0000" stop="20251008195700 +0000" channel="79589">
+    <title>¡Buena suerte Charlie!</title>
+    <desc>Aniversario de Amy y Bob es interrumpido cuando la sabana favorita de Charlie es extraviada. Teddy causa caos al intentar encontrar la sabana.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007142500 +0000" channel="123872">
     <title>El amanecer de los Croods</title>
@@ -24692,6 +25075,10 @@
   <programme start="20251008190000 +0000" stop="20251008192500 +0000" channel="123872">
     <title>Un jefe en pañales: De vuelta a los negocios</title>
     <desc>Los Templeton asisten a la inauguración de un restaurante felinamente sospechoso que obliga a Jefe Bebé a convertir la noche familiar en una larga noche de trabajo.</desc>
+  </programme>
+  <programme start="20251008192500 +0000" stop="20251008195000 +0000" channel="123872">
+    <title>Un jefe en pañales: De vuelta a los negocios</title>
+    <desc>El detective espacial Dekker Botas Lunares, alter ego de Tim, quiere resolver un misterio de Bebé-Corp, y las pistas parecerían apuntar a un empleado de la empresa.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007142000 +0000" channel="77783">
     <title>iCarly</title>
@@ -25016,6 +25403,10 @@
   <programme start="20251008190500 +0000" stop="20251008192500 +0000" channel="77783">
     <title>Victorious</title>
     <desc>A Tori no le gusta su nueva imagen cuando el productor de un programa de premios musicales cambia su apariencia y comportamiento.</desc>
+  </programme>
+  <programme start="20251008192500 +0000" stop="20251008195000 +0000" channel="77783">
+    <title>Victorious</title>
+    <desc>A Tori no le gusta su nueva imagen cuando el productor de una premiación musical le cambia su comportamiento e imagen.</desc>
   </programme>
   <programme start="20251007135600 +0000" stop="20251007142100 +0000" channel="89909">
     <title>Peppa</title>
@@ -25537,6 +25928,10 @@
     <title>Mini Beat Power Rockers</title>
     <desc>Una nueva amiga llega a la guardería: una bebé DJ, que es el alma de la fiesta, pero, cuando los Power Rockers quieren unirse, ella no los deja.</desc>
   </programme>
+  <programme start="20251008192300 +0000" stop="20251008194800 +0000" channel="89909">
+    <title>GhostForce</title>
+    <desc>Halloween ha llegado y todos en Nueva York se preparan para la noche más aterradora del año. Los héroes y sus colegas celebran esta ocasión en Baker's, donde Carla organiza una sesión espiritista para invocar al llamado Maestro del Miedo.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007145100 +0000" channel="96307">
     <title>Fiebre del oro</title>
     <desc>Kevin, el hijo de Tony, regresa para ayudar a salvar el negocio familiar. Parker se esfuerza por arreglar la rotura de una presa y mantener en marcha la gran mina de oro de Dominion Creek.</desc>
@@ -25989,37 +26384,49 @@
     <title>Refugio en el granero</title>
     <desc>Dan y Chris cruzan el lago Míchigan para adoptar a dos cerdos mangálica. Un gallo llamado Bart se somete a una cirugía para quitarse un espolón.</desc>
   </programme>
+  <programme start="20251007192000 +0000" stop="20251007201000 +0000" channel="107374">
+    <title>Dra. Dee: Veterinaria de Alaska</title>
+    <desc>La Dr. Dree tiene que ser muy cuidadosa cuando visita una granja para chequear un caballo llamado Red; el Dr. Terry y Nicole se dirigen a una clínica remota; un perro tiene una lesión que parecería cancerosa.</desc>
+  </programme>
   <programme start="20251007192200 +0000" stop="20251007201200 +0000" channel="107374">
     <title>Dra. Dee: Veterinaria de Alaska</title>
     <desc>La Dr. Dree tiene que ser muy cuidadosa cuando visita una granja para chequear un caballo llamado Red; el Dr. Terry y Nicole se dirigen a una clínica remota; un perro tiene una lesión que parecería cancerosa.</desc>
   </programme>
-  <programme start="20251007201200 +0000" stop="20251007210100 +0000" channel="107374">
+  <programme start="20251007201000 +0000" stop="20251007210000 +0000" channel="107374">
     <title>Dra. Dee: Veterinaria de Alaska</title>
     <desc>La Dra. Dee pone a su madre en un avión para ir a la clínica veterinaria en Manley Hot Springs; un Rottweiler podría tener cáncer de hueso; un conejo sufre por un enorme absceso.</desc>
   </programme>
-  <programme start="20251007210100 +0000" stop="20251007215200 +0000" channel="107374">
+  <programme start="20251007210000 +0000" stop="20251007215000 +0000" channel="107374">
     <title>El zoológico de San Diego</title>
     <desc>Mkhaya, el bebé elefante más pequeño de la manada, aprende a utilizar su trompa. Alba, la osa andina, es una posible madre primeriza. Los veterinarios del zoológico revisan a Mandazzi el gorila. Jeff busca a la escurridiza culebra parchada.</desc>
   </programme>
-  <programme start="20251007215200 +0000" stop="20251007224200 +0000" channel="107374">
+  <programme start="20251007215000 +0000" stop="20251007224000 +0000" channel="107374">
     <title>Guardianes de Luisiana</title>
     <desc>Un anciano desaparece en una zona silvestre y los agentes se apresuran para encontrarlo antes de que caiga la noche. Además, una pista lleva a los agentes a un botín de pesca y a unos pescadores que se niegan a confesar.</desc>
   </programme>
-  <programme start="20251007224200 +0000" stop="20251007233200 +0000" channel="107374">
+  <programme start="20251007224000 +0000" stop="20251007233000 +0000" channel="107374">
     <title>El genio de las piscinas</title>
     <desc>Anthony está en Lexington, Kentucky, creando una alberca de aventuras completada con una pared de rocas para escalar y una tirolesa para una familia llena de adrenalina.</desc>
   </programme>
-  <programme start="20251007233200 +0000" stop="20251008002200 +0000" channel="107374">
+  <programme start="20251007233000 +0000" stop="20251008002000 +0000" channel="107374">
     <title>Guaridas con estilo</title>
     <desc>Antonio transforma un espacio para cabras enanas africanas en el mejor patio de juegos, equipado con una torre para escalar, una plataforma de observación y una casa de tres pisos fácil de limpiar.</desc>
   </programme>
-  <programme start="20251008002200 +0000" stop="20251008011200 +0000" channel="107374">
+  <programme start="20251008002000 +0000" stop="20251008011000 +0000" channel="107374">
     <title>Invasores</title>
     <desc>Una familia encuentra una serpiente venenosa en su baño; un depredador misterioso se dirige al ganado; un secreto en el nuevo departamento de una madre.</desc>
+  </programme>
+  <programme start="20251008011000 +0000" stop="20251008020000 +0000" channel="107374">
+    <title>The Dodo: en busca de héroes</title>
+    <desc>El dedicado equipo del único centro de rescate de focas en Irlanda comparte historias y anécdotas de las focas que han rescatado.</desc>
   </programme>
   <programme start="20251008011200 +0000" stop="20251008020200 +0000" channel="107374">
     <title>The Dodo: en busca de héroes</title>
     <desc>El dedicado equipo del único centro de rescate de focas en Irlanda comparte historias y anécdotas de las focas que han rescatado.</desc>
+  </programme>
+  <programme start="20251008020000 +0000" stop="20251008025000 +0000" channel="107374">
+    <title>Expedición Mungo</title>
+    <desc>Una enorme criatura prehistórica y crocodiliana conocida como Gbahali mata a personas en Liberia; puede ser simplemente un caso de identidad errónea; podría ser una especie súper-clasificada del cocodrilo más semejante a un dinosaurio.</desc>
   </programme>
   <programme start="20251008020200 +0000" stop="20251008025100 +0000" channel="107374">
     <title>Expedición Mungo</title>
@@ -26605,6 +27012,10 @@
     <title>Kite Masters 2019/2020</title>
     <desc>Kite Masters is a series showcasing the latest news from the inspirational world of kite boarding - the action packed sport which continues to take the world by storm. Whether you are a kiteboarder - competitor or recreational, kiteboarding fan.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="100309">
+    <title>Kite Masters 2019/2020</title>
+    <desc>Kite Masters is a series showcasing the latest news from the inspirational world of kite boarding - the action packed sport which continues to take the world by storm. Whether you are a kiteboarder - competitor or recreational, kiteboarding fan.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="124935">
     <title>Whitetail Freaks</title>
     <desc>A newcomer, Greg Davis, hunts for whitetails in Indiana.</desc>
@@ -26836,6 +27247,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="124935">
     <title>Eastman's Hunting TV</title>
     <desc>Hunt Shiras moose with Guy Eastman in northwest Wyoming.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="124935">
+    <title>The Lindsey Way</title>
+    <desc>A special season in Georgia as Charlotte is behind the gun for the first time, and Cash looks to add to his wall on a post rut hunt.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007143000 +0000" channel="84072">
     <title>Abriendo pista</title>
@@ -27917,6 +28332,10 @@
     <title>Goat: The Greatest of All Time</title>
     <desc>Who is the greatest goalkeeper of all time?</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008200000 +0000" channel="101446">
+    <title>Top 20</title>
+    <desc>An exclusive collation of the news and the champions causing a buzz on planet sport.</desc>
+  </programme>
   <programme start="20251007140000 +0000" stop="20251007150000 +0000" channel="110964">
     <title>SportsCenter</title>
     <desc>El noticiero de ESPN con la más amplia cobertura y noticias de los eventos deportivos.</desc>
@@ -28180,6 +28599,10 @@
   <programme start="20251008190000 +0000" stop="20251008193000 +0000" channel="101736">
     <title>School of Golf</title>
     <desc>Martin Hall y Blair O'Neal enseñan claves de configuración, cambios de swing y ejercicios creativos para encontrar más greens. Martin revela un truco de swing que ha ayudado a Rory McIlroy a convertirse en uno de los mejores.</desc>
+  </programme>
+  <programme start="20251008193000 +0000" stop="20251008203000 +0000" channel="101736">
+    <title>Golf Today</title>
+    <desc>Un conversación especial del mundo del golf, de la mano de los expertos.</desc>
   </programme>
   <programme start="20251007140000 +0000" stop="20251007160000 +0000" channel="79049">
     <title>First Take</title>
@@ -29009,10 +29432,6 @@
     <title>El camino de regreso</title>
     <desc>Atrapado en un trabajo sin sentido y luchando contra el alcoholismo, un exatleta de secundaria recibe una oportunidad de redención cuando se convierte en el entrenador de baloncesto de su alma máter.</desc>
   </programme>
-  <programme start="20251007120000 +0000" stop="20251007141000 +0000" channel="116475">
-    <title>Cartas a dios</title>
-    <desc>Un problemático cartero (Jeffrey S.S. Johnson) descubre las cartas que un joven paciente de cáncer le escribió a Dios.</desc>
-  </programme>
   <programme start="20251007141000 +0000" stop="20251007162000 +0000" channel="116475">
     <title>Ellas por ellas</title>
     <desc>Un largometraje compuesto por siete segmentos de cortometraje. Los segmentos serán historias inspiradoras y empoderadoras dirigidas por un grupo diverso e internacional de cineastas, y se llevarán a cabo en todo el mundo.</desc>
@@ -29285,10 +29704,6 @@
     <title>La caída de la Casa Blanca</title>
     <desc>El policía del Capitolio John Cale debe pasar una entrevista para entrar en el Servicio Secreto. Sin saber el resultado, lleva a su hija a visitar la Casa Blanca, pero, durante el recorrido, un grupo paramilitar asalta el edificio.</desc>
   </programme>
-  <programme start="20251007135000 +0000" stop="20251007141000 +0000" channel="91120">
-    <title>Ridiculousness</title>
-    <desc>La invitada especial Karrueche Tran se une a Rob y Steelo. Aparcan en &quot;Unlucky Spaces&quot;, denuncian &quot;Mannequin Misconduct&quot; y revocan invitaciones en &quot;Wedding Wild Cards&quot;.</desc>
-  </programme>
   <programme start="20251007141000 +0000" stop="20251007143500 +0000" channel="91120">
     <title>Ridiculousness</title>
     <desc>Rob y Steelo reciben a Karrueche Tran, haciendo el trabajo y dejando que sus perros se conviertan en alegres mueve colas.</desc>
@@ -29389,6 +29804,10 @@
     <title>Película</title>
     <desc>Arte cinematográfico mundial.</desc>
   </programme>
+  <programme start="20251008193000 +0000" stop="20251008213000 +0000" channel="91120">
+    <title>Película</title>
+    <desc>Arte cinematográfico mundial.</desc>
+  </programme>
   <programme start="20251007135000 +0000" stop="20251007160400 +0000" channel="84823">
     <title>Parque Jurásico</title>
     <desc>Tres expertos y otras personas son invitados a un parque de diversiones, donde se encuentran dinosaurios creados en base al ADN.</desc>
@@ -29456,6 +29875,10 @@
   <programme start="20251008174200 +0000" stop="20251008192500 +0000" channel="84823">
     <title>Vista por última vez</title>
     <desc>La esposa de Will Spann desaparece en una estación de servicio. Desesperado y dispuesto a todo por encontrarla viva, Will emprende una búsqueda que lo conduce a enfrentarse a las fuerzas del orden y adentrarse en un camino hacia el abismo.</desc>
+  </programme>
+  <programme start="20251008192500 +0000" stop="20251008200200 +0000" channel="84823">
+    <title>Twisted Metal</title>
+    <desc>Un forastero hablador que no recuerda su pasado tiene la oportunidad de una vida mejor si puede entregar un paquete a través de un páramo posapocalíptico.</desc>
   </programme>
   <programme start="20251007133700 +0000" stop="20251007151700 +0000" channel="80652">
     <title>Kung Fu Panda 3</title>
