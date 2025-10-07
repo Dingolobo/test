@@ -29,9 +29,19 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
             current_ts = base_ts + i * interval_seconds
             url = URL_TEMPLATE.format(timestamp=current_ts)
 
-            # Esperar la respuesta antes de hacer el fetch
-            response_promise = page.wait_for_response(lambda r: url in r.url)
-            
+            response_data = None
+
+            async def handle_response(response):
+                nonlocal response_data
+                if url in response.url and response.status == 200:
+                    try:
+                        response_data = await response.json()
+                    except Exception as e:
+                        print(f"Error parseando JSON en fetch {i+1}: {e}")
+
+            # Configurar listener para esta respuesta específica
+            response_listener = page.on("response", handle_response)
+
             # Realizar el fetch via evaluate
             await page.evaluate(f"""
                 fetch("{url}", {{
@@ -43,23 +53,21 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
                 }});
             """)
 
-            # Esperar y obtener la respuesta
-            response = await response_promise
-            if response.status != 200:
-                print(f"Advertencia: Fetch {i+1} falló con status {response.status}. Continuando...")
-                continue
+            # Esperar la respuesta (similar al original)
+            await asyncio.sleep(5)
 
-            try:
-                data = await response.json()
-                all_data.append(data)
+            # Remover el listener después de un tiempo para evitar acumulación
+            page.remove_listener("response", response_listener)
+
+            if response_data is not None:
+                all_data.append(response_data)
                 print(f"Fetch {i+1} completado para timestamp {current_ts}.")
-            except Exception as e:
-                print(f"Error parseando JSON en fetch {i+1}: {e}")
-                continue
+            else:
+                print(f"Advertencia: No se obtuvo respuesta para fetch {i+1}. Continuando...")
 
             # Pequeña pausa entre fetches para evitar rate limiting
             if i < num_fetches - 1:
-                await asyncio.sleep(1)
+                await asyncio.sleep(2)
 
         await browser.close()
 
@@ -140,7 +148,8 @@ def save_xmltv(xml_str, filename="dish.xml"):
 
 def main():
     # Realizar fetches múltiples (5 fetches cubren ~6h + 4*5:50h ≈ 28.33 horas)
-    all_epg_data = asyncio.run(fetch_multiple(num_fetches=5, interval_seconds=5*3600 + 50*60))  # 5:50 horas en segundos
+    # interval_seconds = 5*3600 + 50*60 = 5 horas 50 min en segundos
+    all_epg_data = asyncio.run(fetch_multiple(num_fetches=5, interval_seconds=5*3600 + 50*60))
     
     # Fusionar datos
     merged_channels = merge_epg_data(all_epg_data)
