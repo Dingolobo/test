@@ -91,7 +91,7 @@ async def extract_valid_uuid():
         logger.error("No se obtuvo UUID válido.")
     return valid_uuid
 
-async def run_with_retries(max_retries=5, retry_delay=5):
+async def run_with_retries(max_retries=8, retry_delay=3):
     for attempt in range(1, max_retries + 1):
         logger.info(f"Intento {attempt} para extraer UUID válido...")
         uuid = await extract_valid_uuid()
