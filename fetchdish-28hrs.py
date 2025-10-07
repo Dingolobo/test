@@ -164,11 +164,48 @@ def channels_to_xmltv(channels):
             })
 
             program_info = event.get('program', {})
-            title = ET.SubElement(prog, 'title')
+            title = ET.SubElement(prog, 'title', lang='es')
             title.text = program_info.get('title', 'Sin título')
 
-            desc = ET.SubElement(prog, 'desc')
+            desc = ET.SubElement(prog, 'desc', lang='es')
             desc.text = program_info.get('shortDesc', '')
+
+            # Poster del programa (thumbnail del event)
+            event_thumbnail = event.get('thumbnail', '')
+            if event_thumbnail:
+                poster_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}.jpg"
+                icon = ET.SubElement(prog, 'icon', src=poster_url)
+
+            # Rating
+            rating = event.get('rating')
+            if rating is not None and rating != '':
+                rating_elem = ET.SubElement(prog, 'rating')
+                value = ET.SubElement(rating_elem, 'value')
+                value.text = str(rating)
+
+            # Season y Episode (usando episode-num en formato XMLTV)
+            season = program_info.get('season')
+            episode = program_info.get('episode')
+            if season is not None and episode is not None and season != '' and episode != '':
+                try:
+                    # Formato: S{season}E{episode} (estándar común para XMLTV)
+                    episode_num = f"S{season}E{episode}"
+                    ep_num_elem = ET.SubElement(prog, 'episode-num', system='xmltv_ns')
+                    ep_num_elem.text = episode_num
+                except (ValueError, TypeError):
+                    pass  # Omitir si no se puede formatear
+
+            # Episode Title (como sub-title)
+            episode_title = program_info.get('episodeTitle')
+            if episode_title and episode_title != '':
+                sub_title = ET.SubElement(prog, 'sub-title', lang='es')
+                sub_title.text = episode_title
+
+            # Release Year (como date)
+            release_year = program_info.get('releaseYear')
+            if release_year is not None and release_year != '':
+                date_elem = ET.SubElement(prog, 'date')
+                date_elem.text = str(release_year)
 
     return ET.tostring(tv, encoding='utf-8', xml_declaration=True).decode('utf-8')
 
@@ -197,10 +234,12 @@ def main():
     total_channels = len(merged_channels)
     total_programmes = sum(len(ch['events']) for ch in merged_channels.values())
     channels_with_logos = sum(1 for ch in merged_channels.values() if ch.get('thumbnail'))
+    programmes_with_posters = sum(1 for ch in merged_channels.values() for event in ch['events'] if event.get('thumbnail'))
     print(f"Archivo dish.xml generado correctamente.")
     print(f"Canales únicos: {total_channels}")
     print(f"Programas totales (sin duplicados): {total_programmes}")
     print(f"Canales con logos: {channels_with_logos}")
+    print(f"Programas con posters: {programmes_with_posters}")
 
 if __name__ == "__main__":
     main()
