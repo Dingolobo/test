@@ -12,6 +12,7 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
     """Realiza múltiples fetches de EPG con timestamps incrementales."""
     base_ts = int(time.time())
     all_data = []
+    pending_responses = {}  # url -> response_data
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -25,22 +26,27 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
         await page.goto("https://tvlistings.gracenote.com/grid-affiliates.html?aid=dishmex")
         await asyncio.sleep(2)  # Esperar un poco para cargar la página
 
+        # Listener único para todas las respuestas
+        def handle_response(response):
+            response_url = response.url
+            if any(url in response_url for url in pending_responses.keys()) and response.status == 200:
+                try:
+                    data = asyncio.run(asyncio.get_event_loop().run_in_executor(None, lambda: asyncio.run(response.json())))
+                    # Encontrar la URL que coincide
+                    for pending_url, _ in list(pending_responses.items()):
+                        if pending_url in response_url:
+                            pending_responses[pending_url] = data
+                            print(f"Respuesta capturada para {pending_url}")
+                            break
+                except Exception as e:
+                    print(f"Error parseando JSON para {response_url}: {e}")
+
+        page.on("response", handle_response)
+
         for i in range(num_fetches):
             current_ts = base_ts + i * interval_seconds
             url = URL_TEMPLATE.format(timestamp=current_ts)
-
-            response_data = None
-
-            async def handle_response(response):
-                nonlocal response_data
-                if url in response.url and response.status == 200:
-                    try:
-                        response_data = await response.json()
-                    except Exception as e:
-                        print(f"Error parseando JSON en fetch {i+1}: {e}")
-
-            # Configurar listener para esta respuesta específica
-            response_listener = page.on("response", handle_response)
+            pending_responses[url] = None  # Marcar como pendiente
 
             # Realizar el fetch via evaluate
             await page.evaluate(f"""
@@ -56,20 +62,23 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
             # Esperar la respuesta (similar al original)
             await asyncio.sleep(5)
 
-            # Remover el listener después de un tiempo para evitar acumulación
-            page.remove_listener("response", response_listener)
-
-            if response_data is not None:
-                all_data.append(response_data)
+            # Verificar si se capturó
+            if pending_responses[url] is not None:
+                all_data.append(pending_responses[url])
                 print(f"Fetch {i+1} completado para timestamp {current_ts}.")
+                del pending_responses[url]  # Remover de pendientes
             else:
-                print(f"Advertencia: No se obtuvo respuesta para fetch {i+1}. Continuando...")
+                print(f"Advertencia: No se obtuvo respuesta para fetch {i+1} ({url}). Continuando...")
 
             # Pequeña pausa entre fetches para evitar rate limiting
             if i < num_fetches - 1:
                 await asyncio.sleep(2)
 
         await browser.close()
+
+    # Verificar si hay pendientes al final
+    if pending_responses:
+        print(f"Advertencia: {len(pending_responses)} respuestas pendientes no capturadas.")
 
     if not all_data:
         raise Exception("No se pudo obtener ningún dato EPG")
