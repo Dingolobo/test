@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import xml.dom.minidom
 from playwright.async_api import async_playwright
 import json
+import re  # Para manipular la URL del thumbnail
 
 URL_TEMPLATE = ("https://tvlistings.gracenote.com/api/grid?"
                 "lineupId=MEX-1008175-DEFAULT&timespan=6&headendId=1008175&country=MEX&timezone=&device=-"
@@ -99,7 +100,7 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
 
 def merge_epg_data(all_data):
     """Fusiona múltiples conjuntos de datos EPG, eliminando duplicados."""
-    channels = {}  # channelId -> {'callSign': str, 'events': list}
+    channels = {}  # channelId -> {'callSign': str, 'thumbnail': str, 'events': list}
 
     for data in all_data:
         for channel in data.get('channels', []):
@@ -108,8 +109,16 @@ def merge_epg_data(all_data):
                 continue
 
             if cid not in channels:
+                thumbnail = channel.get('thumbnail', '')
+                # Procesar la URL del thumbnail: agregar https: si es necesario y cambiar w=55 a w=256
+                if thumbnail:
+                    if thumbnail.startswith('//'):
+                        thumbnail = 'https:' + thumbnail
+                    # Reemplazar w=55 por w=256 usando regex para manejar posibles variaciones
+                    thumbnail = re.sub(r'w=\d+', 'w=256', thumbnail)
                 channels[cid] = {
                     'callSign': channel.get('callSign', 'SinNombre'),
+                    'thumbnail': thumbnail,
                     'events': []
                 }
 
@@ -136,6 +145,11 @@ def channels_to_xmltv(channels):
         ch = ET.SubElement(tv, 'channel', id=cid)
         display_name = ET.SubElement(ch, 'display-name')
         display_name.text = chdata['callSign']
+        
+        # Agregar icono si hay thumbnail
+        thumbnail = chdata.get('thumbnail', '')
+        if thumbnail:
+            icon = ET.SubElement(ch, 'icon', src=thumbnail)
 
     # Crear elementos <programme>
     for cid, chdata in channels.items():
@@ -182,9 +196,11 @@ def main():
     
     total_channels = len(merged_channels)
     total_programmes = sum(len(ch['events']) for ch in merged_channels.values())
+    channels_with_logos = sum(1 for ch in merged_channels.values() if ch.get('thumbnail'))
     print(f"Archivo dish.xml generado correctamente.")
     print(f"Canales únicos: {total_channels}")
     print(f"Programas totales (sin duplicados): {total_programmes}")
+    print(f"Canales con logos: {channels_with_logos}")
 
 if __name__ == "__main__":
     main()
