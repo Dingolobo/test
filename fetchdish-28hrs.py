@@ -3,6 +3,7 @@ import time
 import xml.etree.ElementTree as ET
 import xml.dom.minidom
 from playwright.async_api import async_playwright
+import json
 
 URL_TEMPLATE = ("https://tvlistings.gracenote.com/api/grid?"
                 "lineupId=MEX-1008175-DEFAULT&timespan=6&headendId=1008175&country=MEX&timezone=&device=-"
@@ -12,7 +13,7 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
     """Realiza múltiples fetches de EPG con timestamps incrementales."""
     base_ts = int(time.time())
     all_data = []
-    pending_responses = {}  # url -> response_data
+    pending_responses = {}  # url -> response object or None
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -26,20 +27,16 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
         await page.goto("https://tvlistings.gracenote.com/grid-affiliates.html?aid=dishmex")
         await asyncio.sleep(2)  # Esperar un poco para cargar la página
 
-        # Listener único para todas las respuestas
+        # Listener único para todas las respuestas (síncrono)
         def handle_response(response):
             response_url = response.url
-            if any(url in response_url for url in pending_responses.keys()) and response.status == 200:
-                try:
-                    data = asyncio.run(asyncio.get_event_loop().run_in_executor(None, lambda: asyncio.run(response.json())))
-                    # Encontrar la URL que coincide
-                    for pending_url, _ in list(pending_responses.items()):
-                        if pending_url in response_url:
-                            pending_responses[pending_url] = data
-                            print(f"Respuesta capturada para {pending_url}")
-                            break
-                except Exception as e:
-                    print(f"Error parseando JSON para {response_url}: {e}")
+            if any(url in response_url for url in pending_responses) and response.status == 200:
+                # Encontrar la URL que coincide y almacenar el objeto response
+                for pending_url in list(pending_responses.keys()):
+                    if pending_url in response_url:
+                        pending_responses[pending_url] = response
+                        print(f"Respuesta capturada para {pending_url}")
+                        break
 
         page.on("response", handle_response)
 
@@ -62,11 +59,26 @@ async def fetch_multiple(num_fetches=5, interval_seconds=21000):
             # Esperar la respuesta (similar al original)
             await asyncio.sleep(5)
 
-            # Verificar si se capturó
+            # Verificar si se capturó el response object
             if pending_responses[url] is not None:
-                all_data.append(pending_responses[url])
-                print(f"Fetch {i+1} completado para timestamp {current_ts}.")
-                del pending_responses[url]  # Remover de pendientes
+                try:
+                    # Ahora parsear el JSON en contexto async
+                    response_obj = pending_responses[url]
+                    response_text = await response_obj.text()
+                    data = json.loads(response_text)
+                    all_data.append(data)
+                    print(f"Fetch {i+1} completado para timestamp {current_ts}.")
+                except Exception as e:
+                    print(f"Error parseando JSON para fetch {i+1}: {e}")
+                    # Opcional: intentar con response.json() si text() falla
+                    try:
+                        data = await response_obj.json()
+                        all_data.append(data)
+                        print(f"Fetch {i+1} completado usando json() alternativo.")
+                    except Exception as e2:
+                        print(f"Error alternativo parseando JSON: {e2}")
+                finally:
+                    del pending_responses[url]  # Remover de pendientes
             else:
                 print(f"Advertencia: No se obtuvo respuesta para fetch {i+1} ({url}). Continuando...")
 
