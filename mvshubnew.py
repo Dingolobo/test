@@ -170,10 +170,14 @@ def build_xmltv(channels_data):
             call_sign = call_sign_elem.text if call_sign_elem is not None else str(channel_id)
             number_elem = tv_channel.find(f"{ns}number")
             number = number_elem.text if number_elem is not None else ""
-            image = tv_channel.find(f".//{ns}image")
-            if image is not None:
-                url_elem = image.find(f"{ns}url")
-                logo_src = url_elem.text if url_elem is not None else ""
+            # Logo del CANAL: Solo del <TV_CHANNEL><images>
+            channel_images = tv_channel.findall(f".//{ns}images/{ns}image")
+            if channel_images:
+                channel_image = channel_images[0]  # Primera imagen del canal (logo)
+                url_elem = channel_image.find(f"{ns}url")
+                if url_elem is not None and url_elem.text:
+                    logo_src = url_elem.text.strip()
+                    logger.debug(f"Logo del canal {channel_id}: {logo_src}")
         else:
             logger.warning(f"No TV_CHANNEL in first content for {channel_id} - using defaults")
         
@@ -264,15 +268,24 @@ def build_xmltv(channels_data):
                     date_elem = ET.SubElement(programme, "date")
                     date_elem.text = formatted_date
 
-            # Poster del programa: Primera <image><url> en <images> del content
-            images = content.findall(f".//{ns}images/{ns}image")
-            if images:
-                first_image = images[0]
+            # Poster del programa: Primera <image><url> en <images> DEL CONTENT (no del TV_CHANNEL)
+            # Buscar específicamente en las <images> del <content> actual (programme)
+            content_images = content.findall(f"{ns}images/{ns}image")  # Sin .// para buscar directo en content
+            if not content_images:
+                # Fallback: Buscar descendientes si no está directo
+                content_images = content.findall(f".//{ns}images/{ns}image")
+            if content_images:
+                first_image = content_images[0]  # Primera imagen del content (debería ser BROWSE o similar, poster)
                 url_elem = first_image.find(f"{ns}url")
                 if url_elem is not None and url_elem.text:
                     poster_src = url_elem.text.strip()
-                    if poster_src:
+                    if poster_src and "logo" not in poster_src.lower():  # Evitar logos accidentales
                         icon = ET.SubElement(programme, "icon", src=poster_src)
+                        logger.debug(f"Poster del programa en canal {channel_id}: {poster_src}")
+                    else:
+                        logger.debug(f"Imagen ignorada (posible logo): {poster_src}")
+            else:
+                logger.debug(f"No se encontró <images> en content para canal {channel_id}")
     
     rough_string = ET.tostring(tv, encoding='unicode', method='xml')
     reparsed = ET.fromstring(rough_string)
