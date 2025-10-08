@@ -34,5 +34,5 @@ jobs:
         git config user.name "github-actions"
         git config user.email "actions@github.com"
         git add nxt-plus.xml
-        git commit -m "Actualizar guía EPG filtrada para skymas/edye" || echo "No hay cambios para commitear"
+        git commit -m "Actualizar guía EPG filtrada" || echo "No hay cambios para commitear"
         git push origin main
