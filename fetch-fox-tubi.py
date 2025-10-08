@@ -2,6 +2,7 @@ import requests
 import json
 import xml.etree.ElementTree as ET
 from datetime import datetime
+from urllib.parse import quote  # Agregado: Para codificar params en URL
 import sys
 
 # Configuration (device_id vacío para que funcione)
