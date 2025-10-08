@@ -12,7 +12,7 @@ EPG_URLS = [
     'https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml',
     'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/mvshub.xml',
     'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/dish.xml',
-    'https://www.open-epg.com/generate/CDgwm3SqTb.xml'
+    'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/openepg.xml'
 ]
 
 # Diccionario de filtros: clave = URL, valor = lista de IDs de canales permitidos.
