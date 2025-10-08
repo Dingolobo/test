@@ -7,11 +7,12 @@ from datetime import datetime
 
 # Array de URLs de ejemplo (reemplaza con tus URLs reales)
 EPG_URLS = [
-    'https://raw.githubusercontent.com/Dingolobo/xmldata/refs/heads/main/schdirect.xml',
-    'https://raw.githubusercontent.com/Dingolobo/xmldata/refs/heads/main/openepg.xml',
     'https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/Plex/mx.xml',
-    'https://raw.githubusercontent.com/Dingolobo/xmldata/main/mvshub.xml',
-    'https://raw.githubusercontent.com/serviciovodflex/nxt-guide/refs/heads/main/epg.xml'  # Nueva URL agregada
+    'https://raw.githubusercontent.com/luisms123/tdt/master/guiacanales.xml',
+    'https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml',
+    'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/mvshub.xml',
+    'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/dish.xml',
+    'https://www.open-epg.com/generate/CDgwm3SqTb.xml'
 ]
 
 # Diccionario de filtros: clave = URL, valor = lista de IDs de canales permitidos.
@@ -24,19 +25,194 @@ EPG_URLS = [
 #    - Si la lista está vacía [], se incluirán todos (equivalente a no filtrar).
 # Filtros actuales:
 FILTERS = {
-    # Filtro para mx.xml: solo estos dos IDs
+    # Filtro para mx.xml: solo estos IDs
     'https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/Plex/mx.xml': [
         "608049aefa2b8ae93c2c3a63-688d3402a6fe30698ab42007", #ITV deportes
         "608049aefa2b8ae93c2c3a63-63f0ca427b78030ed9990309", #Curiosity
         "608049aefa2b8ae93c2c3a63-66633339ebeb02ee8bd1597c"  #fifa+
     ],
-    # Ejemplo de filtro para la nueva URL nxt-guide: reemplaza con IDs reales de canales que quieras.
-    # Por ahora, está vacío (no filtra nada). Para filtrar, agrega IDs como en el ejemplo de mx.xml.
-    'https://raw.githubusercontent.com/serviciovodflex/nxt-guide/refs/heads/main/epg.xml': [
-        "SkySports1.mx",  # Ejemplo: descomenta y agrega IDs reales, e.g., "canal1.example.com"
-        "SkySports16.mx",   # Agrega tantos como necesites
-        "SkySports24.mx"
+    # Filtro para guiacanales.xml: solo estos IDs
+    'https://raw.githubusercontent.com/luisms123/tdt/master/guiacanales.xml': [
+        "Sky Sports 1",  # sky sports 1
+        "Sky Sports 16",   # sky sports 16
+        "Sky Sports 24",  #sky sports 24
+        "4 de Monterrey",
+        "Canal De Las Estrellas -1 Hora",
+        "Canal De Las Estrellas -2 Hora"
+    ],
+    # Filtro para acidjesuz
+    'https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml': [
+        "I108.18101.schedulesdirect.org",
+        "I111.89542.schedulesdirect.org",
+        "I112.72801.schedulesdirect.org",
+        "I129.20742.schedulesdirect.org",
+        "I16.83162.schedulesdirect.org",
+        "I191.58780.schedulesdirect.org",
+        "I193.58646.schedulesdirect.org",
+        "I205.95679.schedulesdirect.org",
+        "I207.19736.schedulesdirect.org",
+        "I208.16288.schedulesdirect.org",
+        "I210.74016.schedulesdirect.org",
+        "I23.111165.schedulesdirect.org",
+        "I235.55980.schedulesdirect.org",
+        "I272.79318.schedulesdirect.org",
+        "I273.64230.schedulesdirect.org",
+        "I278.95630.schedulesdirect.org",
+        "I304.16574.schedulesdirect.org",
+        "I305.40704.schedulesdirect.org",
+        "I337.60179.schedulesdirect.org",
+        "I353.71799.schedulesdirect.org",
+        "I361.17672.schedulesdirect.org",
+        "I373.16298.schedulesdirect.org",
+        "I374.16423.schedulesdirect.org",
+        "I376.19737.schedulesdirect.org",
+        "I377.68317.schedulesdirect.org",
+        "I378.80804.schedulesdirect.org",
+        "I381.80805.schedulesdirect.org",
+        "I414.111249.schedulesdirect.org",
+        "I425.113876.schedulesdirect.org",
+        "I438.98718.schedulesdirect.org",
+        "I448.67632.schedulesdirect.org",
+        "I488.99621.schedulesdirect.org",
+        "I513.59155.schedulesdirect.org",
+        "I551.33629.schedulesdirect.org",
+        "I554.75785.schedulesdirect.org",
+        "I560.109786.schedulesdirect.org",
+        "I561.50798.schedulesdirect.org",
+        "I562.82446.schedulesdirect.org",
+        "I575.50367.schedulesdirect.org",
+        "I681.19246.schedulesdirect.org",
+        "I684.16189.schedulesdirect.org",
+        "I687.15211.schedulesdirect.org",
+        "I689.73070.schedulesdirect.org",
+        "I699.37232.schedulesdirect.org",
+        "I711.63109.schedulesdirect.org",
+        "I718.65129.schedulesdirect.org",
+        "I739.84425.schedulesdirect.org",
+        "I754.11118.schedulesdirect.org"
+    ],
+    # Filtro para dish
+    'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/dish.xml': [
+        "12712",
+        "15178",
+        "15192",
+        "15232",
+        "15296",
+        "15384",
+        "15688",
+        "15969",
+        "16141",
+        "16213",
+        "16435",
+        "16464",
+        "16707",
+        "16794",
+        "16795",
+        "16799",
+        "16800",
+        "17484",
+        "18169",
+        "18329",
+        "18955",
+        "19158",
+        "19234",
+        "19384",
+        "19385",
+        "20548",
+        "24519",
+        "25615",
+        "25788",
+        "25793",
+        "27741",
+        "27773",
+        "29017",
+        "32749",
+        "34344",
+        "34412",
+        "34710",
+        "34863",
+        "34879",
+        "37747",
+        "40137",
+        "45831",
+        "45955",
+        "46442",
+        "46608",
+        "47403",
+        "48293",
+        "50577",
+        "52762",
+        "56036",
+        "56727",
+        "57580",
+        "59582",
+        "60295",
+        "60801",
+        "61033",
+        "61311",
+        "61404",
+        "61719",
+        "62043",
+        "64835",
+        "65940",
+        "66419",
+        "66488",
+        "67787",
+        "68119",
+        "68134",
+        "68140",
+        "71621",
+        "72625",
+        "74420",
+        "74450",
+        "75537",
+        "77783",
+        "78763",
+        "79402",
+        "79968",
+        "80199",
+        "82970",
+        "83458",
+        "84532",
+        "87915",
+        "88305",
+        "88533",
+        "89128",
+        "89260",
+        "89610",
+        "90209",
+        "90653",
+        "90682",
+        "90917",
+        "91029",
+        "92197",
+        "95687",
+        "96445",
+        "97501",
+        "98192",
+        "100602,"
+        "101111",
+        "101734",
+        "102301",
+        "106112",
+        "107366",
+        "109817",
+        "109982",
+        "115713",
+        "118698",
+        "119198",
+        "120767",
+        "121144",
+        "123193",
+        "123604",
+        "124934",
+        "140026",
+        "141773",
+        "144778",
+        "148503",
+        "186893"
     ]
+    
     # Para agregar otra URL y filtro:
     # 'https://ejemplo.com/otra-epg.xml': ["id1", "id2", "id3"]
 }
