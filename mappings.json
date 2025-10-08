@@ -39,7 +39,7 @@
   "1141": "EWTN",
   "1361": "Enlace",
   "1445": "Excelsior Tv",
-  "1446": "Justicia TV",
+  "50577": "Justicia TV",
   "1447": "Mexiquense TV CDMX",
   "1451": "ESNE",
   "12712": "MTV",
@@ -198,7 +198,7 @@
   "I425.113876.schedulesdirect.org": "HLN",
   "608049aefa2b8ae93c2c3a63-688d3402a6fe30698ab42007": "ITV Deportes",
   "Canal De Las Estrellas -1 Hora": "Las Estrellas -1hr",
-  "CANAL DE LAS ESTRELLAS +2.mx": "Las Estrellas -2hr",
+  "Canal De Las Estrellas -2 Hora": "Las Estrellas -2hr",
   "I448.67632.schedulesdirect.org": "Latin America Sports",
   "MX NUESTRO CINE.mx": "MX Nuestro Cine",
   "I513.59155.schedulesdirect.org": "NHK World",
@@ -206,9 +206,9 @@
   "I554.75785.schedulesdirect.org": "Rai Italia",
   "I560.109786.schedulesdirect.org": "Real Madrid TV",
   "I575.50367.schedulesdirect.org": "SKY One",
-  "SkySports1.mx": "SKY Sports 1",
-  "SkySports16.mx": "SKY Sports 16",
-  "SkySports24.mx": "SKY Sports 24",
+  "Sky Sports 1": "SKY Sports 1",
+  "Sky Sports 16": "SKY Sports 16",
+  "Sky Sports 24": "SKY Sports 24",
   "SONY MOVIES.mx": "Sony Movies",
   "I681.19246.schedulesdirect.org": "TCM",
   "I684.16189.schedulesdirect.org": "Telefe Internacional",
@@ -222,5 +222,6 @@
   "I561.50798.schedulesdirect.org": "TV Globo",
   "I739.84425.schedulesdirect.org": "Unicable",
   "I754.11118.schedulesdirect.org": "Univision",
-  "Win+Futbol.co": "Winsports Plus"
+  "Win+Futbol.co": "Winsports Plus",
+  "4 de Monterrey": "Canal 34 MTY"
 }
