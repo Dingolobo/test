@@ -5,7 +5,7 @@ from urllib.parse import quote
 import sys
 
 # Config (mismo que antes)
-BASE_URL = "https://epg-cdn.production-public.tubi.io/content/epg/programming"
+BASE_URL = "https://api.codetabs.com/v1/proxy?quest=https://epg-cdn.production-public.tubi.io/content/epg/programming"
 PARAMS = {
     "platform": "web",
     "device_id": "",
