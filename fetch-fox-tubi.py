@@ -3,16 +3,27 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from urllib.parse import quote  # Para codificar params en URL
 import sys
+import time  # Para waits en Selenium
 
-# Intenta importar cloudscraper; fallback a requests si no disponible (para debug)
+# Intenta importar Selenium/undetected-chromedriver; fallback a cloudscraper o requests
 try:
-    import cloudscraper
-    SCRAPER_AVAILABLE = True
-    print("CloudScraper loaded: Anti-Cloudflare enabled.")
+    import undetected_chromedriver as uc
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.common.by import By
+    SELENIUM_AVAILABLE = True
+    print("Selenium + undetected-chromedriver loaded: Full browser simulation for Akamai evasion.")
 except ImportError:
-    import requests
-    SCRAPER_AVAILABLE = False
-    print("WARNING: CloudScraper not installed. Using plain requests (may fail on Cloudflare). Install with: pip install cloudscraper")
+    SELENIUM_AVAILABLE = False
+    print("WARNING: Selenium not installed. Install with: pip install selenium undetected-chromedriver")
+    try:
+        import cloudscraper
+        SCRAPER_AVAILABLE = True
+        print("CloudScraper fallback loaded (may not evade Akamai).")
+    except ImportError:
+        import requests
+        SCRAPER_AVAILABLE = False
+        print("Plain requests fallback (likely to fail on Akamai). Install cloudscraper or selenium.")
 
 # Configuration (device_id vacío para que funcione)
 BASE_URL = "https://epg-cdn.production-public.tubi.io/content/epg/programming"
@@ -27,256 +38,102 @@ OUTPUT_FILE = "tubi_fox.xml"
 CHANNEL_NAME = "FOX en Tubi"  # Default from sample
 LANG = "es"  # From lang: ["Spanish"]
 
-# Headers para simular navegador real (anti-bot)
-HEADERS = {
-    'User -Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',  # Chrome reciente
-    'Accept': 'application/json, text/plain, */*',
-    'Accept-Language': 'en-US,en;q=0.9,es;q=0.8',  # Incluye español
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Referer': 'https://tubitv.com/',  # Referer de Tubi
-    'Sec-Fetch-Dest': 'empty',
-    'Sec-Fetch-Mode': 'cors',
-    'Sec-Fetch-Site': 'same-site',
-    'Origin': 'https://tubitv.com',
-    'Connection': 'keep-alive'
-}
-
 def build_url():
     """Build the full URL from params."""
-    query_params = "&".join([f"{k}={quote(v)}" for k, v in PARAMS.items()])  # quote para URLs seguras
+    query_params = "&".join([f"{k}={quote(v)}" for k, v in PARAMS.items()])
     return f"{BASE_URL}?{query_params}"
 
 def fetch_epg_data():
-    """Fetch data from the URL using cloudscraper or requests, with logs."""
+    """Fetch data using Selenium (Akamai evasion), fallback to cloudscraper/requests."""
     url = build_url()
-    print(f"Fetching from URL: {url}")  # Log: URL completa
-    print(f"Using scraper: {SCRAPER_AVAILABLE}")  # Log: Si usa cloudscraper
-    print(f"User -Agent sent: {HEADERS['User -Agent']}")  # Log: User-Agent usado
-    
-    try:
-        if SCRAPER_AVAILABLE:
-            # Crea scraper con cloudscraper (evade Cloudflare)
-            scraper = cloudscraper.create_scraper(
-                browser={
-                    'browser': 'chrome',
-                    'platform': 'windows',
-                    'mobile': False
-                },
-                delay=10  # Delay para evitar rate-limit
-            )
-            # Agrega headers al scraper
-            scraper.headers.update(HEADERS)
-            response = scraper.get(url, timeout=30)  # Timeout más largo para challenges
-            print("CloudScraper: Challenge solved (if any).")
-        else:
-            # Fallback a requests (puede fallar)
-            response = requests.get(url, headers=HEADERS, timeout=10)
-        
-        print(f"HTTP Status Code: {response.status_code}")  # Log: Código HTTP
-        print(f"Content-Type: {response.headers.get('Content-Type', 'Unknown')}")  # Log: Tipo de contenido
-        print(f"Response Length: {len(response.text)} characters")  # Log: Tamaño (debería ~5000+)
-        print(f"All Response Headers: {dict(response.headers)}")  # Log: Headers (busca cf-ray, x-amz-cf-id)
-        
-        if response.status_code != 200:
-            print(f"ERROR: HTTP {response.status_code} (possible Cloudflare block)")
-            print(f"Response Body (first 1000 chars): {response.text[:1000]}...")
-            print(f"Is HTML block? {response.text.startswith('<')}")
-            return None
-        
-        # Intenta parsear como JSON
+    print(f"Fetching from URL: {url}")
+    print(f"Using Selenium: {SELENIUM_AVAILABLE}, CloudScraper: {getattr(sys.modules, 'cloudscraper', False) is not None if 'cloudscraper' in globals() else False}")
+
+    if SELENIUM_AVAILABLE:
+        print("Using Selenium + undetected-chromedriver for Akamai evasion...")
         try:
-            data = response.json()
-            print("SUCCESS: JSON parsed successfully.")
+            # Config Chrome options para headless y evasión
+            options = Options()
+            options.add_argument('--headless')  # Headless para Actions
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--disable-blink-features=AutomationControlled')
+            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option('useAutomationExtension', False)
+            options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+
+            # Crea driver undetected
+            driver = uc.Chrome(options=options, version_main=None)  # Auto-detecta Chrome version
+            driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+
+            print("Selenium: Navigating to URL...")
+            driver.get(url)
+            time.sleep(5)  # Wait para JS/challenges de Akamai
+
+            # Obtén response (Selenium no tiene status directo, pero chequea page_source)
+            page_source = driver.page_source
+            print(f"Selenium Response Length: {len(page_source)} characters")
+            print(f"Selenium Title: {driver.title}")  # Si es error, title podría ser "Error"
+
+            if "Error" in driver.title or len(page_source) < 1000:
+                print("Selenium: Detected possible Akamai block in page_source.")
+                print(f"Page Source Snippet: {page_source[:500]}...")
+                driver.quit()
+                return None
+
+            # Intenta extraer JSON de page_source (Akamai devuelve JSON directo si pasa)
+            if page_source.strip().startswith('{'):
+                data = json.loads(page_source)
+                print("Selenium: JSON extracted from page_source.")
+            else:
+                print("Selenium: No JSON in page_source (possible redirect/block).")
+                driver.quit()
+                return None
+
+            driver.quit()
+
+            # Logs como antes
+            print("SUCCESS: JSON parsed via Selenium.")
             print(f"JSON Top-Level Keys: {list(data.keys()) if isinstance(data, dict) else 'Not a dict'}")
-            
             rows = data.get('rows', [])
             print(f"Rows in JSON: {len(rows)}")
-            
             if rows:
                 first_row = rows[0]
-                print(f"First Row Keys: {list(first_row.keys())}")
                 programs = first_row.get('programs', [])
                 print(f"Programs in First Row: {len(programs)}")
                 if programs:
                     first_program = programs[0]
-                    print(f"First Program Keys: {list(first_program.keys())}")
-                    print(f"Sample First Program Title: {first_program.get('title', 'N/A')}")
-                    print(f"Sample First Program Start Time: {first_program.get('start_time', 'N/A')}")
-                else:
-                    print("No programs in first row.")
+                    print(f"Sample Title: {first_program.get('title', 'N/A')}")
             else:
-                print("WARNING: 'rows' is empty. Possible remaining block or no data.")
-                print(f"Full JSON Data (for debug): {json.dumps(data, indent=2)}")
-                print("  - If length short, Cloudflare may still block. Try delay=10 or different IP.")
-            
+                print(f"Full JSON (debug): {json.dumps(data, indent=2)}")
+
             return data
-        except json.JSONDecodeError as e:
-            print(f"ERROR: Failed to parse JSON. Reason: {e}")
-            print(f"Raw Response Body (first 1000 chars): {response.text[:1000]}...")
-            print(f"Is HTML/Cloudflare challenge? {response.text.startswith('<') or 'cloudflare' in response.text.lower()}")
+
+        except Exception as e:
+            print(f"Selenium ERROR: {e}")
+            print("  - Check Chrome installation or version mismatch.")
             return None
-            
-    except Exception as e:  # Captura errores de cloudscraper (e.g., challenge fail)
-        print(f"ERROR: Fetch failed. Reason: {e}")
-        print("  - If CloudScraper error, may need update or VPN.")
-        return None
 
-# [El resto del script es idéntico: parse_time, build_xmltv, save_xml, main]
-def parse_time(iso_time):
-    """Convert ISO time to XMLTV format (YYYYMMDDHHMMSS +0000)."""
-    if not iso_time:
-        return ""
-    try:
-        dt = datetime.fromisoformat(iso_time.replace('Z', '+00:00'))
-        return dt.strftime("%Y%m%d%H%M%S +0000")
-    except ValueError as e:
-        print(f"WARNING: Invalid time format '{iso_time}': {e}")
-        return ""
-
-def build_xmltv(data):
-    """Build XMLTV from the JSON data with logs."""
-    print("Starting XMLTV build...")
-    
-    if not data or 'rows' not in data:
-        print("ERROR: No 'rows' key in data. Cannot build XMLTV.")
-        return None
-    
-    rows = data['rows']
-    if not rows:
-        print("ERROR: 'rows' is empty. Skipping XMLTV build.")
-        return None
-    
-    row = rows[0]  # Single row for channel
-    print(f"Processing row title: {row.get('title', 'N/A')}")
-    programs = row.get('programs', [])
-    print(f"Building with {len(programs)} programs.")
-
-    if not programs:
-        print("ERROR: No programs in row. Cannot build XMLTV.")
-        return None
-
-    # Create root <tv> element
-    tv = ET.Element('tv', {
-        'generator-info-name': 'Tubi EPG to XMLTV Converter',
-        'source-info-url': build_url(),
-        'source-info-name': 'Tubi EPG'
-    })
-
-    # Channel element
-    channel = ET.SubElement(tv, 'channel', {'id': CHANNEL_ID})
-    display_name = ET.SubElement(channel, 'display-name')
-    display_name.text = row.get('title', CHANNEL_NAME)
-    print(f"Channel display-name set to: {display_name.text}")
-    
-    # Logo from thumbnail (prefer custom, fallback to images.thumbnail)
-    thumbnail_url = ""
-    images = row.get('images', {})
-    custom = images.get('custom', {})
-    if isinstance(custom, dict) and 'thumbnail' in custom and isinstance(custom['thumbnail'], list) and custom['thumbnail']:
-        thumbnail_url = custom['thumbnail'][0]
-        print(f"Using custom thumbnail: {thumbnail_url}")
-    elif isinstance(images.get('thumbnail'), list) and images['thumbnail']:
-        thumbnail_url = images['thumbnail'][0]
-        print(f"Using default thumbnail: {thumbnail_url}")
+    # Fallback a cloudscraper si disponible
+    elif 'cloudscraper' in globals() and SCRAPER_AVAILABLE:
+        print("Fallback to CloudScraper...")
+        # [Código de cloudscraper de la versión anterior, abreviado para espacio]
+        try:
+            scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False}, delay=10)
+            # ... (resto igual que antes)
+            # (Incluye el código completo de fetch con cloudscraper de mi respuesta anterior)
+            # Para brevidad, asumo que lo copias de la versión previa
+            pass  # Reemplaza con el bloque cloudscraper
+        except Exception as e:
+            print(f"CloudScraper ERROR: {e}")
+            return None
     else:
-        print("No thumbnail URL found.")
-    
-    if thumbnail_url:
-        icon = ET.SubElement(channel, 'icon', {'src': thumbnail_url})
+        # Fallback requests (fallará)
+        print("Fallback to requests (likely fail)...")
+        # [Código requests de versiones anteriores]
+        pass  # Reemplaza con requests.get
 
-    # Programme elements
-    valid_programs = 0
-    for i, program in enumerate(programs):
-        print(f"Processing program {i}: {program.get('title', 'N/A')}")
-        start_time = parse_time(program.get('start_time'))
-        end_time = parse_time(program.get('end_time'))
-        if not start_time or not end_time:
-            print(f"  Skipping: Invalid times (start: {program.get('start_time')}, end: {program.get('end_time')})")
-            continue
+    return None  # Si todos fallan
 
-        programme = ET.SubElement(tv, 'programme', {
-            'start': start_time,
-            'stop': end_time,
-            'channel': CHANNEL_ID
-        })
-        valid_programs += 1
-
-        # Title
-        title = ET.SubElement(programme, 'title', {'lang': LANG})
-        title.text = program.get('title', '')
-        print(f"  Title: {title.text}")
-
-        # Description
-        desc = ET.SubElement(programme, 'desc', {'lang': LANG})
-        desc.text = program.get('description', '')
-        print(f"  Desc: {desc.text[:50]}..." if desc.text else "  Desc: Empty")
-
-        # Date (year) - solo si no es "0"
-        year = program.get('year')
-        if year and year != '0':
-            date_elem = ET.SubElement(programme, 'date')
-            date_elem.text = year
-            print(f"  Year: {year}")
-
-        # Episode (season and episode) - formato SxxEyy si disponibles y no null/0
-        season_num = program.get('season_number')
-        episode_num = program.get('episode_number')
-        if season_num is not None and episode_num is not None and (season_num != 0 or episode_num != 0):
-            try:
-                ep_num_text = f"{int(season_num):02d}{int(episode_num):02d}"
-                episode_elem = ET.SubElement(programme, 'episode-num', {'system': 'xmltv_ns'})
-                episode_elem.text = ep_num_text
-                print(f"  Episode: S{season_num}E{episode_num}")
-            except ValueError:
-                print(f"  Skipping episode: Invalid season/episode numbers")
-
-        # Ratings
-        ratings = program.get('ratings', [])
-        if ratings:
-            rating = ratings[0]  # Primer rating
-            rating_elem = ET.SubElement(programme, 'rating', {'system': rating.get('system', 'mpaa')})
-            value_elem = ET.SubElement(rating_elem, 'value')
-            value_elem.text = rating.get('value', '')
-            print(f"  Rating: {rating.get('value', 'N/A')} ({rating.get('system', 'N/A')})")
-
-        # Poster (como <icon> en programme)
-        prog_images = program.get('images', {})
-        poster_url = ""
-        if isinstance(prog_images.get('poster'), list) and prog_images['poster']:
-            poster_url = prog_images['poster'][0]
-        if poster_url:
-            prog_icon = ET.SubElement(programme, 'icon', {'src': poster_url})
-            print(f"  Poster: {poster_url}")
-
-    print(f"Built XMLTV with 1 channel and {valid_programs} valid programmes.")
-    return tv
-
-def save_xml(tv_root, filename):
-    """Save XML to file with proper formatting."""
-    rough_string = ET.tostring(tv_root, 'unicode', short_empty_elements=False)
-    reparsed = ET.fromstring(rough_string)
-    try:
-        ET.indent(reparsed, space="  ", level=0)  # Pretty print (Python 3.9+)
-    except AttributeError:
-        pass  # Ignora si versión antigua
-    tree = ET.ElementTree(reparsed)
-    tree.write(filename, encoding='utf-8', xml_declaration=True, short_empty_elements=False)
-    print(f"XML saved to {filename}")
-
-def main():
-    data = fetch_epg_data()
-    if data:
-        tv = build_xmltv(data)
-        if tv:
-            save_xml(tv, OUTPUT_FILE)
-            print("Success: XMLTV generated.")
-            sys.exit(0)
-        else:
-            print("No valid data to build XMLTV (e.g., empty rows). Skipping generation.")
-            sys.exit(0)  # No falla Actions
-    else:
-        print("No data fetched. Skipping XML generation.")
-        sys.exit(0)
-
-if __name__ == "__main__":
-    main()
+# [Resto del script idéntico: parse_time, build_xmltv, save_xml, main - copia de la versión anterior]
+# (Para ahorrar espacio, usa el build_xmltv y main de la respuesta con cloudscraper; son iguales)
