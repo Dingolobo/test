@@ -2,7 +2,7 @@ import requests
 import json
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from urllib.parse import quote  # Agregado: Para codificar params en URL
+from urllib.parse import quote  # Para codificar params en URL
 import sys
 
 # Configuration (device_id vacío para que funcione)
@@ -18,6 +18,20 @@ OUTPUT_FILE = "tubi_fox.xml"
 CHANNEL_NAME = "FOX en Tubi"  # Default from sample
 LANG = "es"  # From lang: ["Spanish"]
 
+# Headers para simular navegador real (anti-bot)
+HEADERS = {
+    'User -Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',  # Chrome reciente
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-US,en;q=0.9,es;q=0.8',  # Incluye español
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Referer': 'https://tubitv.com/',  # Referer de Tubi para más realismo
+    'Sec-Fetch-Dest': 'empty',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Site': 'same-site',
+    'Origin': 'https://tubitv.com',
+    'Connection': 'keep-alive'
+}
+
 def build_url():
     """Build the full URL from params."""
     query_params = "&".join([f"{k}={quote(v)}" for k, v in PARAMS.items()])  # quote para URLs seguras
@@ -27,12 +41,14 @@ def fetch_epg_data():
     """Fetch data from the URL and log everything."""
     url = build_url()
     print(f"Fetching from URL: {url}")  # Log: URL completa
+    print(f"User -Agent sent: {HEADERS['User -Agent']}")  # Log: User-Agent usado (para debug anti-bot)
     
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, headers=HEADERS, timeout=10)  # Agregado: headers anti-bot
         print(f"HTTP Status Code: {response.status_code}")  # Log: Código HTTP
         print(f"Content-Type: {response.headers.get('Content-Type', 'Unknown')}")  # Log: Tipo de contenido
-        print(f"Response Length: {len(response.text)} characters")  # Log: Tamaño de respuesta
+        print(f"Response Length: {len(response.text)} characters")  # Log: Tamaño de respuesta (debería ser ~5000+ ahora)
+        print(f"All Response Headers: {dict(response.headers)}")  # Log: Headers de respuesta (para ver si hay anti-bot como 'cf-ray')
         
         if response.status_code != 200:
             print(f"ERROR: HTTP {response.status_code}")
@@ -61,13 +77,16 @@ def fetch_epg_data():
                 else:
                     print("No programs in first row.")
             else:
-                print("WARNING: 'rows' is empty. No programming data available.")
-                print(f"Other JSON data: {data}")
+                print("WARNING: 'rows' is empty. Possible bot detection or rate-limit.")
+                print(f"Full JSON Data (for debug): {json.dumps(data, indent=2)}")  # Log: JSON completo si vacío (para ver 'valid_duration' u otros)
+                print("  - If length was short (~34 chars), add headers worked? Check User-Agent.")
+                print("  - Try local browser: Open URL in incognito to confirm.")
             
             return data
         except json.JSONDecodeError as e:
             print(f"ERROR: Failed to parse JSON. Reason: {e}")
             print(f"Raw Response Body (first 1000 chars): {response.text[:1000]}...")
+            print(f"Is it HTML? (bot block): {response.text.startswith('<')}")
             return None
             
     except requests.RequestException as e:
