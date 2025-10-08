@@ -6,8 +6,8 @@ CANAL_IDS = [
     "SkySports24.mx",
 ]
 
-INPUT_FILE = "openepg.xml"
-OUTPUT_FILE = "openepg_filtered.xml"
+INPUT_FILE = "nxt-plus-unfiltered.xml"
+OUTPUT_FILE = "nxt-plus.xml"
 
 def filtrar_canales():
     try:
