@@ -7,40 +7,32 @@
 		<display-name>SKY SPORTS BUNDESLIGA ᴴᴰ</display-name>
 		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-bundesliga-hd.png" />
 	</channel>
-	<programme start="20251006210000 -0300" stop="20251006230000 -0300" start_timestamp="1759795200" stop_timestamp="1759802400" channel="SkySports16.mx">
-		<title>Athletic Club de Bilbao vs. RCD</title>
+	<programme start="20251007210000 -0300" stop="20251007220000 -0300" start_timestamp="1759881600" stop_timestamp="1759885200" channel="SkySports16.mx">
+		<title>Programa Jornadas LaLiga</title>
 		<desc />
 	</programme>
-	<programme start="20251006230000 -0300" stop="20251007010000 -0300" start_timestamp="1759802400" stop_timestamp="1759809600" channel="SkySports16.mx">
-		<title>Sevilla vs. Barcelona</title>
+	<programme start="20251007220000 -0300" stop="20251007223000 -0300" start_timestamp="1759885200" stop_timestamp="1759887000" channel="SkySports16.mx">
+		<title>Previo</title>
 		<desc />
 	</programme>
-	<programme start="20251007010000 -0300" stop="20251007020000 -0300" start_timestamp="1759809600" stop_timestamp="1759813200" channel="SkySports16.mx">
-		<title>Jornadas Laliga</title>
+	<programme start="20251007223000 -0300" stop="20251008003000 -0300" start_timestamp="1759887000" stop_timestamp="1759894200" channel="SkySports16.mx">
+		<title>Real Madrid vs. Villarreal C</title>
 		<desc />
 	</programme>
-	<programme start="20251007020000 -0300" stop="20251007030000 -0300" start_timestamp="1759813200" stop_timestamp="1759816800" channel="SkySports16.mx">
-		<title>Espanyol vs. Real Betis</title>
+	<programme start="20251008003000 -0300" stop="20251008010000 -0300" start_timestamp="1759894200" stop_timestamp="1759896000" channel="SkySports16.mx">
+		<title>LALIGA Smash</title>
 		<desc />
 	</programme>
-	<programme start="20251006210000 -0300" stop="20251006230000 -0300" start_timestamp="1759795200" stop_timestamp="1759802400" channel="SkySports24.mx">
-		<title>SV Werder Bremen vs. FC St. Pau</title>
+	<programme start="20251008010000 -0300" stop="20251008030000 -0300" start_timestamp="1759896000" stop_timestamp="1759903200" channel="SkySports16.mx">
+		<title>RC Celta de Vigo vs. Atlético d</title>
 		<desc />
 	</programme>
-	<programme start="20251006230000 -0300" stop="20251007000000 -0300" start_timestamp="1759802400" stop_timestamp="1759806000" channel="SkySports24.mx">
-		<title>Bundesliga Highlights Show</title>
+	<programme start="20251007190000 -0300" stop="20251007230000 -0300" start_timestamp="1759874400" stop_timestamp="1759888800" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
 		<desc />
 	</programme>
-	<programme start="20251007000000 -0300" stop="20251007003000 -0300" start_timestamp="1759806000" stop_timestamp="1759807800" channel="SkySports24.mx">
-		<title>Bundesliga Discover a Club</title>
-		<desc />
-	</programme>
-	<programme start="20251007003000 -0300" stop="20251007013000 -0300" start_timestamp="1759807800" stop_timestamp="1759811400" channel="SkySports24.mx">
-		<title>Bundesliga Highlights Show</title>
-		<desc />
-	</programme>
-	<programme start="20251007013000 -0300" stop="20251007030000 -0300" start_timestamp="1759811400" stop_timestamp="1759816800" channel="SkySports24.mx">
-		<title>Borussia M'gladbach vs. SC Frei</title>
+	<programme start="20251007230000 -0300" stop="20251008030000 -0300" start_timestamp="1759888800" stop_timestamp="1759903200" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
 		<desc />
 	</programme>
 	</tv>
