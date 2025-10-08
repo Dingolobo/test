@@ -13,7 +13,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
     - name: Run script
-      run: fetch-fox-tubi.py
+      run: python fetch-fox-tubi.py
     - name: Commit XML
       run: |
         git config --local user.email "action@github.com"
