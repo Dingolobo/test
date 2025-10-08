@@ -66,7 +66,7 @@ async def extract_valid_uuid():
         await page.goto("https://www.mvshub.com.mx/#spa/epg")
 
         try:
-            await page.wait_for_selector("div.page", timeout=15000)
+            await page.wait_for_selector("div.page", timeout=10000)
             logger.info("Elemento clave cargado, página lista.")
         except TimeoutError:
             logger.warning("No se encontró el elemento clave, continuar igual.")
@@ -79,7 +79,7 @@ async def extract_valid_uuid():
 
         # Esperar hasta 20 segundos o hasta que se obtenga UUID válido
         try:
-            await asyncio.wait_for(stop_listening.wait(), timeout=20)
+            await asyncio.wait_for(stop_listening.wait(), timeout=5)
         except asyncio.TimeoutError:
             logger.warning("Timeout esperando UUID válido.")
 
