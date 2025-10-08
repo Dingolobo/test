@@ -1,62 +1,289 @@
-name: Generate Tubi FOX EPG XML
+import json
+import xml.etree.ElementTree as ET
+from datetime import datetime
+from urllib.parse import quote
+import sys
+import time
 
-on:
-  schedule:
-    - cron: '0 */6 * * *'  # Cada 6 horas
-  workflow_dispatch:
+# Intenta importar Selenium/undetected-chromedriver; fallback a cloudscraper o requests
+SELENIUM_AVAILABLE = False
+CLOUDSCRAPER_AVAILABLE = False
+REQUESTS_AVAILABLE = False
 
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
+try:
+    import undetected_chromedriver as uc
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.common.by import By
+    SELENIUM_AVAILABLE = True
+    print("Selenium + undetected-chromedriver loaded: Full browser simulation for Akamai evasion.")
+except ImportError:
+    print("WARNING: Selenium not installed. Install with: pip install selenium undetected-chromedriver")
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+try:
+    import cloudscraper
+    CLOUDSCRAPER_AVAILABLE = True
+    if not SELENIUM_AVAILABLE:
+        print("CloudScraper loaded as fallback (may not fully evade Akamai).")
+except ImportError:
+    pass
 
-    - name: Install system dependencies (Chrome for Selenium)
-      run: |
-        # Instala Chrome y fonts para headless
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 --no-install-recommends
-        # Verifica Chrome
-        google-chrome --version
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+    if not SELENIUM_AVAILABLE and not CLOUDSCRAPER_AVAILABLE:
+        print("Plain requests as last fallback (likely to fail on Akamai).")
+except ImportError:
+    print("ERROR: No HTTP library available. Install requests/cloudscraper/selenium.")
+    sys.exit(1)
 
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install selenium undetected-chromedriver cloudscraper requests  # Selenium principal, fallbacks
+# Configuration
+BASE_URL = "https://epg-cdn.production-public.tubi.io/content/epg/programming"
+PARAMS = {
+    "platform": "web",
+    "device_id": "",  # Vacío
+    "lookahead": "1",
+    "content_id": "400000122"
+}
+CHANNEL_ID = "400000122"
+OUTPUT_FILE = "tubi_fox.xml"
+CHANNEL_NAME = "FOX en Tubi"
+LANG = "es"
 
-    - name: Run EPG Fetch Script
-      id: fetch
-      run: |
-        python fetch-fox-tubi.py
-        if [ -f tubi_fox.xml ]; then
-          echo "xml_generated=true" >> $GITHUB_ENV
-        else
-          echo "xml_generated=false" >> $GITHUB_ENV
-          echo "No XML (Akamai block?). Check logs for Selenium output."
-        fi
+def build_url():
+    query_params = "&".join([f"{k}={quote(v)}" for k, v in PARAMS.items()])
+    return f"{BASE_URL}?{query_params}"
 
-    - name: Commit and Push XML (if generated)
-      if: env.xml_generated == 'true'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add tubi_fox.xml
-        git diff --staged --quiet || git commit -m "Update Tubi FOX EPG XML [$(date +'%Y-%m-%d %H:%M')]"
+def fetch_epg_data():
+    url = build_url()
+    print(f"Fetching from URL: {url}")
+    print(f"Available methods: Selenium={SELENIUM_AVAILABLE}, CloudScraper={CLOUDSCRAPER_AVAILABLE}, Requests={REQUESTS_AVAILABLE}")
 
-        git push
-      continue-on-error: true
+    # Prioridad 1: Selenium para evasión completa
+    if SELENIUM_AVAILABLE:
+        print("Attempting fetch with Selenium...")
+        try:
+            options = Options()
+            options.add_argument('--headless')
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--disable-gpu')
+            options.add_argument('--disable-images')  # Acelera, no necesita imágenes
+            options.add_argument('--disable-blink-features=AutomationControlled')
+            options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+            options.add_experimental_option('useAutomationExtension', False)
+            options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
 
-    - name: Upload XML as Artifact
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: tubi-epg-xml
-        path: tubi_fox.xml
-        if-no-files-found: ignore
+            driver = uc.Chrome(options=options, version_main=120)  # Especifica versión ~120 para compatibilidad
+            driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            driver.execute_script("Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]})")
+            driver.execute_script("Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en', 'es']})")
+
+            print("Selenium: Loading URL...")
+            driver.get(url)
+            time.sleep(10)  # Wait más largo para Akamai JS/challenges
+
+            page_source = driver.page_source
+            title = driver.title
+            print(f"Selenium: Page title: '{title}'")
+            print(f"Selenium: Response length: {len(page_source)} characters")
+            print(f"Selenium: Is JSON? {page_source.strip().startswith('{')}")
+            print(f"Selenium: Contains error/HTML? {'<html' in page_source.lower() or 'error' in page_source.lower()}")
+
+            if len(page_source) < 100 or '<html' in page_source.lower() or 'error' in title.lower():
+                print(f"Selenium: Possible Akamai block. Page source snippet: {page_source[:500]}...")
+                driver.quit()
+                print("Selenium failed. Trying fallback...")
+            else:
+                try:
+                    if page_source.strip().startswith('{'):
+                        data = json.loads(page_source)
+                        print("Selenium: SUCCESS - JSON parsed from page_source.")
+                    else:
+                        print("Selenium: Page_source not JSON. Raw snippet: " + page_source[:200])
+                        driver.quit()
+                        return None
+                    driver.quit()
+                    # Log JSON details
+                    print(f"JSON Keys: {list(data.keys())}")
+                    rows = data.get('rows', [])
+                    print(f"Rows: {len(rows)}")
+                    if rows:
+                        programs = rows[0].get('programs', [])
+                        print(f"Programs: {len(programs)}")
+                        if programs:
+                            print(f"Sample title: {programs[0].get('title', 'N/A')}")
+                    return data
+                except json.JSONDecodeError as e:
+                    print(f"Selenium: JSON parse error: {e}")
+                    print(f"Page source snippet: {page_source[:300]}...")
+                    driver.quit()
+                    return None
+
+            driver.quit()
+        except Exception as e:
+            print(f"Selenium ERROR: {type(e).__name__}: {e}")
+            print("  - Possible Chrome/driver issue. Check Actions logs for Chrome version.")
+
+    # Prioridad 2: CloudScraper fallback
+    if CLOUDSCRAPER_AVAILABLE:
+        print("Attempting fetch with CloudScraper...")
+        try:
+            scraper = cloudscraper.create_scraper(
+                browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False},
+                delay=5
+            )
+            response = scraper.get(url, timeout=20)
+            print(f"CloudScraper Status: {response.status_code}, Length: {len(response.text)}")
+            if response.status_code == 200 and response.text.strip().startswith('{'):
+                data = response.json()
+                print("CloudScraper: SUCCESS - JSON parsed.")
+                # Log details (same as above)
+                print(f"JSON Keys: {list(data.keys())}")
+                rows = data.get('rows', [])
+                print(f"Rows: {len(rows)}")
+                return data
+            else:
+                print(f"CloudScraper failed. Body snippet: {response.text[:200]}...")
+        except Exception as e:
+            print(f"CloudScraper ERROR: {e}")
+
+    # Prioridad 3: Requests fallback
+    if REQUESTS_AVAILABLE:
+        print("Attempting fetch with requests (last resort)...")
+        headers = {
+            'User -Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json',
+            'Referer': 'https://tubitv.com/'
+        }
+        try:
+            response = requests.get(url, headers=headers, timeout=10)
+            print(f"Requests Status: {response.status_code}, Length: {len(response.text)}")
+            if response.status_code == 200 and response.text.strip().startswith('{'):
+                data = response.json()
+                print("Requests: SUCCESS - JSON parsed.")
+                # Log details
+                print(f"JSON Keys: {list(data.keys())}")
+                rows = data.get('rows', [])
+                print(f"Rows: {len(rows)}")
+                return data
+            else:
+                print(f"Requests failed. Body snippet: {response.text[:200]}...")
+        except Exception as e:
+            print(f"Requests ERROR: {e}")
+
+    print("All methods failed. Possible persistent Akamai block or network issue.")
+    return None
+
+def parse_time(iso_time):
+    if not iso_time:
+        return ""
+    try:
+        dt = datetime.fromisoformat(iso_time.replace('Z', '+00:00'))
+        return dt.strftime("%Y%m%d%H%M%S +0000")
+    except ValueError as e:
+        print(f"WARNING: Invalid time '{iso_time}': {e}")
+        return ""
+
+def build_xmltv(data):
+    print("Building XMLTV...")
+    if not data or 'rows' not in data or not data['rows']:
+        print("ERROR: No valid rows in data.")
+        return None
+
+    row = data['rows'][0]
+    programs = row.get('programs', [])
+    if not programs:
+        print("ERROR: No programs.")
+        return None
+
+    print(f"Channel: {row.get('title', CHANNEL_NAME)}, Programs: {len(programs)}")
+
+    tv = ET.Element('tv', attrib={
+        'generator-info-name': 'Tubi EPG Converter',
+        'source-info-url': build_url(),
+        'source-info-name': 'Tubi EPG'
+    })
+
+    # Channel
+    channel = ET.SubElement(tv, 'channel', attrib={'id': CHANNEL_ID})
+    ET.SubElement(channel, 'display-name').text = row.get('title', CHANNEL_NAME)
+
+    # Icon from thumbnail
+    images = row.get('images', {})
+    thumbnail_url = images.get('thumbnail', [None])[0] if isinstance(images.get('thumbnail'), list) else None
+    if thumbnail_url:
+        ET.SubElement(channel, 'icon', attrib={'src': thumbnail_url})
+        print(f"Channel icon: {thumbnail_url}")
+
+    # Programmes
+    valid_programs = 0
+    for i, program in enumerate(programs):
+        start = parse_time(program.get('start_time'))
+        end = parse_time(program.get('end_time'))
+        if not start or not end:
+            continue
+
+        programme = ET.SubElement(tv, 'programme', attrib={
+            'start': start,
+            'stop': end,
+            'channel': CHANNEL_ID
+        })
+        valid_programs += 1
+
+        ET.SubElement(programme, 'title', attrib={'lang': LANG}).text = program.get('title', '')
+        ET.SubElement(programme, 'desc', attrib={'lang': LANG}).text = program.get('description', '')
+
+        year = program.get('year')
+        if year and year != '0':
+            ET.SubElement(programme, 'date').text = year
+
+        season = program.get('season_number')
+        episode = program.get('episode_number')
+        if season is not None and episode is not None and season != 0 and episode != 0:
+            ep_text = f"{int(season):02d}{int(episode):02d}"
+            ET.SubElement(programme, 'episode-num', attrib={'system': 'xmltv_ns'}).text = ep_text
+
+        ratings = program.get('ratings', [])
+        if ratings:
+            rating = ratings[0]
+            rating_elem = ET.SubElement(programme, 'rating', attrib={'system': rating.get('system', 'mpaa')})
+            ET.SubElement(rating_elem, 'value').text = rating.get('value', '')
+
+        # Poster icon
+        prog_images = program.get('images', {})
+        poster_url = prog_images.get('poster', [None])[0] if isinstance(prog_images.get('poster'), list) else None
+        if poster_url:
+            ET.SubElement(programme, 'icon', attrib={'src': poster_url})
+
+    print(f"XML built with {valid_programs} programmes.")
+    return tv
+
+def save_xml(tv_root, filename):
+    rough = ET.tostring(tv_root, 'unicode')
+    root = ET.fromstring(rough)
+    try:
+        ET.indent(root, space="  ")
+    except:
+        pass
+    tree = ET.ElementTree(root)
+    tree.write(filename, encoding='utf-8', xml_declaration=True)
+    print(f"XML saved to {filename}")
+
+def main():
+    data = fetch_epg_data()
+    if data:
+        tv = build_xmltv(data)
+        if tv:
+            save_xml(tv, OUTPUT_FILE)
+            print("SUCCESS: XMLTV generated.")
+            sys.exit(0)
+        else:
+            print("Failed to build XMLTV from data.")
+            sys.exit(0)
+    else:
+        print("No data fetched. Check logs for details.")
+        sys.exit(0)
+
+if __name__ == "__main__":
+    main()
