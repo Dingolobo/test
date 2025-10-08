@@ -1,0 +1,44 @@
+name: Merge EPG XML
+
+on:
+  schedule:
+    # Ejecuta cada hora (ajusta según necesites, e.g., '0 */6 * * *' para cada 6 horas)
+    - cron: '15 11 * * *'
+  workflow_dispatch:  # Permite ejecución manual desde la UI de GitHub
+
+jobs:
+  merge-epg:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # Para push automático
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Versión de Python
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run EPG merge script
+      run: python epg-merger.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add mxepg.xml
+        if git diff --staged --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Actualizado EPG mergeado - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
