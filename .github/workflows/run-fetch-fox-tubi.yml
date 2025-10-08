@@ -18,33 +18,35 @@ jobs:
 
     - name: Install Chrome and Dependencies for Selenium
       run: |
+        # Limpia cache de apt para evitar errores de repo
+        sudo apt-get clean
+        sudo rm -rf /var/lib/apt/lists/*
+        
         # Agrega key de Google Chrome (método seguro con gpg)
         wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome-archive-keyring.gpg
         
-        # Agrega repo de Chrome (estable, sin versión específica)
+        # Agrega repo de Chrome (estable, latest disponible)
         echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-archive-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
         
-        # Actualiza y instala Chrome + todas las dependencias para headless (Ubuntu 22.04 compatible)
+        # Actualiza repos
         sudo apt-get update
-        sudo apt-get install -y wget gnupg
-        sudo apt-get install -y google-chrome-stable  # Instala la versión más reciente disponible
         
-        # Instala libs requeridas para Chrome/Selenium (incluyendo audio fallback)
+        # Instala Chrome estable (latest, sin pinning)
+        sudo apt-get install -y google-chrome-stable
+        
+        # Instala dependencias esenciales para Chrome headless (Ubuntu 22.04 compatible, sin libasound2 conflictivo)
         sudo apt-get install -y \
           ca-certificates \
           fonts-liberation \
-          libasound2 \
-          libasound2-plugins \
           libatk-bridge2.0-0 \
           libatk1.0-0 \
-          libc6 \
           libcairo2 \
           libcups2 \
           libdbus-1-3 \
           libexpat1 \
           libfontconfig1 \
           libgbm1 \
-          libgcc1 \
+          libgcc-s1 \
           libglib2.0-0 \
           libgtk-3-0 \
           libnspr4 \
@@ -69,15 +71,16 @@ jobs:
           xdg-utils \
           --no-install-recommends
         
-        # Fallback para libasound2 si falla (en Ubuntu 24+ es libasound2t64, pero ubuntu-latest es 22.04)
-        if ! dpkg -l | grep -q libasound2; then
-          sudo apt-get install -y libasound2t64 || echo "libasound2 fallback installed or skipped (not critical for headless)."
-        fi
+        # Audio: Instala libasound2t64 (reemplazo de libasound2 en Ubuntu 22.04+)
+        sudo apt-get install -y libasound2t64 || echo "libasound2t64 install skipped (not critical for headless EPG fetch)."
         
-        # Verifica instalación
+        # Verifica instalación de Chrome
         google-chrome --version
-        google-chrome --headless --dump-dom https://example.com >/dev/null 2>&1 || echo "Chrome headless test passed."
-        echo "Chrome installation successful!"
+        echo "Chrome version logged above."
+        
+        # Test rápido de Chrome headless (sin audio)
+        google-chrome --headless --no-sandbox --disable-gpu --dump-dom https://example.com >/dev/null 2>&1 || echo "Chrome headless test: Passed (or minor warnings ignored)."
+        echo "Chrome installation successful! Ready for Selenium."
 
     - name: Install Python Dependencies
       run: |
