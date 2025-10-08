@@ -19,7 +19,7 @@ jobs:
 
     - name: Configurar git para push con token personal
       run: |
-        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/test/xmldata.git
+        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Dingolobo/test.git
 
     - name: Commit y push cambios
       run: |
