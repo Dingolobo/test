@@ -23,7 +23,7 @@ jobs:
     - name: Fetch EPG Data with Curl
       id: fetch
       run: |
-        URL="https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=&lookahead=1&content_id=400000122"
+        URL="https://api.codetabs.com/v1/proxy?quest=https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=&lookahead=1&content_id=400000122"
         
         # Headers anti-bot (simula Chrome)
         curl -s -L \
