@@ -1,9 +1,18 @@
-import requests
 import json
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from urllib.parse import quote  # Para codificar params en URL
 import sys
+
+# Intenta importar cloudscraper; fallback a requests si no disponible (para debug)
+try:
+    import cloudscraper
+    SCRAPER_AVAILABLE = True
+    print("CloudScraper loaded: Anti-Cloudflare enabled.")
+except ImportError:
+    import requests
+    SCRAPER_AVAILABLE = False
+    print("WARNING: CloudScraper not installed. Using plain requests (may fail on Cloudflare). Install with: pip install cloudscraper")
 
 # Configuration (device_id vacío para que funcione)
 BASE_URL = "https://epg-cdn.production-public.tubi.io/content/epg/programming"
@@ -24,7 +33,7 @@ HEADERS = {
     'Accept': 'application/json, text/plain, */*',
     'Accept-Language': 'en-US,en;q=0.9,es;q=0.8',  # Incluye español
     'Accept-Encoding': 'gzip, deflate, br',
-    'Referer': 'https://tubitv.com/',  # Referer de Tubi para más realismo
+    'Referer': 'https://tubitv.com/',  # Referer de Tubi
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-site',
@@ -38,21 +47,40 @@ def build_url():
     return f"{BASE_URL}?{query_params}"
 
 def fetch_epg_data():
-    """Fetch data from the URL and log everything."""
+    """Fetch data from the URL using cloudscraper or requests, with logs."""
     url = build_url()
     print(f"Fetching from URL: {url}")  # Log: URL completa
-    print(f"User -Agent sent: {HEADERS['User -Agent']}")  # Log: User-Agent usado (para debug anti-bot)
+    print(f"Using scraper: {SCRAPER_AVAILABLE}")  # Log: Si usa cloudscraper
+    print(f"User -Agent sent: {HEADERS['User -Agent']}")  # Log: User-Agent usado
     
     try:
-        response = requests.get(url, headers=HEADERS, timeout=10)  # Agregado: headers anti-bot
+        if SCRAPER_AVAILABLE:
+            # Crea scraper con cloudscraper (evade Cloudflare)
+            scraper = cloudscraper.create_scraper(
+                browser={
+                    'browser': 'chrome',
+                    'platform': 'windows',
+                    'mobile': False
+                },
+                delay=10  # Delay para evitar rate-limit
+            )
+            # Agrega headers al scraper
+            scraper.headers.update(HEADERS)
+            response = scraper.get(url, timeout=30)  # Timeout más largo para challenges
+            print("CloudScraper: Challenge solved (if any).")
+        else:
+            # Fallback a requests (puede fallar)
+            response = requests.get(url, headers=HEADERS, timeout=10)
+        
         print(f"HTTP Status Code: {response.status_code}")  # Log: Código HTTP
         print(f"Content-Type: {response.headers.get('Content-Type', 'Unknown')}")  # Log: Tipo de contenido
-        print(f"Response Length: {len(response.text)} characters")  # Log: Tamaño de respuesta (debería ser ~5000+ ahora)
-        print(f"All Response Headers: {dict(response.headers)}")  # Log: Headers de respuesta (para ver si hay anti-bot como 'cf-ray')
+        print(f"Response Length: {len(response.text)} characters")  # Log: Tamaño (debería ~5000+)
+        print(f"All Response Headers: {dict(response.headers)}")  # Log: Headers (busca cf-ray, x-amz-cf-id)
         
         if response.status_code != 200:
-            print(f"ERROR: HTTP {response.status_code}")
+            print(f"ERROR: HTTP {response.status_code} (possible Cloudflare block)")
             print(f"Response Body (first 1000 chars): {response.text[:1000]}...")
+            print(f"Is HTML block? {response.text.startswith('<')}")
             return None
         
         # Intenta parsear como JSON
@@ -77,22 +105,23 @@ def fetch_epg_data():
                 else:
                     print("No programs in first row.")
             else:
-                print("WARNING: 'rows' is empty. Possible bot detection or rate-limit.")
-                print(f"Full JSON Data (for debug): {json.dumps(data, indent=2)}")  # Log: JSON completo si vacío (para ver 'valid_duration' u otros)
-                print("  - If length was short (~34 chars), add headers worked? Check User-Agent.")
-                print("  - Try local browser: Open URL in incognito to confirm.")
+                print("WARNING: 'rows' is empty. Possible remaining block or no data.")
+                print(f"Full JSON Data (for debug): {json.dumps(data, indent=2)}")
+                print("  - If length short, Cloudflare may still block. Try delay=10 or different IP.")
             
             return data
         except json.JSONDecodeError as e:
             print(f"ERROR: Failed to parse JSON. Reason: {e}")
             print(f"Raw Response Body (first 1000 chars): {response.text[:1000]}...")
-            print(f"Is it HTML? (bot block): {response.text.startswith('<')}")
+            print(f"Is HTML/Cloudflare challenge? {response.text.startswith('<') or 'cloudflare' in response.text.lower()}")
             return None
             
-    except requests.RequestException as e:
-        print(f"ERROR: Request failed. Reason: {e}")
+    except Exception as e:  # Captura errores de cloudscraper (e.g., challenge fail)
+        print(f"ERROR: Fetch failed. Reason: {e}")
+        print("  - If CloudScraper error, may need update or VPN.")
         return None
 
+# [El resto del script es idéntico: parse_time, build_xmltv, save_xml, main]
 def parse_time(iso_time):
     """Convert ISO time to XMLTV format (YYYYMMDDHHMMSS +0000)."""
     if not iso_time:
@@ -155,7 +184,7 @@ def build_xmltv(data):
     if thumbnail_url:
         icon = ET.SubElement(channel, 'icon', {'src': thumbnail_url})
 
-    # Programme elements (compatibilidad XMLTV)
+    # Programme elements
     valid_programs = 0
     for i, program in enumerate(programs):
         print(f"Processing program {i}: {program.get('title', 'N/A')}")
@@ -210,7 +239,7 @@ def build_xmltv(data):
             value_elem.text = rating.get('value', '')
             print(f"  Rating: {rating.get('value', 'N/A')} ({rating.get('system', 'N/A')})")
 
-        # Poster (como <icon> en programme para compatibilidad extendida)
+        # Poster (como <icon> en programme)
         prog_images = program.get('images', {})
         poster_url = ""
         if isinstance(prog_images.get('poster'), list) and prog_images['poster']:
