@@ -7,31 +7,115 @@
 		<display-name>SKY SPORTS BUNDESLIGA ᴴᴰ</display-name>
 		<icon src="https://raw.githubusercontent.com/serviciovodflex/nxt-guide/main/img/dazn-movistar-sky/sky-sports-bundesliga-hd.png" />
 	</channel>
-	<programme start="20251007210000 -0300" stop="20251007220000 -0300" start_timestamp="1759881600" stop_timestamp="1759885200" channel="SkySports16.mx">
-		<title>Programa Jornadas LaLiga</title>
-		<desc />
-	</programme>
-	<programme start="20251007220000 -0300" stop="20251007223000 -0300" start_timestamp="1759885200" stop_timestamp="1759887000" channel="SkySports16.mx">
-		<title>Previo</title>
-		<desc />
-	</programme>
-	<programme start="20251007223000 -0300" stop="20251008003000 -0300" start_timestamp="1759887000" stop_timestamp="1759894200" channel="SkySports16.mx">
-		<title>Real Madrid vs. Villarreal C</title>
-		<desc />
-	</programme>
-	<programme start="20251008003000 -0300" stop="20251008010000 -0300" start_timestamp="1759894200" stop_timestamp="1759896000" channel="SkySports16.mx">
+	<programme start="20251008210000 -0300" stop="20251008213000 -0300" start_timestamp="1759968000" stop_timestamp="1759969800" channel="SkySports16.mx">
 		<title>LALIGA Smash</title>
 		<desc />
 	</programme>
-	<programme start="20251008010000 -0300" stop="20251008030000 -0300" start_timestamp="1759896000" stop_timestamp="1759903200" channel="SkySports16.mx">
+	<programme start="20251008213000 -0300" stop="20251008233000 -0300" start_timestamp="1759969800" stop_timestamp="1759977000" channel="SkySports16.mx">
+		<title>Sevilla vs. Barcelona</title>
+		<desc />
+	</programme>
+	<programme start="20251008233000 -0300" stop="20251009003000 -0300" start_timestamp="1759977000" stop_timestamp="1759980600" channel="SkySports16.mx">
+		<title>Programa Jornadas LaLiga</title>
+		<desc />
+	</programme>
+	<programme start="20251009003000 -0300" stop="20251009023000 -0300" start_timestamp="1759980600" stop_timestamp="1759987800" channel="SkySports16.mx">
+		<title>Athletic Club de Bilbao vs. RCD</title>
+		<desc />
+	</programme>
+	<programme start="20251009023000 -0300" stop="20251009030000 -0300" start_timestamp="1759987800" stop_timestamp="1759989600" channel="SkySports16.mx">
+		<title>LALIGA Smash</title>
+		<desc />
+	</programme>
+	<programme start="20251009030000 -0300" stop="20251009050000 -0300" start_timestamp="1759989600" stop_timestamp="1759996800" channel="SkySports16.mx">
+		<title>Girona FC vs. Valencia</title>
+		<desc />
+	</programme>
+	<programme start="20251009050000 -0300" stop="20251009070000 -0300" start_timestamp="1759996800" stop_timestamp="1760004000" channel="SkySports16.mx">
+		<title>CA Osasuna vs. Getafe</title>
+		<desc />
+	</programme>
+	<programme start="20251009070000 -0300" stop="20251009090000 -0300" start_timestamp="1760004000" stop_timestamp="1760011200" channel="SkySports16.mx">
+		<title>Sky Sports 16</title>
+		<desc />
+	</programme>
+	<programme start="20251009090000 -0300" stop="20251009100000 -0300" start_timestamp="1760011200" stop_timestamp="1760014800" channel="SkySports16.mx">
+		<title>Programa Jornadas LaLiga</title>
+		<desc />
+	</programme>
+	<programme start="20251009100000 -0300" stop="20251009120000 -0300" start_timestamp="1760014800" stop_timestamp="1760022000" channel="SkySports16.mx">
+		<title>Real Oviedo vs. Levante</title>
+		<desc />
+	</programme>
+	<programme start="20251009120000 -0300" stop="20251009140000 -0300" start_timestamp="1760022000" stop_timestamp="1760029200" channel="SkySports16.mx">
+		<title>Athletic Club de Bilbao vs. RCD</title>
+		<desc />
+	</programme>
+	<programme start="20251009140000 -0300" stop="20251009150000 -0300" start_timestamp="1760029200" stop_timestamp="1760032800" channel="SkySports16.mx">
+		<title>Programa Jornadas LaLiga</title>
+		<desc />
+	</programme>
+	<programme start="20251009150000 -0300" stop="20251009170000 -0300" start_timestamp="1760032800" stop_timestamp="1760040000" channel="SkySports16.mx">
+		<title>Espanyol vs. Real Betis</title>
+		<desc />
+	</programme>
+	<programme start="20251009170000 -0300" stop="20251009190000 -0300" start_timestamp="1760040000" stop_timestamp="1760047200" channel="SkySports16.mx">
+		<title>Real Madrid vs. Villarreal C</title>
+		<desc />
+	</programme>
+	<programme start="20251009190000 -0300" stop="20251009193000 -0300" start_timestamp="1760047200" stop_timestamp="1760049000" channel="SkySports16.mx">
+		<title>LALIGA Smash</title>
+		<desc />
+	</programme>
+	<programme start="20251009193000 -0300" stop="20251009213000 -0300" start_timestamp="1760049000" stop_timestamp="1760056200" channel="SkySports16.mx">
+		<title>CA Osasuna vs. Getafe</title>
+		<desc />
+	</programme>
+	<programme start="20251009213000 -0300" stop="20251009223000 -0300" start_timestamp="1760056200" stop_timestamp="1760059800" channel="SkySports16.mx">
+		<title>Programa Jornadas LaLiga</title>
+		<desc />
+	</programme>
+	<programme start="20251009223000 -0300" stop="20251010003000 -0300" start_timestamp="1760059800" stop_timestamp="1760067000" channel="SkySports16.mx">
+		<title>Sevilla vs. Barcelona</title>
+		<desc />
+	</programme>
+	<programme start="20251010003000 -0300" stop="20251010010000 -0300" start_timestamp="1760067000" stop_timestamp="1760068800" channel="SkySports16.mx">
+		<title>LALIGA Smash</title>
+		<desc />
+	</programme>
+	<programme start="20251010010000 -0300" stop="20251010030000 -0300" start_timestamp="1760068800" stop_timestamp="1760076000" channel="SkySports16.mx">
 		<title>RC Celta de Vigo vs. Atlético d</title>
 		<desc />
 	</programme>
-	<programme start="20251007190000 -0300" stop="20251007230000 -0300" start_timestamp="1759874400" stop_timestamp="1759888800" channel="SkySports24.mx">
+	<programme start="20251008190000 -0300" stop="20251008230000 -0300" start_timestamp="1759960800" stop_timestamp="1759975200" channel="SkySports24.mx">
 		<title>Sky Sports 24</title>
 		<desc />
 	</programme>
-	<programme start="20251007230000 -0300" stop="20251008030000 -0300" start_timestamp="1759888800" stop_timestamp="1759903200" channel="SkySports24.mx">
+	<programme start="20251008230000 -0300" stop="20251009030000 -0300" start_timestamp="1759975200" stop_timestamp="1759989600" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251009030000 -0300" stop="20251009070000 -0300" start_timestamp="1759989600" stop_timestamp="1760004000" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251009070000 -0300" stop="20251009110000 -0300" start_timestamp="1760004000" stop_timestamp="1760018400" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251009110000 -0300" stop="20251009150000 -0300" start_timestamp="1760018400" stop_timestamp="1760032800" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251009150000 -0300" stop="20251009190000 -0300" start_timestamp="1760032800" stop_timestamp="1760047200" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251009190000 -0300" stop="20251009230000 -0300" start_timestamp="1760047200" stop_timestamp="1760061600" channel="SkySports24.mx">
+		<title>Sky Sports 24</title>
+		<desc />
+	</programme>
+	<programme start="20251009230000 -0300" stop="20251010030000 -0300" start_timestamp="1760061600" stop_timestamp="1760076000" channel="SkySports24.mx">
 		<title>Sky Sports 24</title>
 		<desc />
 	</programme>
