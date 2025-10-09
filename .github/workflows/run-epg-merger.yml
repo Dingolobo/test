@@ -2,8 +2,7 @@ name: Merge EPG XML
 
 on:
   schedule:
-    # Ejecuta cada hora (ajusta según necesites, e.g., '0 */6 * * *' para cada 6 horas)
-    - cron: '15 11 * * *'
+    - cron: '20 11 * * *' #Se ejecuta a las 11:20 AM UTC = 6:20 AM -5 GMT
   workflow_dispatch:  # Permite ejecución manual desde la UI de GitHub
 
 jobs:
