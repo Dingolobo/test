@@ -26,5 +26,5 @@ jobs:
         git config user.name "github-actions"
         git config user.email "actions@github.com"
         git add openepg.xml
-        git commit -m "Actualizar guía Openepg actualizado" || echo "No hay cambios para commitear"
+        git commit -m "Actualizado - [$(TZ="America/Cancun" date +"%d-%m-%Y %H:%M GMT-5")] - [$(date +'%d-%m-%Y %H:%M UTC')]" || echo "No hay cambios para commitear"
         git push origin main
