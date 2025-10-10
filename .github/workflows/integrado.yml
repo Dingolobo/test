@@ -1,0 +1,80 @@
+name: Fetch and Merge All EPG Sources
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # Se ejecuta a las 11:00 AM UTC = 6:00 AM GMT-5 (todo en uno)
+  workflow_dispatch:  # Permite ejecución manual desde GitHub
+
+# Evita ejecuciones concurrentes
+concurrency:
+  group: fetch-merge-all-epg-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fetch-and-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4  # Unificado a v4 para mejor soporte y push
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # Para permisos de push (reemplaza PAT)
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Unificado (compatible con 3.11 scripts)
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install playwright requests  # Para Dish, MVSHUB y merge
+        playwright install chromium  # Para Dish
+        python -m playwright install  # Para MVSHUB (browsers)
+
+    # Extracción 1: Dish (con Playwright, continue-on-error con log)
+    - name: Fetch Dish EPG
+      continue-on-error: true
+      run: |
+        python fetchdish-28hrs.py || { echo "Error en Fetch Dish: Exit code $? - Continuando sin dish.xml"; exit 0; }
+
+    # Extracción 2: Openepg (wget simple, continue-on-error con log)
+    - name: Fetch Openepg XML
+      continue-on-error: true
+      run: |
+        wget --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36" -O openepg.xml https://www.open-epg.com/generate/CDgwm3SqTb.xml || { echo "Error en Fetch Openepg: Exit code $? - Continuando sin openepg.xml"; exit 0; }
+
+    # Extracción 3: MVSHUB (con Playwright/requests, continue-on-error con log)
+    - name: Fetch MVSHUB EPG
+      continue-on-error: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Si el script lo usa
+      run: |
+        python mvshubnew.py || { echo "Error en Fetch MVSHUB: Exit code $? - Continuando sin mvshub.xml"; exit 0; }
+
+    # Merge: Crítico, sin continue-on-error (para todo si falla)
+    - name: Merge EPG XMLs and Normalize Channels
+      run: |
+        # Opcional: Check si XMLs existen para log
+        ls -la *.xml || echo "Algunos XMLs faltan (posibles fallos en fetch), merge parcial"
+        python epg-merger.py  # Asume lee dish.xml, openepg.xml, mvshub.xml y genera mxepg.xml con mapping
+
+    - name: Configure Git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"  # Unificado
+
+    # Commit y push final: Solo una vez, para todos los archivos
+    - name: Commit and push all EPG files
+      run: |
+        # Add todos los archivos generados
+        git add dish.xml openepg.xml mvshub.xml mxepg.xml
+        if ! git diff --cached --quiet; then
+          git commit -m "Fetch and Merge EPG - Actualizado [$(TZ=\"America/Cancun\" date +\"%d-%m-%Y %H:%M GMT-5\")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
+          git pull --rebase origin main  # Sincroniza cambios remotos
+          git push origin main
+        else
+          echo "No hay cambios para commitear"
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
