@@ -28,9 +28,9 @@ jobs:
         python -m playwright install
 
     - name: Run EPG fetch script
-      env:
-        TIMEZONE_OFFSET: '0'  # Ajusta si quieres otro offset horario
-        CHANNEL_IDS: '306, 645, 701, 702, 703, 704, 705, 726, 727, 728, 734, 736, 741, 761, 762, 763, 764, 766, 769, 770, 771, 772, 801, 802, 803, 805, 806, 807, 808, 809, 814, 821, 822, 963, 964, 965, 1062, 1141, 1361, 1445, 1447,  1451'  # Opcional, puedes cambiar o pasar por args
+      #env:
+      #  TIMEZONE_OFFSET: '0'  # Ajusta si quieres otro offset horario
+      #  CHANNEL_IDS: '306, 645, 701, 702, 703, 704, 705, 726, 727, 728, 734, 736, 741, 761, 762, 763, 764, 766, 769, 770, 771, 772, 801, 802, 803, 805, 806, 807, 808, 809, 814, 821, 822, 963, 964, 965, 1062, 1141, 1361, 1445, 1447,  1451'  # Opcional, puedes cambiar o pasar por args
       run: |
         python mvshubnew.py
     
