@@ -35,4 +35,5 @@ jobs:
         git config user.email "actions@github.com"
         git add nxt-plus.xml
         git commit -m "Actualizar guía EPG filtrada" || echo "No hay cambios para commitear"
+        git pull --rebase origin main  # Tu adición: sincroniza remotos antes de push
         git push origin main
