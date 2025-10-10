@@ -2,7 +2,7 @@ name: Fetch Dish 28hrs to XML
 
 on:
   schedule:
-    - cron: '0 11 * * *'  # Se ejecuta a las 11:00 AM UTC = 6:00 AM -5GMT
+    - cron: '0 11 * * *'  # Se ejecuta a las 11:00 AM UTC = 6:00 AM GMT-5
   workflow_dispatch:
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
       run: |
         git add dish.xml
         if ! git diff --cached --quiet; then
-          git commit -m "Actualización automática de dish.xml"
+          git commit -m "Actualizado - [$(TZ="America/Cancun" date +"%d-%m-%Y %H:%M GMT-5")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
           git push
         else
           echo "No hay cambios para commitear"
