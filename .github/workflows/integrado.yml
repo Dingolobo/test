@@ -70,7 +70,7 @@ jobs:
         # Add todos los archivos generados
         git add dish.xml openepg.xml mvshub.xml mxepg.xml
         if ! git diff --cached --quiet; then
-          git commit -m "Fetch and Merge EPG - Actualizado [$(TZ=\"America/Cancun\" date +\"%d-%m-%Y %H:%M GMT-5\")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
+          git commit -m "Actualizado - [$(TZ="America/Cancun" date +"%d-%m-%Y %H:%M GMT-5")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
           git pull --rebase origin main  # Sincroniza cambios remotos
           git push origin main
         else
