@@ -413,32 +413,22 @@
     <date>20200322</date>
     <icon src="http://dshm.tmsimg.com/assets/p18103841_b_v12_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="306">
+    <title lang="es">Pódcast: Presencia real</title>
+    <desc lang="es">Pódcast de temas religiosos.</desc>
+    <category lang="es">Talk</category>
+    <category lang="es">Religious</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20250309</date>
+    <icon src="http://dshm.tmsimg.com/assets/p30732882_b_h10_aa.jpg" />
+  </programme>
   <channel id="645">
     <display-name>FR24ESD</display-name>
     <display-name>113</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s105780_ld_h8_ab.png" />
   </channel>
-  <programme start="20251010144500 +0000" stop="20251010145900 +0000" channel="645">
-    <title lang="es">África 7 Dias</title>
-    <desc lang="es">Un recuento en 30 minutos de los acontecimientos que marcaron historia en África durante la semana.</desc>
-    <category lang="es">Newsmagazine</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20040425</date>
-    <icon src="http://dshm.tmsimg.com/assets/p325347_b_v7_aa.jpg" />
-  </programme>
-  <programme start="20251010145900 +0000" stop="20251010150000 +0000" channel="645">
-    <title lang="es">El tiempo</title>
-    <desc lang="es">Información meteorológica de todo el mundo.</desc>
-    <category lang="es">Weather</category>
-    <category lang="es">News</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20141015</date>
-    <icon src="http://dshm.tmsimg.com/assets/p11187080_b_h8_ad.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010151500 +0000" channel="645">
     <title lang="es">Noticias</title>
     <desc lang="es">La redacción de France 24 ofrece un noticiero breve con las últimas noticias producidas.</desc>
@@ -1451,6 +1441,26 @@
     </rating>
     <date>20121230</date>
     <icon src="http://dshm.tmsimg.com/assets/p9683988_b_h8_af.jpg" />
+  </programme>
+  <programme start="20251011061500 +0000" stop="20251011062300 +0000" channel="645">
+    <title lang="es">Ciencia y tecnología</title>
+    <desc lang="es">Programa que se adentra en las novedades y los enigmas de la ciencia y la tecnología.</desc>
+    <category lang="es">Science</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20101009</date>
+    <icon src="http://dshm.tmsimg.com/assets/p8349068_b_h8_aa.jpg" />
+  </programme>
+  <programme start="20251011062300 +0000" stop="20251011062900 +0000" channel="645">
+    <title lang="es">En foco</title>
+    <desc lang="es">Un reportaje breve que aborda temas que frecuentemente son obviados en las noticias.</desc>
+    <category lang="es">Public affairs</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20101122</date>
+    <icon src="http://dshm.tmsimg.com/assets/p8414675_st_v8_ab.jpg" />
   </programme>
   <channel id="701">
     <display-name>UNIPRZ</display-name>
@@ -2536,20 +2546,6 @@
     <display-name>753</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s121868_h3_ba.png" />
   </channel>
-  <programme start="20251010141500 +0000" stop="20251010150000 +0000" channel="703">
-    <title lang="es">Accidente, suicidio o asesinato</title>
-    <desc lang="es">Una antigua reina de la belleza, madre de ocho hijos, es hallada muerta en la tina de la bañera tras haberse sometido a una operación estética. Lo que parece un accidente se torna sospecha hacia su esposo, un doctor.</desc>
-    <category lang="es">Documentary</category>
-    <category lang="es">Crime</category>
-    <category lang="es">Mystery</category>
-    <sub-title lang="es">La atención de un médico</sub-title>
-    <episode-num system="xmltv_ns">S4E18</episode-num>
-    <rating>
-      <value>TV14</value>
-    </rating>
-    <date>20230527</date>
-    <icon src="http://dshm.tmsimg.com/assets/p24644766_e_h10_ab.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010152500 +0000" channel="703">
     <title lang="es">It Takes a Killer</title>
     <desc lang="es">El asesinato de un profesor universitario sorprende a la población de Richmond, Virginia; los policías investigan el homicidio hasta que las pruebas revelan el plan de un asesino a sangre fría.</desc>
@@ -3507,25 +3503,25 @@
     <date>20160522</date>
     <icon src="http://dshm.tmsimg.com/assets/p12832565_e_h10_ab.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012154500 +0000" channel="703">
+    <title lang="es">Parejas asesinas</title>
+    <desc lang="es">Una pareja se encuentra en el centro de una conspiración tras producirse una explosión en una comunidad de vecinos.</desc>
+    <category lang="es">Documentary</category>
+    <category lang="es">Crime</category>
+    <category lang="es">Mystery</category>
+    <sub-title lang="es">Monserrate Shirley y Mark Leonard</sub-title>
+    <episode-num system="xmltv_ns">S7E9</episode-num>
+    <rating>
+      <value>TVPG</value>
+    </rating>
+    <date>20160529</date>
+    <icon src="http://dshm.tmsimg.com/assets/p12852123_e_v7_aa.jpg" />
+  </programme>
   <channel id="704">
     <display-name>UNIREZ</display-name>
     <display-name>754</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s121867_h3_ba.png" />
   </channel>
-  <programme start="20251010145000 +0000" stop="20251010151000 +0000" channel="704">
-    <title lang="es">La familia Chrisley</title>
-    <desc lang="es">Todd no puede soportar ni un minuto más los ronquidos de Julie. Faye entra en guerra contra un competidor en el negocio de los envíos a domicilio.</desc>
-    <category lang="es">Reality</category>
-    <category lang="es">Comedy</category>
-    <category lang="es">Entertainment</category>
-    <sub-title lang="es">Guerras de ronquidos</sub-title>
-    <episode-num system="xmltv_ns">S9E2</episode-num>
-    <rating>
-      <value>TV14</value>
-    </rating>
-    <date>20210819</date>
-    <icon src="http://dshm.tmsimg.com/assets/p20356531_e_h10_ab.jpg" />
-  </programme>
   <programme start="20251010151000 +0000" stop="20251010153500 +0000" channel="704">
     <title lang="es">La familia Chrisley</title>
     <desc lang="es">Faye confiesa que tiene 25 años de rencor contra el padre de Julie. Todd soborna a Chloe a cambio de información.</desc>
@@ -4581,24 +4577,25 @@
     <date>20141217</date>
     <icon src="http://dshm.tmsimg.com/assets/p11295372_e_v11_ab.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012152500 +0000" channel="704">
+    <title lang="es">La familia Chrisley</title>
+    <desc lang="es">Los Chrisleys son entrevistados para una revista y Todd escribe un guión para su familia para memorizar; cuando las cosas se salen del guión, Todd toma represalias con honestidad.</desc>
+    <category lang="es">Reality</category>
+    <category lang="es">Comedy</category>
+    <category lang="es">Entertainment</category>
+    <sub-title lang="es">Gran Id-ea de Savannah</sub-title>
+    <episode-num system="xmltv_ns">S3E1</episode-num>
+    <rating>
+      <value>TV14</value>
+    </rating>
+    <date>20150602</date>
+    <icon src="http://dshm.tmsimg.com/assets/p11718863_e_h10_aa.jpg" />
+  </programme>
   <channel id="705">
     <display-name>UNICOZ</display-name>
     <display-name>752</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s121870_h3_ba.png" />
   </channel>
-  <programme start="20251010143500 +0000" stop="20251010150000 +0000" channel="705">
-    <title lang="es">The Office</title>
-    <desc lang="es">Michael asombra a Pam y Jim cuando revela la identidad de su nueva novia; Dwight ofrece a Jim una extraña oferta para hacer las paces.</desc>
-    <category lang="es">Sitcom</category>
-    <category lang="es">Comedy</category>
-    <sub-title lang="es">La novia</sub-title>
-    <episode-num system="xmltv_ns">S6E7</episode-num>
-    <rating>
-      <value>TV14</value>
-    </rating>
-    <date>20091022</date>
-    <icon src="http://dshm.tmsimg.com/assets/p7867638_e_h10_ac.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010152500 +0000" channel="705">
     <title lang="es">The Office</title>
     <desc lang="es">En la oficina planean hacer una casa embrujada para niños en la comunidad. Michael cae en un estanque con peces koi en una importante reunión de negocios.</desc>
@@ -5732,25 +5729,24 @@
     <date>20030627</date>
     <icon src="http://dshm.tmsimg.com/assets/p2689371_e_h10_ab.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012154500 +0000" channel="705">
+    <title lang="es">Monk</title>
+    <desc lang="es">Cuando el director de pista de un circo es asesinado por un atrevido volante, claves indican su ex esposa acrobática y vengativa, pero ella sufre de un pies roto.</desc>
+    <category lang="es">Crime drama</category>
+    <category lang="es">Comedy</category>
+    <sub-title lang="es">El señor Monk va al circo</sub-title>
+    <episode-num system="xmltv_ns">S2E4</episode-num>
+    <rating>
+      <value>TVPG</value>
+    </rating>
+    <date>20030718</date>
+    <icon src="http://dshm.tmsimg.com/assets/p2689373_e_v8_ab.jpg" />
+  </programme>
   <channel id="726">
     <display-name>DSCIENL</display-name>
     <display-name>401</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s48527_h3_ba.png" />
   </channel>
-  <programme start="20251010141200 +0000" stop="20251010150000 +0000" channel="726">
-    <title lang="es">Contacto alienígena</title>
-    <desc lang="es">Paul y Kawa investigan un sitio donde se estrelló un ovni en Argentina y los relatos de los testigos que afirman haber visto hombres de negro. Sarah y Nick rastrean una serie de ovnis en Phoenix y un choque en 1947 relacionado con Roswell.</desc>
-    <category lang="es">Documentary</category>
-    <category lang="es">Science</category>
-    <category lang="es">Paranormal</category>
-    <sub-title lang="es">Los verdaderos hombres de negro</sub-title>
-    <episode-num system="xmltv_ns">S1E4</episode-num>
-    <rating>
-      <value>TVPG</value>
-    </rating>
-    <date>20190828</date>
-    <icon src="http://dshm.tmsimg.com/assets/p17134652_e_v8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010154800 +0000" channel="726">
     <title lang="es">Moonshiners</title>
     <desc lang="es">Josh y Big Chuck establecen un nuevo lugar secreto donde guardar sus provisiones. Mark y Digger se aventuran en el territorio de las Montañas Humeantes y se dirigen a la gran ciudad para hacer la mayor venta de su carrera.</desc>
@@ -6503,24 +6499,23 @@
     <date>20101020</date>
     <icon src="http://dshm.tmsimg.com/assets/p8292523_b_v8_ad.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012154800 +0000" channel="726">
+    <title lang="es">Gigantes de la Industria Americana</title>
+    <desc lang="es">John D. Rockefeller, rey del keroseno, y Thomas Scott, visionario del ferrocarril de Pensilvania lucharon por controlar la industria petrolera de Estados Unidos.</desc>
+    <category lang="es">History</category>
+    <sub-title lang="es">Rockefeller vs. Scott</sub-title>
+    <episode-num system="xmltv_ns">S1E2</episode-num>
+    <rating>
+      <value>TVPG</value>
+    </rating>
+    <date>20150811</date>
+    <icon src="http://dshm.tmsimg.com/assets/p11967523_e_h10_ac.jpg" />
+  </programme>
   <channel id="727">
     <display-name>FOODNET</display-name>
     <display-name>246</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s44718_ll_h8_ab.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="727">
-    <title lang="es">Paul Hollywood City Bakes</title>
-    <desc lang="es">In Copenhagen, Paul meets Mette Blomsterberg, a local baker and celebrity. She teaches him how to make kranskake, a tower of delicious almond cookies, that's easy to make, yet impressive enough as a centrepiece for any special occasion.</desc>
-    <category lang="es">Cooking</category>
-    <category lang="es">Travel</category>
-    <sub-title lang="es">Copenhagen</sub-title>
-    <episode-num system="xmltv_ns">S1E6</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-    <date>20160502</date>
-    <icon src="http://dshm.tmsimg.com/assets/p12722505_e_v8_ac.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="727">
     <title lang="es">The Pioneer Woman</title>
     <desc lang="es">Ree Drummond's favourite women are visiting her new house. She makes mini pineapple shrimp tostadas and bacon-wrapped baby potatoes for bite-sized apps before whipping up boozy chocolate trifles and blackberry blood orange mojitos.</desc>
@@ -7621,6 +7616,19 @@
     </rating>
     <date>20161005</date>
     <icon src="http://dshm.tmsimg.com/assets/p13316449_e_v8_aa.jpg" />
+  </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="727">
+    <title lang="es">Great British Railway Journeys</title>
+    <desc lang="es">Michael Portillo arrives in Littlehampton, where he discovers how Victorian engineers dug deep to defend the town's residents from cholera and learns how their drills still access clean water around the world.</desc>
+    <category lang="es">Documentary</category>
+    <category lang="es">Travel</category>
+    <sub-title lang="es">Littlehampton to Beaulieu</sub-title>
+    <episode-num system="xmltv_ns">S7E8</episode-num>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20160113</date>
+    <icon src="http://dshm.tmsimg.com/assets/p12452989_e_h10_aa.jpg" />
   </programme>
   <channel id="728">
     <display-name>HGTVLA</display-name>
@@ -8786,20 +8794,6 @@
     <display-name>540</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s64046_h3_ba.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="734">
-    <title lang="es">Fishing 411</title>
-    <desc lang="es">Off Shore anglers converge on the Niagara Bar to target trout and salmon in the spring time.</desc>
-    <category lang="es">Fishing</category>
-    <category lang="es">Documentary</category>
-    <category lang="es">Entertainment</category>
-    <sub-title lang="es">The Salmon of the Niagara Bar</sub-title>
-    <episode-num system="xmltv_ns">S8E10</episode-num>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20240308</date>
-    <icon src="http://dshm.tmsimg.com/assets/p9647793_b_h8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="734">
     <title lang="es">Bill Dance Outdoors</title>
     <desc lang="es">Bill goes back to the basics bank fishing with live bait for catfish sharing his knowledge and angling passion with his young buddy.</desc>
@@ -9781,23 +9775,24 @@
     <date>20251011</date>
     <icon src="http://dshm.tmsimg.com/assets/p25763401_b_v12_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="734">
+    <title lang="es">MLF All Angles</title>
+    <desc lang="es">All Angles inside look at the MLF Team Series 2025 Patriot Cup Elimination Match 2 with angler commentary.</desc>
+    <category lang="es">Outdoors</category>
+    <category lang="es">Fishing</category>
+    <sub-title lang="es">Inside the 2025 Patriot Cup - Elimination Match 2</sub-title>
+    <episode-num system="xmltv_ns">S10E14</episode-num>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20250412</date>
+    <icon src="http://dshm.tmsimg.com/assets/p12509750_b_v12_ab.jpg" />
+  </programme>
   <channel id="736">
     <display-name>NOVELIS</display-name>
     <display-name>242</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s120979_ll_h8_aa.png" />
   </channel>
-  <programme start="20251010140000 +0000" stop="20251010150000 +0000" channel="736">
-    <title lang="es">Las amazonas</title>
-    <desc lang="es">La historia de un gran amor entre dos personas de pueblo que por jugadas del destino, y la maldad de Loreto, se vieron separadas y vueltas a reunir por la fuerza de su amor.</desc>
-    <category lang="es">Soap</category>
-    <category lang="es">Drama</category>
-    <category lang="es">Romance</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20160516</date>
-    <icon src="http://dshm.tmsimg.com/assets/p12862451_b_h10_ab.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="736">
     <title lang="es">Mundo de fieras</title>
     <desc lang="es">Gabriel y Damián, dos hermanos gemelos, volverán a unir sus vidas tras haber sido separados durante su niñez.</desc>
@@ -10303,6 +10298,15 @@
     <icon src="http://dshm.tmsimg.com/assets/p399730_b_h10_aa.jpg" />
   </programme>
   <programme start="20251012140000 +0000" stop="20251012150000 +0000" channel="736">
+    <title lang="es">Hechizo de Amor</title>
+    <category lang="es">Soap</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20000613</date>
+    <icon src="http://dshm.tmsimg.com/assets/p399730_b_h10_aa.jpg" />
+  </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="736">
     <title lang="es">Hechizo de Amor</title>
     <category lang="es">Soap</category>
     <rating>
@@ -11151,6 +11155,19 @@
     </rating>
     <date>20160704</date>
     <icon src="http://dshm.tmsimg.com/assets/p13048173_b_v8_ab.jpg" />
+  </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="761">
+    <title lang="es">El diario de Diana</title>
+    <desc lang="es">Junto a entrevistas a diferentes expertos, lecciones sobre cómo armonizar todas las áreas de la vida, manejar las emociones y cambiar creencias para entender la felicidad como una oportunidad de vivir a plenitud.</desc>
+    <category lang="es">Entertainment</category>
+    <category lang="es">Interview</category>
+    <category lang="es">Newsmagazine</category>
+    <category lang="es">Variety</category>
+    <rating>
+      <value>TVG</value>
+    </rating>
+    <date>20090820</date>
+    <icon src="http://dshm.tmsimg.com/assets/p7817740_b_v8_ac.jpg" />
   </programme>
   <channel id="762">
     <display-name>DOCUBL</display-name>
@@ -12209,14 +12226,6 @@
     <display-name>262</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s78762_h3_ba.png" />
   </channel>
-  <programme start="20251010140000 +0000" stop="20251010150000 +0000" channel="763">
-    <title lang="es">Look</title>
-    <category lang="es">Entertainment</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <icon src="http://dshm.tmsimg.com/assets/p12244930_st_h10_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="763">
     <title lang="es">Cities</title>
     <desc lang="es">Fashion Box analiza las últimas tendencias de la moda urbana.</desc>
@@ -12816,20 +12825,21 @@
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p12244930_st_h10_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="763">
+    <title lang="es">Cities</title>
+    <desc lang="es">Fashion Box analiza las últimas tendencias de la moda urbana.</desc>
+    <category lang="es">Fashion</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20130102</date>
+    <icon src="http://edge.prod.ovp.ses.com:7780/xtv-ws-client/images/stripe_default_large_unfocused.png" />
+  </programme>
   <channel id="764">
     <display-name>FUEL</display-name>
     <display-name>542</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s116115_ld_h8_aa.png" />
   </channel>
-  <programme start="20251010140000 +0000" stop="20251010150000 +0000" channel="764">
-    <title lang="es">Movie</title>
-    <desc lang="es">Movie to be announced.</desc>
-    <category lang="es">Entertainment</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <icon src="http://dshm.tmsimg.com/assets/p809737_b_v12_bp.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="764">
     <title lang="es">Thrillbillies</title>
     <desc lang="es">Revisiting the most misguided adventures, ridiculous stunts and golden moments.</desc>
@@ -13794,36 +13804,21 @@
     <date>20240406</date>
     <icon src="http://dshm.tmsimg.com/assets/p26823918_b_h8_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012155000 +0000" channel="764">
+    <title lang="es">iDabble VM</title>
+    <desc lang="es">Mark Appleyard hosts a quarterly video magazine dedicated to covering the ins and outs of skateboarding and the culture surrounding it.</desc>
+    <category lang="es">Skateboarding</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20230723</date>
+    <icon src="http://dshm.tmsimg.com/assets/p24901212_b_v12_ab.jpg" />
+  </programme>
   <channel id="766">
     <display-name>TV5MHD</display-name>
     <display-name>280</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s95641_ld_h8_ab.png" />
   </channel>
-  <programme start="20251010145100 +0000" stop="20251010145500 +0000" channel="766">
-    <title lang="es">La minute de Max Bird</title>
-    <desc lang="es">Le lion est un grand félin social vivant en groupe. Les mâles dominants protègent le groupe, mais sont souvent remplacés...</desc>
-    <category lang="es">Animals</category>
-    <category lang="es">Science</category>
-    <sub-title lang="es">Le lion</sub-title>
-    <episode-num system="xmltv_ns">S1E4</episode-num>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20250714</date>
-    <icon src="http://dshm.tmsimg.com/assets/p30609278_e_h10_aa.jpg" />
-  </programme>
-  <programme start="20251010145500 +0000" stop="20251010145800 +0000" channel="766">
-    <title lang="es">Vestiaires</title>
-    <desc lang="es">Palparocket Rolland se présente à la journaliste non voyante Sophie de façon plutôt lourde.</desc>
-    <category lang="es">Entertainment</category>
-    <category lang="es">Comedy</category>
-    <sub-title lang="es">Palparocket</sub-title>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20211002</date>
-    <icon src="http://dshm.tmsimg.com/assets/p25340619_e_v8_aa.jpg" />
-  </programme>
   <programme start="20251010145800 +0000" stop="20251010151600 +0000" channel="766">
     <title lang="es">L'éthique helvétique</title>
     <desc lang="es">Tristan Miquel et Julien Girardin questionnent les enjeux éthiques et philosophiques de la société. Cette série dresse des parallèles entre le passé et le présent afin de stimuler la réflexion sur les différents courants de pensées.</desc>
@@ -14954,22 +14949,34 @@
     <date>20210308</date>
     <icon src="http://dshm.tmsimg.com/assets/p19569077_b_v11_ab.jpg" />
   </programme>
+  <programme start="20251012085500 +0000" stop="20251012091800 +0000" channel="766">
+    <title lang="es">Le match dans le match</title>
+    <desc lang="es">C'est l'un des plus gros tournois de tennis pour les joueurs de 18 ans ou moins : retour sur l'histoire du tournoi ITF de Beaulieu-sur-Mer avec son directeur, Christophe Ribero.</desc>
+    <category lang="es">Interview</category>
+    <category lang="es">Biography</category>
+    <sub-title lang="es">Christophe Ribero</sub-title>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20250712</date>
+    <icon src="http://dshm.tmsimg.com/assets/p28104960_b_v12_aa.jpg" />
+  </programme>
+  <programme start="20251012091800 +0000" stop="20251012102700 +0000" channel="766">
+    <title lang="es">C dans l'air</title>
+    <desc lang="es">Débat réalisé en direct sur un thème précis de l'actualité politique, sociale, économique ou culturelle, qui permet à quatre invités, spécialistes du sujet, d'échanger leurs analyses et opinions.</desc>
+    <category lang="es">Newsmagazine</category>
+    <category lang="es">Public affairs</category>
+    <rating>
+      <value>TVG</value>
+    </rating>
+    <date>20010917</date>
+    <icon src="http://dshm.tmsimg.com/assets/p8224172_b_v8_ab.jpg" />
+  </programme>
   <channel id="769">
     <display-name>FSALPHD</display-name>
     <display-name>504</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s41677_ld_h8_ac.png" />
   </channel>
-  <programme start="20251010140000 +0000" stop="20251010150000 +0000" channel="769">
-    <title lang="es">Central Fox</title>
-    <desc lang="es">Noticiero de deportes con las últimas novedades del acontecer deportivo a nivel mundial.</desc>
-    <category lang="es">Sports talk</category>
-    <category lang="es">News</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>19980809</date>
-    <icon src="http://dshm.tmsimg.com/assets/p16071833_b_v8_ae.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="769">
     <title lang="es">La última palabra</title>
     <desc lang="es">Programa de debate y polémica sobre el fútbol.</desc>
@@ -15442,21 +15449,22 @@
     <date>20120101</date>
     <icon src="http://dshm.tmsimg.com/assets/p12797355_b_h10_af.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="769">
+    <title lang="es">49ers Insights</title>
+    <desc lang="es">Entrevistas e imágenes exclusivas en esta previa rumbo al juego de los San Francisco 49ers.</desc>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Football</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20240907</date>
+    <icon src="http://dshm.tmsimg.com/assets/p28232446_b_v8_aa.jpg" />
+  </programme>
   <channel id="770">
     <display-name>FOXS2</display-name>
     <display-name>505</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s66365_ld_h8_ab.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="770">
-    <title lang="es">FOX Fit</title>
-    <desc lang="es">Ejercicios y rutinas de trabajo para obtener un cuerpo perfecto de forma sencilla y amena. Todo ello de la mano de expertas consagradas en el mundo del fitness.</desc>
-    <category lang="es">Exercise</category>
-    <rating>
-      <value>TVG</value>
-    </rating>
-    <date>20150427</date>
-    <icon src="http://dshm.tmsimg.com/assets/p11727241_b_v8_ac.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010180000 +0000" channel="770">
     <title lang="es">Fútbol Americano NFL</title>
     <desc lang="es">Eagles se enfrenta a Giants en una nueva edición de una rivalidad que data de 1933, con un total de 185 partidos disputados. Philadelphia domina la serie 95-88-2.</desc>
@@ -15815,6 +15823,17 @@
     </rating>
     <date>20240907</date>
     <icon src="http://dshm.tmsimg.com/assets/p28232446_b_v8_aa.jpg" />
+  </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="770">
+    <title lang="es">NFL GameDay</title>
+    <desc lang="es">Aspectos destacados; conferencias de prensa después del juego; entrevistas y análisis.</desc>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Football</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20060910</date>
+    <icon src="http://dshm.tmsimg.com/assets/p267704_b_v8_ad.jpg" />
   </programme>
   <channel id="771">
     <display-name>FSP3</display-name>
@@ -17713,15 +17732,6 @@
     <display-name>412</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s59014_h3_ba.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="803">
-    <title lang="es">Ideas on Stage</title>
-    <desc lang="es">Lo mejor del contenido presentado en los eventos de WOBI.</desc>
-    <category lang="es">Bus./financial</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <icon src="http://dshm.tmsimg.com/assets/p12806259_b_h8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="803">
     <title lang="es">Mark it</title>
     <desc lang="es">Serie que revisa los temas más relevantes para el marketing de hoy. Cómo hacer marketing para chicos, cómo vender a las mujeres, el poder de las ideas, por qué venden las celebridades, en qué consiste el marketing del entretenimiento y mucho más.</desc>
@@ -18660,20 +18670,21 @@
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p12806259_b_h8_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="803">
+    <title lang="es">Mark it</title>
+    <desc lang="es">Serie que revisa los temas más relevantes para el marketing de hoy. Cómo hacer marketing para chicos, cómo vender a las mujeres, el poder de las ideas, por qué venden las celebridades, en qué consiste el marketing del entretenimiento y mucho más.</desc>
+    <category lang="es">Bus./financial</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20111010</date>
+    <icon src="http://dshm.tmsimg.com/assets/p8889456_b_v8_ab.jpg" />
+  </programme>
   <channel id="805">
     <display-name>FILMBOX</display-name>
     <display-name>732</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s83525_h3_ba.png" />
   </channel>
-  <programme start="20251010143500 +0000" stop="20251010150000 +0000" channel="805">
-    <title lang="es">Breath</title>
-    <desc lang="es">Lizon dreams of a party for her ninth birthday and the fact that she lives with her mother in a car is, to her, completely irrelevant.</desc>
-    <category lang="es">Drama</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <icon src="http://dshm.tmsimg.com/assets/p11587686_i_h10_ab.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="805">
     <title lang="es">Sherlock - Terror By Night</title>
     <desc lang="es">Lady Margaret and her son Roland hire Sherlock Holmes to go to Scotland to protect their Star of Rhodesia. When Roland is killed and the Star is stolen, Holmes and Dr. Watson investigate, discovering another murder.</desc>
@@ -19172,17 +19183,6 @@
     <display-name>270</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s79893_h3_ba.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="807">
-    <title lang="es">Latin Angels</title>
-    <desc lang="es">Los destinos más increíbles y exclusivos de todo el mundo presentados por las mujeres latinas más bellas.</desc>
-    <category lang="es">Travel</category>
-    <category lang="es">Documentary</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20180601</date>
-    <icon src="http://dshm.tmsimg.com/assets/p15416707_b_v8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="807">
     <title lang="es">Top 10</title>
     <desc lang="es">Conteo semanal con lo mejor de la música hispana y mundial.</desc>
@@ -19876,21 +19876,20 @@
     <date>20180601</date>
     <icon src="http://dshm.tmsimg.com/assets/p15416707_b_v8_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="807">
+    <title lang="es">Top 10</title>
+    <desc lang="es">Conteo semanal con lo mejor de la música hispana y mundial.</desc>
+    <category lang="es">Entertainment</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <icon src="http://dshm.tmsimg.com/assets/p21914926_b_h8_aa.jpg" />
+  </programme>
   <channel id="808">
     <display-name>LANGELS</display-name>
     <display-name>268</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s106396_ld_h8_aa.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="808">
-    <title lang="es">Latin angels travel</title>
-    <desc lang="es">Nuestras latin angels viajan alrededor del mundo.</desc>
-    <category lang="es">Entertainment</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20121205</date>
-    <icon src="http://dshm.tmsimg.com/assets/p14902855_b_h11_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="808">
     <title lang="es">Latin angels mix</title>
     <desc lang="es">Deportes, vida nocturna, detrás de cámaras.</desc>
@@ -20838,26 +20837,21 @@
     <date>20220701</date>
     <icon src="http://dshm.tmsimg.com/assets/p22635782_b_h8_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="808">
+    <title lang="es">Dress Code</title>
+    <desc lang="es">Consejos de moda originales, prácticos y útiles, con la creación de manualidades, farándula y entrevistas. Además consejos básicos y opciones para combinar prendas, sin importar la ocasión o temporada.</desc>
+    <category lang="es">Special</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20090211</date>
+    <icon src="http://dshm.tmsimg.com/assets/p658457_st_v8_aa.jpg" />
+  </programme>
   <channel id="809">
     <display-name>FIXFXS</display-name>
     <display-name>365</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s119825_ld_h8_aa.png" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="809">
-    <title lang="es">Fix y Foxi</title>
-    <desc lang="es">El pomposo hermano mayor del tío Fax, un famoso explorador, llega a la ciudad y se lleva a Fax, Fix &amp; Foxi y Lupini a dar un paseo por el bosque, presumiendo y menospreciando a su hermano en el proceso.</desc>
-    <category lang="es">Children</category>
-    <category lang="es">Fantasy</category>
-    <category lang="es">Comedy</category>
-    <category lang="es">Action</category>
-    <category lang="es">Animated</category>
-    <sub-title lang="es">Fax el intrépido</sub-title>
-    <rating>
-      <value>TVG</value>
-    </rating>
-    <date>20000226</date>
-    <icon src="http://dshm.tmsimg.com/assets/p8295266_e_v8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="809">
     <title lang="es">Crocadoo</title>
     <desc lang="es">Los cocodrilos están inundados de turistas. Todos toman fotografías y dejan basura. Billy y los cocodrilos se hartan y deciden deshacerse de los turistas.</desc>
@@ -22162,6 +22156,20 @@
     <date>20110820</date>
     <icon src="http://dshm.tmsimg.com/assets/p13500746_e_h10_ab.jpg" />
   </programme>
+  <programme start="20251012040000 +0000" stop="20251012043000 +0000" channel="809">
+    <title lang="es">Da Boom Crew</title>
+    <desc lang="es">Los miembros del Boom Crew suben a lo alto de una estatua gigante para ayudar a unos alienígenas desesperados, allí se encuentran con una chica alienígena que esconde un secreto.</desc>
+    <category lang="es">Children</category>
+    <category lang="es">Science fiction</category>
+    <category lang="es">Animated</category>
+    <sub-title lang="es">Una estatua con grandes retos</sub-title>
+    <episode-num system="xmltv_ns">S1E2</episode-num>
+    <rating>
+      <value>TVY7</value>
+    </rating>
+    <date>20040918</date>
+    <icon src="http://dshm.tmsimg.com/assets/p3044509_e_v8_aa.jpg" />
+  </programme>
   <channel id="814">
     <display-name>ANTMOT</display-name>
     <display-name>546</display-name>
@@ -23407,18 +23415,6 @@
     <display-name>306</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s89006_ld_h8_ab.png" />
   </channel>
-  <programme start="20251010090000 +0000" stop="20251010150000 +0000" channel="822">
-    <title lang="es">Club Classics</title>
-    <desc lang="es">MTV brings you the ultimate dance compilation: non-stop anthems from the old school to the new.</desc>
-    <category lang="es">Special</category>
-    <category lang="es">Entertainment</category>
-    <category lang="es">Music</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20250915</date>
-    <icon src="http://dshm.tmsimg.com/assets/p30874215_b_h8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="822">
     <title lang="es">Club Classics</title>
     <desc lang="es">MTV brings you the ultimate dance compilation: non-stop anthems from the old school to the new.</desc>
@@ -23605,6 +23601,17 @@
     </rating>
     <date>20220121</date>
     <icon src="http://dshm.tmsimg.com/assets/p21405605_b_h8_aa.jpg" />
+  </programme>
+  <programme start="20251012150000 +0000" stop="20251012190000 +0000" channel="822">
+    <title lang="es">Calvin Harris: Hit 50!</title>
+    <desc lang="es">Taking a look at the 50 of Calvin Harris' biggest dance bangers.</desc>
+    <category lang="es">Special</category>
+    <category lang="es">Music</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20250414</date>
+    <icon src="http://dshm.tmsimg.com/assets/p29649020_b_v12_aa.jpg" />
   </programme>
   <channel id="963">
     <display-name>TVE</display-name>
@@ -24208,15 +24215,6 @@
     <display-name>231</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s106724_ll_h8_ab.png" />
   </channel>
-  <programme start="20251010144500 +0000" stop="20251010150000 +0000" channel="964">
-    <title lang="es">Zoom Net Express</title>
-    <category lang="es">News</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20250108</date>
-    <icon src="http://dshm.tmsimg.com/assets/p29197384_b_h8_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="964">
     <title lang="es">Servir y proteger</title>
     <desc lang="es">La investigación sobre El Fantasma da un giro inesperado. Boi consigue trabajo en Chollos Galván. A Cata le otorgan el tercer grado. Lorenzo le consigue un auto a Noemi, pero eso causa problemas con Isidro.</desc>
@@ -24826,36 +24824,23 @@
     <date>20221003</date>
     <icon src="http://dshm.tmsimg.com/assets/p23105090_b_h10_ab.jpg" />
   </programme>
+  <programme start="20251012145700 +0000" stop="20251012155500 +0000" channel="964">
+    <title lang="es">Servir y proteger</title>
+    <desc lang="es">Cata le cuenta a Hanna que Vega controla la banda de Rebeca. Además, Saúl decide aceptar la propuesta de trabajo de su tío, lo que provoca el enfado de Isidro.</desc>
+    <category lang="es">Crime</category>
+    <category lang="es">Drama</category>
+    <episode-num system="xmltv_ns">S1E1307</episode-num>
+    <rating>
+      <value>TVG</value>
+    </rating>
+    <date>20220929</date>
+    <icon src="http://dshm.tmsimg.com/assets/p22857880_e_v8_aa.jpg" />
+  </programme>
   <channel id="965">
     <display-name>CLAN</display-name>
     <display-name>366</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s110045_ld_h8_aa.png" />
   </channel>
-  <programme start="20251010144000 +0000" stop="20251010145600 +0000" channel="965">
-    <title lang="es">Kemy</title>
-    <desc lang="es">Kemy es un simpático y curioso dinosaurio que junto a sus amigos vivirá aventuras que les ayudarán a responder diferentes preguntas.</desc>
-    <category lang="es">Children</category>
-    <category lang="es">Fantasy</category>
-    <category lang="es">Educational</category>
-    <category lang="es">Animated</category>
-    <rating>
-      <value>TVG</value>
-    </rating>
-    <date>20110228</date>
-    <icon src="http://dshm.tmsimg.com/assets/p11027889_b_h10_aa.jpg" />
-  </programme>
-  <programme start="20251010145600 +0000" stop="20251010150900 +0000" channel="965">
-    <title lang="es">Misha, la gata violeta</title>
-    <desc lang="es">Misha es una gatita joven y un poco rebelde. Tiene todas las características de un felino, y también tiene muchas ganas de aprender. Su frase favorita es: ¿Y por qué?</desc>
-    <category lang="es">Children</category>
-    <category lang="es">Adventure</category>
-    <category lang="es">Educational</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <date>20140915</date>
-    <icon src="http://dshm.tmsimg.com/assets/p11239160_b_h8_aa.jpg" />
-  </programme>
   <programme start="20251010150900 +0000" stop="20251010152300 +0000" channel="965">
     <title lang="es">Misha, la gata violeta</title>
     <desc lang="es">Misha es una gatita joven y un poco rebelde. Tiene todas las características de un felino, y también tiene muchas ganas de aprender. Su frase favorita es: ¿Y por qué?</desc>
@@ -26135,6 +26120,30 @@
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p16885791_b_v8_ab.jpg" />
   </programme>
+  <programme start="20251011135000 +0000" stop="20251011135900 +0000" channel="965">
+    <title lang="es">Osito Gominola</title>
+    <desc lang="es">El osito Gominola y sus amigos tienen aventuras divertidas.</desc>
+    <category lang="es">Children</category>
+    <category lang="es">Adventure</category>
+    <category lang="es">Animated</category>
+    <rating>
+      <value>TVY</value>
+    </rating>
+    <icon src="http://dshm.tmsimg.com/assets/p16885791_b_v8_ab.jpg" />
+  </programme>
+  <programme start="20251011135900 +0000" stop="20251011141400 +0000" channel="965">
+    <title lang="es">Kemy</title>
+    <desc lang="es">Kemy es un simpático y curioso dinosaurio que junto a sus amigos vivirá aventuras que les ayudarán a responder diferentes preguntas.</desc>
+    <category lang="es">Children</category>
+    <category lang="es">Fantasy</category>
+    <category lang="es">Educational</category>
+    <category lang="es">Animated</category>
+    <rating>
+      <value>TVG</value>
+    </rating>
+    <date>20110228</date>
+    <icon src="http://dshm.tmsimg.com/assets/p11027889_b_h10_aa.jpg" />
+  </programme>
   <channel id="1062">
     <display-name>CANU</display-name>
     <display-name>13</display-name>
@@ -26281,22 +26290,6 @@
     <display-name>19</display-name>
     <icon src="http://192.0.2.70:7780/xtv-ws-client/api/content/thumbnail/asset/1709642" />
   </channel>
-  <programme start="20251010143000 +0000" stop="20251010150000 +0000" channel="1141">
-    <title lang="es">Ni AM, ni FM, ni Mp3</title>
-    <desc lang="es">Se presentan entrevistas testimoniales sobre temas médicos y las luchas personales de quienes buscan salir adelante con la ayuda del Señor.</desc>
-    <category lang="es">Medical</category>
-    <category lang="es">Health</category>
-    <category lang="es">Interview</category>
-    <category lang="es">Religious</category>
-    <category lang="es">Self improvement</category>
-    <sub-title lang="es">Medicina natural</sub-title>
-    <episode-num system="xmltv_ns">S1E19</episode-num>
-    <rating>
-      <value>TVPG</value>
-    </rating>
-    <date>20250619</date>
-    <icon src="http://dshm.tmsimg.com/assets/p20576542_b_h10_ab.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="1141">
     <title lang="es">Perspectiva católica</title>
     <desc lang="es">Un programa que aborda la actualidad del mundo y de la iglesia desde una perspectiva católica.</desc>
@@ -27256,6 +27249,17 @@
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p482063_b_h10_aa.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="1141">
+    <title lang="es">El mensaje de Fátima</title>
+    <desc lang="es">En el año de 1917 sucedió una de las intervenciones más importantes sobre la tierra desde los tiempos bíblicos, en Fátima, Portugal.</desc>
+    <category lang="es">Religious</category>
+    <sub-title lang="es">El milagro del sol</sub-title>
+    <rating>
+      <value>TVPG</value>
+    </rating>
+    <date>20170613</date>
+    <icon src="http://dshm.tmsimg.com/assets/p14183874_b_h10_aa.jpg" />
+  </programme>
   <channel id="1361">
     <display-name>ENLACE</display-name>
     <display-name>35</display-name>
@@ -28063,21 +28067,22 @@
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p459763_b_h8_bs.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="1445">
+    <title lang="es">Programa pagado</title>
+    <desc lang="es">Programa que muestra diversos productos para la venta.</desc>
+    <category lang="es">Shopping</category>
+    <category lang="es">Consumer</category>
+    <category lang="es">Variety</category>
+    <rating>
+      <value>TVG</value>
+    </rating>
+    <icon src="http://dshm.tmsimg.com/assets/p459763_b_h8_bs.jpg" />
+  </programme>
   <channel id="1447">
     <display-name>TXMEXHD</display-name>
     <display-name>48</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s28440_h3_ba.png" />
   </channel>
-  <programme start="20251010133000 +0000" stop="20251010150000 +0000" channel="1447">
-    <title lang="es">Conferencia matutina del presidente de México</title>
-    <desc lang="es">Transmisión de la conferencia de la presidenta Claudia Sheinbaum Pardo, en vivo desde el Palacio Nacional.</desc>
-    <category lang="es">Special</category>
-    <category lang="es">Politics</category>
-    <rating>
-      <value>NR</value>
-    </rating>
-    <icon src="http://dshm.tmsimg.com/assets/p17208764_b_h8_ab.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010153000 +0000" channel="1447">
     <title lang="es">Fiestas mágicas</title>
     <desc lang="es">La magia y el valor turístico de los pueblos, su cultura, historia, simbolismo y tradiciones que se mantienen intactas a través del tiempo.</desc>
@@ -28690,22 +28695,21 @@
     <date>20180107</date>
     <icon src="http://dshm.tmsimg.com/assets/p14556233_b_h8_ab.jpg" />
   </programme>
+  <programme start="20251012150000 +0000" stop="20251012160000 +0000" channel="1447">
+    <title lang="es">Otro Stylo para cocinar</title>
+    <desc lang="es">Un espacio en el que se enseñan a preparar recetas prácticas y fáciles.</desc>
+    <category lang="es">Cooking</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>20160705</date>
+    <icon src="http://dshm.tmsimg.com/assets/p13048139_b_v11_ab.jpg" />
+  </programme>
   <channel id="1451">
     <display-name>ESNE</display-name>
     <display-name>52</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s46421_ld_h10_aa.png" />
   </channel>
-  <programme start="20251010140000 +0000" stop="20251010150000 +0000" channel="1451">
-    <title lang="es">Palabras que edifican</title>
-    <desc lang="es">Programa dedicado a las conferencias que Noel Díaz ha impartido en diferentes eventos durante los últimos 36 años en Los Ángeles, California, así como en misiones en Estados Unidos y Latinoamérica, como parte de su apostolado de evangelización.</desc>
-    <category lang="es">Religious</category>
-    <category lang="es">Interview</category>
-    <rating>
-      <value>TVG</value>
-    </rating>
-    <date>20110601</date>
-    <icon src="http://dshm.tmsimg.com/assets/p8701278_b_h10_aa.jpg" />
-  </programme>
   <programme start="20251010150000 +0000" stop="20251010160000 +0000" channel="1451">
     <title lang="es">Enamórate</title>
     <desc lang="es">Consejos sobre los temas más importantes sobre la familia bajo la enseñanza de la palabra de Dios.</desc>
@@ -29316,5 +29320,16 @@
     </rating>
     <date>20120606</date>
     <icon src="http://dshm.tmsimg.com/assets/p9268845_b_h8_ac.jpg" />
+  </programme>
+  <programme start="20251012150000 +0000" stop="20251012153000 +0000" channel="1451">
+    <title lang="es">Educación y Conciencia</title>
+    <category lang="es">Religious</category>
+    <category lang="es">Educational</category>
+    <category lang="es">Interview</category>
+    <rating>
+      <value>TVY</value>
+    </rating>
+    <date>20150818</date>
+    <icon src="http://dshm.tmsimg.com/assets/p12066432_b_h10_aa.jpg" />
   </programme>
 </tv>
