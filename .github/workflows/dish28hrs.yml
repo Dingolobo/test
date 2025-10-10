@@ -36,8 +36,9 @@ jobs:
       run: |
         git add dish.xml
         if ! git diff --cached --quiet; then
-          git commit -m "Actualizado - [$(TZ="America/Cancun" date +"%d-%m-%Y %H:%M GMT-5")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
-          git push
+          git commit -m "Actualizado - [$(TZ=\"America/Cancun\" date +\"%d-%m-%Y %H:%M GMT-5\")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
+          git pull --rebase origin main  # Tu adición: sincroniza remotos antes de push
+          git push origin main  # Especifica el branch para claridad (en lugar de git push implícito)
         else
           echo "No hay cambios para commitear"
         fi
