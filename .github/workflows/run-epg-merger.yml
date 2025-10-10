@@ -2,7 +2,7 @@ name: Merge EPG XML
 
 on:
   schedule:
-    - cron: '20 11 * * *' #Se ejecuta a las 11:20 AM UTC = 6:20 AM -5 GMT
+    - cron: '20 11 * * *' #Se ejecuta a las 11:20 AM UTC = 6:20 AM GMT-5
   workflow_dispatch:  # Permite ejecución manual desde la UI de GitHub
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
         if git diff --staged --quiet; then
           echo "No changes to commit."
         else
-          git commit -m "Actualizado EPG mergeado - $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Actualizado - [$(TZ="America/Cancun" date +"%d-%m-%Y %H:%M GMT-5")] - [$(date +'%d-%m-%Y %H:%M UTC')]"
           git push
         fi
       env:
