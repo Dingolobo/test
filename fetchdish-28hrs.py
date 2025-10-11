@@ -5,10 +5,15 @@ import xml.dom.minidom
 from playwright.async_api import async_playwright
 import json
 import re  # Para manipular la URL del thumbnail
+import requests  # Para verificar existencia de imágenes
+from requests.exceptions import RequestException  # Para manejar errores en requests
 
 URL_TEMPLATE = ("https://tvlistings.gracenote.com/api/grid?"
                 "lineupId=MEX-1008175-DEFAULT&timespan=6&headendId=1008175&country=MEX&timezone=&device=-"
                 "&postalCode=&isOverride=true&pref=16,128&userId=-&aid=dishmex&languagecode=es-mx&time={timestamp}")
+
+# Cache global para resultados de verificación de imágenes (url -> bool: existe o no)
+image_cache = {}
 
 async def fetch_multiple(num_fetches=5, interval_seconds=21000):
     """Realiza múltiples fetches de EPG con timestamps incrementales."""
@@ -136,6 +141,29 @@ def merge_epg_data(all_data):
 
     return channels
 
+# Función helper para construir el path del thumbnail con versión específica
+def build_thumbnail(raw, version='h10'):
+    modified = raw.replace('v9', version)
+    return modified + '.jpg?w=600'
+
+# Función para verificar si la imagen existe (HEAD request ligero con cache)
+def image_exists(url, timeout=1):
+    if url in image_cache:
+        return image_cache[url]  # Retorna del cache si ya se verificó
+    
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+        }
+        response = requests.head(url, timeout=timeout, headers=headers, allow_redirects=True)
+        exists = response.status_code == 200
+        image_cache[url] = exists  # Guardar en cache
+        return exists
+    except RequestException:
+        # Si falla (timeout, conexión, etc.), asume no existe para fallback rápido
+        image_cache[url] = False
+        return False
+
 def channels_to_xmltv(channels):
     """Convierte los canales fusionados a formato XMLTV."""
     tv = ET.Element('tv')
@@ -170,11 +198,38 @@ def channels_to_xmltv(channels):
             desc = ET.SubElement(prog, 'desc', lang='es')
             desc.text = program_info.get('shortDesc', '')
 
-            # Poster del programa (thumbnail del event)
-            #event_thumbnail = event.get('thumbnail', '').replace()
-            event_thumbnail = event.get('thumbnail', '').replace('v9', 'h10') + '.jpg?w=600'
-            if event_thumbnail:
-                poster_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}#.jpg"
+            # Poster del programa (thumbnail del event) con fallback
+            thumbnail_raw = event.get('thumbnail', '')
+            poster_url = None
+            if thumbnail_raw:
+                # Intento principal con 'h10'
+                event_thumbnail = build_thumbnail(thumbnail_raw, 'h10')
+                test_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}"
+                
+                if image_exists(test_url):
+                    poster_url = test_url
+                    # print(f"Usando h10 para: {test_url}")  # Opcional: debug
+                else:
+                    # Fallback a 'h9'
+                    event_thumbnail = build_thumbnail(thumbnail_raw, 'h9')
+                    test_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}"
+                    
+                    if image_exists(test_url):
+                        poster_url = test_url
+                        # print(f"Fallback a h9 para: {test_url}")  # Opcional: debug
+                    else:
+                        # Fallback a 'h8'
+                        event_thumbnail = build_thumbnail(thumbnail_raw, 'h8')
+                        test_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}"
+                        
+                        if image_exists(test_url):
+                            poster_url = test_url
+                            # print(f"Fallback a h8 para: {test_url}")  # Opcional: debug
+                        else:
+                            # print(f"Ninguna versión existe para thumbnail_raw: {thumbnail_raw}")  # Opcional: debug
+                            pass  # Omitir icon si nada funciona
+            
+            if poster_url:
                 icon = ET.SubElement(prog, 'icon', src=poster_url)
 
             # Rating
@@ -220,6 +275,9 @@ def save_xmltv(xml_str, filename="dish.xml"):
         f.write(xml_str)
 
 def main():
+    global image_cache  # Asegurar que el cache se use
+    image_cache = {}  # Inicializar cache vacío al inicio
+    
     # Realizar fetches múltiples (5 fetches cubren ~6h + 4*5:50h ≈ 28.33 horas)
     # interval_seconds = 5*3600 + 50*60 = 5 horas 50 min en segundos
     all_epg_data = asyncio.run(fetch_multiple(num_fetches=5, interval_seconds=5*3600 + 50*60))
@@ -241,6 +299,11 @@ def main():
     print(f"Programas totales (sin duplicados): {total_programmes}")
     print(f"Canales con logos: {channels_with_logos}")
     print(f"Programas con posters: {programmes_with_posters}")
+    
+    # Opcional: Estadísticas del cache
+    cache_hits = sum(1 for v in image_cache.values() if v)  # URLs que existen
+    cache_total = len(image_cache)
+    print(f"Verificaciones de imágenes: {cache_total} únicas (de las cuales {cache_hits} existen).")
 
 if __name__ == "__main__":
     main()
