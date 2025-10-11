@@ -23,7 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install playwright
         playwright install chromium
-        pip install requests
 
     - name: Run EPG fetch script
       run: python fetchdish-28hrs.py
