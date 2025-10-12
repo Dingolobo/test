@@ -222,7 +222,7 @@ def save_xmltv(xml_str, filename="dish.xml"):
 def main():
     # Realizar fetches múltiples (5 fetches cubren ~6h + 4*5:50h ≈ 28.33 horas)
     # interval_seconds = 5*3600 + 50*60 = 5 horas 50 min en segundos
-    all_epg_data = asyncio.run(fetch_multiple(num_fetches=5, interval_seconds=5*3600 + 50*60))
+    all_epg_data = asyncio.run(fetch_multiple(num_fetches=4, interval_seconds=5*3600 + 50*60))
     
     # Fusionar datos
     merged_channels = merge_epg_data(all_epg_data)
