@@ -2,7 +2,7 @@ name: Fetch and Merge All EPG Sources
 
 on:
   schedule:
-    - cron: '10 11,21 * * *'  # Se ejecuta a las 11:00 AM UTC = 6:00 AM GMT-5 (todo en uno)
+    - cron: '10 11,23 * * *'  # Se ejecuta a las 11:00 AM UTC = 6:00 AM GMT-5 (todo en uno)
   workflow_dispatch:  # Permite ejecución manual desde GitHub
 
 # Evita ejecuciones concurrentes
