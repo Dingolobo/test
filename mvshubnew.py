@@ -13,8 +13,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 GENERIC_UUID = ["5cc95856-8487-406e-bb67-83f97d24ab5f",
-    "2c841b16-71f5-4e68-886a-63678ae79fb0",
-    "534a757e-5489-4bc2-9915-3c9228482865"]
+                "2c841b16-71f5-4e68-886a-63678ae79fb0",
+                "534a757e-5489-4bc2-9915-3c9228482865"]
 CHANNEL_URL_PREFIX = "https://edge.prod.ovp.ses.com:9443/xtv-ws-client/api/epgcache/list/"
 
 CHANNEL_IDS = [306, 645, 701, 702, 703, 704, 705, 726, 727, 728, 734, 736, 741, 761, 762, 763, 764, 766, 769, 770, 771, 772, 801, 802, 803, 805, 806, 807, 808, 809, 814, 821, 822, 963, 964, 965, 1062, 1141, 1361, 1445, 1447,  1451]
@@ -55,7 +55,8 @@ async def extract_valid_uuid():
                 match = uuid_regex.search(url)
                 if match:
                     uuid = match.group(1)
-                    if uuid == GENERIC_UUID:
+                    #if uuid == GENERIC_UUID:
+                    if uuid in GENERIC_UUID:
                         logger.info(f"UUID genérico detectado en URL: {uuid}, descartando...")
                     else:
                         logger.info(f"UUID válido detectado en URL: {uuid}, guardando...")
