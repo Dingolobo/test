@@ -17,6 +17,7 @@ INVALID_UUIDS = [
     "2c841b16-71f5-4e68-886a-63678ae79fb0",
     "534a757e-5489-4bc2-9915-3c9228482865"  # Agregado del log reciente (da 406)
 ]
+
 CHANNEL_URL_PREFIX = "https://edge.prod.ovp.ses.com:9443/xtv-ws-client/api/epgcache/list/"
 
 CHANNEL_IDS = [306, 645, 701, 702, 703, 704, 705, 726, 727, 728, 734, 736, 741, 761, 762, 763, 764, 766, 769, 770, 771, 772, 801, 802, 803, 805, 806, 807, 808, 809, 814, 821, 822, 963, 964, 965, 1062, 1141, 1361, 1445, 1447,  1451]
@@ -36,8 +37,51 @@ HEADERS_EPG = {
     'pragma': 'no-cache'
 }
 
+def test_fetch_channel_222(uuid):
+    """Función sync para prueba de canal 222 (usada en to_thread)"""
+    offset = int(os.environ.get('TIMEZONE_OFFSET', '0'))
+    now = datetime.utcnow() + timedelta(hours=offset)
+    date_from = int(now.timestamp() * 1000)
+    date_to = int((now + timedelta(days=2)).timestamp() * 1000)
+    
+    session = requests.Session()
+    session.headers.update(HEADERS_EPG)
+    
+    # Llamar a fetch_channel_contents pero solo retornar si es válido (no guardar raw)
+    url_base = f"https://edge.prod.ovp.ses.com:9443/xtv-ws-client/api/epgcache/list/{uuid}/" + "{}/220?page=0&size=100&dateFrom={}&dateTo={}"
+    url = url_base.format(222, date_from, date_to)
+    logger.info(f"Prueba fetch para canal 222 con UUID {uuid}: {url}")
+    
+    try:
+        response = session.get(url, headers=HEADERS_EPG, timeout=15, verify=False)
+        logger.info(f"Status prueba 222: {response.status_code}")
+        
+        if response.status_code != 200:
+            logger.warning(f"Prueba fallida (status {response.status_code}) para UUID {uuid}")
+            return []
+        
+        if len(response.text.strip()) < 100:
+            logger.warning(f"Prueba fallida (respuesta vacía) para UUID {uuid}")
+            return []
+        
+        # Parse rápido sin guardar raw
+        root = ET.fromstring(response.content)
+        ns = "{http://ws.minervanetworks.com/}"
+        contents = root.findall(f".//{ns}content")
+        if contents:
+            logger.info(f"Prueba exitosa: {len(contents)} programas para UUID {uuid}")
+        else:
+            logger.warning(f"Prueba fallida (sin contents) para UUID {uuid}")
+            contents = []
+        return contents
+        
+    except Exception as e:
+        logger.warning(f"Excepción en prueba para UUID {uuid}: {e}")
+        return []
+
 async def extract_valid_uuid():
-    candidate_uuid = None
+    valid_uuid = None
+    detected_invalid_uuids = set()  # Lista dinámica para descartar en este intento
     uuid_regex = re.compile(r"/list/([0-9a-fA-F\-]{36})/")
 
     async with async_playwright() as p:
@@ -45,88 +89,72 @@ async def extract_valid_uuid():
         context = await browser.new_context()
         page = await context.new_page()
 
-        # Evento para detener cuando se encuentra un candidato
+        # Evento para detener cuando se encuentra UUID válido
         stop_listening = asyncio.Event()
 
         async def handle_response(response):
-            nonlocal candidate_uuid
+            nonlocal valid_uuid, detected_invalid_uuids
             if stop_listening.is_set():
-                return  # Ya tenemos candidato, ignorar más
+                return  # Ya válido, ignorar más
             url = response.url
             if url.startswith(CHANNEL_URL_PREFIX):
                 match = uuid_regex.search(url)
                 if match:
                     uuid = match.group(1)
-                    if uuid in INVALID_UUIDS:
-                        logger.info(f"UUID inválido detectado en URL: {uuid}, descartando y esperando uno válido...")
-                    elif candidate_uuid is None:  # Primer no inválido
-                        logger.info(f"UUID candidato detectado en URL: {uuid}, seleccionado para prueba...")
-                        candidate_uuid = uuid
-                        stop_listening.set()  # Detener recolección
+                    if uuid in INVALID_UUIDS or uuid in detected_invalid_uuids:
+                        logger.info(f"UUID descartado (inválido conocido o detectado): {uuid}")
+                        return
+                    else:
+                        logger.info(f"UUID nuevo detectado: {uuid}, probando con fetch de 222...")
+                        # Probar asíncronamente
+                        test_contents = await asyncio.to_thread(test_fetch_channel_222, uuid)
+                        if test_contents and len(test_contents) > 0:
+                            logger.info(f"¡UUID válido confirmado en tiempo real: {uuid}!")
+                            valid_uuid = uuid
+                            stop_listening.set()  # Detener
+                        else:
+                            logger.warning(f"UUID {uuid} falló prueba, agregando como inválido para este intento.")
+                            detected_invalid_uuids.add(uuid)  # Descartar en este intento
 
         page.on("response", handle_response)
 
-        logger.info("Navegando a la página para extraer UUID candidato...")
+        logger.info("Navegando a la página para extraer UUID válido...")
         await page.goto("https://www.mvshub.com.mx/#spa/epg")
 
         try:
-            await page.wait_for_selector("div.page", timeout=15000)  # Aumentado para más paciencia
+            await page.wait_for_selector("div.page", timeout=15000)  # Ligeramente aumentado
             logger.info("Elemento clave cargado, página lista.")
         except TimeoutError:
             logger.warning("No se encontró el elemento clave, continuar igual.")
 
-        # Scroll más agresivo para forzar más fetches (incluyendo el válido después del default)
-        for y in range(0, 2000, 100):  # Hasta 2000px
+        # Scroll para forzar carga (como original)
+        for y in range(0, 1000, 100):
             await page.evaluate(f"window.scrollTo(0, {y})")
-            await asyncio.sleep(0.3)  # Pausa más corta para más iteraciones
+            await asyncio.sleep(0.5)
         await page.evaluate("window.scrollTo(0, 0)")
 
-        # Esperar hasta 20 segundos o hasta encontrar candidato
+        # Esperar hasta 20 segundos o hasta válido
         try:
             await asyncio.wait_for(stop_listening.wait(), timeout=20)
         except asyncio.TimeoutError:
-            logger.warning("Timeout esperando UUID candidato (posiblemente solo defaults capturados).")
+            logger.warning("Timeout esperando UUID válido (solo inválidos detectados).")
 
         await browser.close()
 
-    if candidate_uuid:
-        logger.info(f"UUID candidato extraído: {candidate_uuid}")
+    if valid_uuid:
+        logger.info(f"UUID válido extraído: {valid_uuid}")
     else:
-        logger.warning("No se extrajo UUID candidato (solo inválidos o ninguno).")
-    return candidate_uuid
+        logger.info(f"No se encontró UUID válido en este intento. Inválidos detectados: {len(detected_invalid_uuids)}")
+    return valid_uuid
 
 async def run_with_retries(max_retries=8, retry_delay=3):
     for attempt in range(1, max_retries + 1):
-        logger.info(f"Intento {attempt} para extraer y validar UUID...")
-        
-        # Paso 1: Extraer candidato
+        logger.info(f"Intento {attempt} para extraer UUID válido...")
         uuid = await extract_valid_uuid()
-        if not uuid:
-            logger.warning(f"No se obtuvo UUID candidato en intento {attempt}. Reintentando en {retry_delay}s...")
-            await asyncio.sleep(retry_delay)
-            continue
-        
-        # Paso 2: Probar con fetch de canal 222
-        logger.info(f"Probando UUID candidato {uuid} con fetch de canal 222...")
-        
-        # Computar fechas para la prueba
-        offset = int(os.environ.get('TIMEZONE_OFFSET', '0'))
-        now = datetime.utcnow() + timedelta(hours=offset)
-        date_from = int(now.timestamp() * 1000)
-        date_to = int((now + timedelta(days=2)).timestamp() * 1000)
-        
-        session = requests.Session()
-        session.headers.update(HEADERS_EPG)
-        
-        test_contents = fetch_channel_contents(222, date_from, date_to, session, uuid)
-        if test_contents and len(test_contents) > 0:
-            logger.info(f"¡UUID válido confirmado! {uuid} (obtuvo {len(test_contents)} programas en prueba).")
+        if uuid:
             return uuid
-        else:
-            logger.warning(f"Prueba fallida para UUID {uuid} (0 programas o error). Reintentando extracción en {retry_delay}s...")
-            await asyncio.sleep(retry_delay)
-    
-    logger.error("Máximo de intentos alcanzado sin UUID válido.")
+        logger.warning(f"No se obtuvo UUID válido en intento {attempt}. Reintentando en {retry_delay}s...")
+        await asyncio.sleep(retry_delay)
     return None
 
 def fetch_channel_contents(channel_id, date_from, date_to, session, uuid):
