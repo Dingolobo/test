@@ -2623,20 +2623,6 @@
     <display-name>753</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s121868_h3_ba.png" />
   </channel>
-  <programme start="20251014103000 +0000" stop="20251014111500 +0000" channel="703">
-    <title lang="es">Un asesino inesperado</title>
-    <desc lang="es">Un científico brillante y padre de familia es encontrado asesinado. La evidencia lleva a la policía a realizar varios arrestos, pero una asombrosa revelación hace que la investigación de un giro de 180 grados.</desc>
-    <category lang="es">Crime</category>
-    <category lang="es">Documentary</category>
-    <category lang="es">Crime drama</category>
-    <sub-title lang="es">Un asesinato de genio</sub-title>
-    <episode-num system="xmltv_ns">S2E3</episode-num>
-    <rating>
-      <value>TV14</value>
-    </rating>
-    <date>20210129</date>
-    <icon src="http://dshm.tmsimg.com/assets/p19354650_e_h8_aa.jpg" />
-  </programme>
   <programme start="20251014111500 +0000" stop="20251014120000 +0000" channel="703">
     <title lang="es">Un asesino inesperado</title>
     <desc lang="es">Cuando la policía encuentra el cuerpo de un popular taxista metido en el maletero de su propio automóvil sumergido en un río, luchan por encontrar sospechoso. La verdad revela un terrible complot de venganza.</desc>
@@ -3629,19 +3615,6 @@
     <display-name>754</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s121867_h3_ba.png" />
   </channel>
-  <programme start="20251014105500 +0000" stop="20251014111500 +0000" channel="704">
-    <title lang="es">La familia Chrisley</title>
-    <desc lang="es">Todd se convierte en un aguafiestas cuando se ve obligado a ir a la NASCAR. Incluye escenas especiales.</desc>
-    <category lang="es">Reality</category>
-    <category lang="es">Comedy</category>
-    <category lang="es">Entertainment</category>
-    <sub-title lang="es">El rápido y el aguafiestas</sub-title>
-    <rating>
-      <value>TV14</value>
-    </rating>
-    <date>20220623</date>
-    <icon src="http://dshm.tmsimg.com/assets/p22145228_e_h10_aa.jpg" />
-  </programme>
   <programme start="20251014111500 +0000" stop="20251014114000 +0000" channel="704">
     <title lang="es">La familia Chrisley</title>
     <desc lang="es">Julie decide vengare luego de que Todd le robara su sorpresa de vacaciones. Además, Faye da una lección a Chase.</desc>
@@ -10863,6 +10836,17 @@
       <value>TVG</value>
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p459763_b_h8_bs.jpg" />
+  </programme>
+  <programme start="20251016112000 +0000" stop="20251016123000 +0000" channel="741">
+    <title lang="es">La historia de Bienvenido</title>
+    <desc lang="es">Marisol cuenta a los niños de un orfanato la historia del burrito huérfano Bienvenido y su amistad con una niña.</desc>
+    <category lang="es">Children</category>
+    <category lang="es">Comedy</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <date>19640622</date>
+    <icon src="http://dshm.tmsimg.com/assets/p49426_i_h13_aa.jpg" />
   </programme>
   <channel id="761">
     <display-name>CARAIHD</display-name>
@@ -19168,6 +19152,15 @@
     </rating>
     <icon src="http://dshm.tmsimg.com/assets/p1113_i_h10_ab.jpg" />
   </programme>
+  <programme start="20251016112000 +0000" stop="20251016124500 +0000" channel="805">
+    <title lang="es">Rage at Dawn</title>
+    <desc lang="es">A special agent (Randolph Scott) poses as a train robber to infiltrate Frank Reno's (Forrest Tucker) outlaw gang.</desc>
+    <category lang="es">Western</category>
+    <rating>
+      <value>NR</value>
+    </rating>
+    <icon src="http://dshm.tmsimg.com/assets/p8536_p_v11_ac.jpg" />
+  </programme>
   <channel id="806">
     <display-name>MOTOADV</display-name>
     <display-name>544</display-name>
@@ -20998,20 +20991,6 @@
     <display-name>365</display-name>
     <icon src="http://dshm.tmsimg.com/assets/s119825_ld_h8_aa.png" />
   </channel>
-  <programme start="20251014104500 +0000" stop="20251014111500 +0000" channel="809">
-    <title lang="es">Secret Millionaires Club</title>
-    <desc lang="es">El club ayuda a Pete con sus negocios en la tienda de mascotas.</desc>
-    <category lang="es">Children</category>
-    <category lang="es">Educational</category>
-    <category lang="es">Animated</category>
-    <sub-title lang="es">Por el bien de las mascotas</sub-title>
-    <episode-num system="xmltv_ns">S1E24</episode-num>
-    <rating>
-      <value>TVY7</value>
-    </rating>
-    <date>20170110</date>
-    <icon src="http://dshm.tmsimg.com/assets/p12979915_e_v8_aa.jpg" />
-  </programme>
   <programme start="20251014111500 +0000" stop="20251014113000 +0000" channel="809">
     <title lang="es">Albert Asks: What is Life?</title>
     <desc lang="es">Albert emprende un viaje a través del tiempo para averiguar cuándo sus antepasados desarrollaron los pulgares.</desc>
@@ -22312,6 +22291,20 @@
     </rating>
     <date>20000226</date>
     <icon src="http://dshm.tmsimg.com/assets/p387071_b_h10_aw.jpg" />
+  </programme>
+  <programme start="20251016013000 +0000" stop="20251016020000 +0000" channel="809">
+    <title lang="es">Tutenstein</title>
+    <desc lang="es">Dos ladrones roban una pieza de arte del museo después de que Tut apaga la alarma.</desc>
+    <category lang="es">Children</category>
+    <category lang="es">Fantasy</category>
+    <category lang="es">Animated</category>
+    <sub-title lang="es">Zona de Inseguridad</sub-title>
+    <episode-num system="xmltv_ns">S1E12</episode-num>
+    <rating>
+      <value>TVY7</value>
+    </rating>
+    <date>20040228</date>
+    <icon src="http://dshm.tmsimg.com/assets/p2899276_e_h11_aa.jpg" />
   </programme>
   <channel id="814">
     <display-name>ANTMOT</display-name>
@@ -23652,6 +23645,18 @@
     <icon src="http://dshm.tmsimg.com/assets/p22957097_e_v8_aa.jpg" />
   </programme>
   <programme start="20251016031500 +0000" stop="20251016111500 +0000" channel="964">
+    <title lang="es">Servir y proteger</title>
+    <desc lang="es">Mientras Lorenzo muestra su verdadera cara, Miralles entra en la nave y se encuentra cara a cara con Matías, el perturbado asesino que quiere matarla. Además, el final ha llegado para el Fantasma, cercado por la policía.</desc>
+    <category lang="es">Crime</category>
+    <category lang="es">Drama</category>
+    <episode-num system="xmltv_ns">S1E1309</episode-num>
+    <rating>
+      <value>TVG</value>
+    </rating>
+    <date>20221003</date>
+    <icon src="http://dshm.tmsimg.com/assets/p22957097_e_v8_aa.jpg" />
+  </programme>
+  <programme start="20251016111500 +0000" stop="20251016191500 +0000" channel="964">
     <title lang="es">Servir y proteger</title>
     <desc lang="es">Mientras Lorenzo muestra su verdadera cara, Miralles entra en la nave y se encuentra cara a cara con Matías, el perturbado asesino que quiere matarla. Además, el final ha llegado para el Fantasma, cercado por la policía.</desc>
     <category lang="es">Crime</category>
