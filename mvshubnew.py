@@ -309,7 +309,7 @@ def main(uuid):
     offset = int(os.environ.get('TIMEZONE_OFFSET', '0'))
     now = datetime.utcnow() + timedelta(hours=offset)
     date_from = int(now.timestamp() * 1000)
-    date_to = int((now + timedelta(days=2)).timestamp() * 1000)
+    date_to = int((now + timedelta(days=3)).timestamp() * 1000)
 
     if len(sys.argv) > 1:
         CHANNEL_IDS = [int(id.strip()) for id in sys.argv[1].split(',')]
