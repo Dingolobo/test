@@ -171,10 +171,10 @@ def channels_to_xmltv(channels):
             desc.text = program_info.get('shortDesc', '')
 
             # Poster del programa (thumbnail del event)
-            #event_thumbnail = event.get('thumbnail', '').replace()
-            event_thumbnail = event.get('thumbnail', '').replace('v8', 'h9').replace('v9', 'h9').replace('v10','h9') + '.jpg?w=600'
+            event_thumbnail = event.get('thumbnail', '').replace()
+            #event_thumbnail = event.get('thumbnail', '').replace('v8', 'h9').replace('v9', 'h9').replace('v10','h9') + '.jpg?w=600'
             if event_thumbnail:
-                poster_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}" #.jpg"
+                poster_url = f"https://zap2it.tmsimg.com/assets/{event_thumbnail}.jpg?w=600"
                 icon = ET.SubElement(prog, 'icon', src=poster_url)
 
             # Rating
