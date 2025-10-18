@@ -6,7 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import json
-import os
 
 # Configurar opciones para headless
 options = webdriver.ChromeOptions()
@@ -19,74 +18,35 @@ options.add_argument('--disable-web-security')
 options.add_argument('--allow-running-insecure-content')
 options.add_argument('--ignore-certificate-errors')
 
-# Iniciar el navegador con timeout mayor para scripts
+# Iniciar el navegador
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver.set_script_timeout(60)  # Aumentar a 60 segundos
 
 try:
-    # Paso 1: Navegar a la página de live TV de Tubi para establecer sesión y cookies
-    print("Navegando a Tubi Live para establecer sesión...")
-    driver.get('https://tubitv.com/es-mx/live')
-    time.sleep(5)
-    
-    # Aceptar cookies si aparece
-    try:
-        accept_button = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Accept') or contains(text(), 'Aceptar') or contains(text(), 'Aceptar todo')]"))
-        )
-        accept_button.click()
-        print("Cookies aceptadas.")
-        time.sleep(2)
-    except:
-        print("No se encontró botón de cookies o ya aceptadas.")
-    
-    # Paso 2: Cargar tu HTML desde GitHub Pages
-    print("Cargando HTML desde GitHub Pages...")
-    driver.get('https://dingolobo.github.io/tubi_fetch.html')  # Ajusta si el repo no es 'test'
-    time.sleep(2)
+    # Navegar directamente a tu HTML en GitHub Pages
+    url = 'https://dingolobo.github.io/tubi_fetch.html'  # Ajusta el nombre del repo si es diferente
+    print(f"Navegando a: {url}")
+    driver.get(url)
     
     # Verificar carga
     print(f"Título de la página: {driver.title}")
     
-    # Ejecutar el fetch via JS con callback
-    js_code = """
-    var callback = arguments[arguments.length - 1];
-    fetchData().then(function(data) {
-        callback(data);
-    }).catch(function(error) {
-        callback('Error: ' + error.message);
-    });
-    
-    async function fetchData() {
-        try {
-            const response = await fetch('https://cors-proxy.cooks.fyi/https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=55450647-2a0d-45ab-9d3b-8a8b15432f13&lookahead=1&content_id=400000156,400000122');
-            if (!response.ok) {
-                throw new Error(`Error HTTP: ${response.status}`);
-            }
-            const data = await response.json();
-            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
-            return data;
-        } catch (error) {
-            document.getElementById('output').textContent = `Error: ${error.message}`;
-            throw error;
-        }
-    }
-    """
-    
-    result = driver.execute_async_script(js_code)
-    print("Fetch ejecutado.")
-    
-    # Esperar resultado
-    WebDriverWait(driver, 30).until(
-        lambda d: d.find_element(By.ID, 'output').text.strip() != ""
+    # Hacer clic en el botón
+    button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.ID, 'fetchBtn'))
     )
+    button.click()
+    print("Clic en botón realizado.")
     
+    # Esperar unos segundos (ajusta si es necesario)
+    time.sleep(5)
+    
+    # Capturar el resultado del <pre id="output">
     output_element = driver.find_element(By.ID, 'output')
     result_text = output_element.text
-    print(f"Resultado crudo: '{result_text}'")
+    print(f"Resultado capturado: '{result_text}'")
     
     if not result_text or result_text.startswith('Error'):
-        print(f"Error: {result_text}")
+        print(f"Error o vacío: {result_text}")
     else:
         data = json.loads(result_text)
         print("Datos obtenidos:")
