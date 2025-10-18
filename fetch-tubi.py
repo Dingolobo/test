@@ -21,6 +21,10 @@ options.add_argument('--ignore-certificate-errors')
 # Iniciar el navegador
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
+max_attempts = 3
+attempt = 0
+data = None
+
 try:
     # Navegar directamente a tu HTML en GitHub Pages
     url = 'https://dingolobo.github.io/tubi_fetch.html'  # Ajusta el nombre del repo si es diferente
@@ -30,28 +34,53 @@ try:
     # Verificar carga
     print(f"Título de la página: {driver.title}")
     
-    # Hacer clic en el botón
-    button = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, 'fetchBtn'))
-    )
-    button.click()
-    print("Clic en botón realizado.")
-    
-    # Esperar unos segundos (ajusta si es necesario)
-    time.sleep(25)
-    
-    # Capturar el resultado del <pre id="output">
-    output_element = driver.find_element(By.ID, 'output')
-    result_text = output_element.text
-    print(f"Resultado capturado: '{result_text}'")
-    
-    if not result_text or result_text.startswith('Error'):
-        print(f"Error o vacío: {result_text}")
-    else:
-        data = json.loads(result_text)
-        print("Datos obtenidos:")
-        print(json.dumps(data, indent=2))
+    while attempt < max_attempts:
+        attempt += 1
+        print(f"Intento {attempt} de {max_attempts}")
         
+        # Hacer clic en el botón
+        button = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'fetchBtn'))
+        )
+        button.click()
+        print("Clic en botón realizado.")
+        
+        # Esperar 5 segundos
+        time.sleep(25)
+        
+        # Capturar el resultado del <pre id="output">
+        output_element = driver.find_element(By.ID, 'output')
+        result_text = output_element.text
+        print(f"Resultado capturado: '{result_text}'")
+        
+        if not result_text or result_text.startswith('Error'):
+            print(f"Error o vacío en intento {attempt}: {result_text}")
+            if attempt < max_attempts:
+                print("Reintentando en 5 segundos...")
+                time.sleep(3)
+            continue
+        
+        # Intentar parsear JSON
+        try:
+            data = json.loads(result_text)
+            if data.get('rows'):  # Si rows no está vacío, éxito
+                print("Datos obtenidos con rows no vacío:")
+                print(json.dumps(data, indent=2))
+                break
+            else:
+                print(f"Rows vacío en intento {attempt}. Reintentando...")
+                if attempt < max_attempts:
+                    time.sleep(5)
+        except json.JSONDecodeError:
+            print(f"JSON inválido en intento {attempt}: {result_text}")
+            if attempt < max_attempts:
+                print("Reintentando en 5 segundos...")
+                time.sleep(3)
+    
+    # Si terminó el loop sin éxito
+    if not data or not data.get('rows'):
+        print("Después de 3 intentos, rows sigue vacío o hubo error.")
+    else:
         with open('tubi_data.json', 'w') as f:
             json.dump(data, f, indent=2)
 
