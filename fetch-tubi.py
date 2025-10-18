@@ -1,70 +1,22 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-import time
+import requests
 import json
-import os
 
-# Configurar opciones para headless (útil en GitHub Actions)
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--disable-gpu')
-options.add_argument('--window-size=1920,1080')  # Asegura tamaño de ventana
+# URL con el proxy CORS de tu HTML
+url = 'https://cors-proxy.cooks.fyi/https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=55450647-2a0d-45ab-9d3b-8a8b15432f13&lookahead=1&content_id=400000156,400000122'
 
-# Iniciar el navegador
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+# Agregar headers para simular un navegador (puede ayudar con restricciones)
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
 
 try:
-    # Ruta al HTML en la raíz del repo (modificación aquí)
-    html_path = os.path.join(os.getcwd(), 'tubi_fetch.html')
-    file_url = f'file://{html_path}'
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()
+    data = response.json()
+    print("Datos obtenidos:")
+    print(json.dumps(data, indent=2))
     
-    print(f"Cargando: {file_url}")
-    driver.get(file_url)
-    
-    # Depuración: Imprimir título y verificar carga
-    print(f"Título de la página: {driver.title}")
-    time.sleep(2)  # Espera breve para carga completa
-    
-    # Verificar si el botón existe
-    try:
-        button = driver.find_element(By.ID, 'fetchBtn')
-        print("Botón encontrado.")
-    except:
-        print("Botón NO encontrado. Guardando page_source para debug...")
-        with open('debug_page.html', 'w') as f:
-            f.write(driver.page_source)
-        raise Exception("El botón 'fetchBtn' no se encontró en el DOM.")
-    
-    # Esperar y hacer clic
-    button = WebDriverWait(driver, 20).until(  # Aumentado a 20s
-        EC.element_to_be_clickable((By.ID, 'fetchBtn'))
-    )
-    button.click()
-    print("Clic en botón realizado.")
-    
-    # Esperar resultado
-    output_element = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.ID, 'output'))
-    )
-    
-    result_text = output_element.text
-    print(f"Resultado crudo: {result_text}")
-    
-    if result_text.startswith('Error'):
-        print(f"Error en fetch: {result_text}")
-    else:
-        data = json.loads(result_text)
-        print("Datos obtenidos:")
-        print(json.dumps(data, indent=2))
-        
-        with open('tubi_data.json', 'w') as f:
-            json.dump(data, f, indent=2)
-
-finally:
-    driver.quit()
+    with open('tubi_data.json', 'w') as f:
+        json.dump(data, f, indent=2)
+except requests.exceptions.RequestException as e:
+    print(f"Error en fetch: {e}")
