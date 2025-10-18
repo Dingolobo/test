@@ -81,7 +81,7 @@
   "34710": "NFL Network",
   "34863": "AYM Sports",
   "34879": "HBO Family",
-  "37747": "Espn 2",
+  "37747": "ESPN 2",
   "40137": "History",
   "45831": "Las Estrellas",
   "45955": "Discovery Kids",
@@ -116,7 +116,7 @@
   "75537": "HBO Plus",
   "77783": "TeenNick",
   "78763": "Fight Box",
-  "79402": "Espn 3",
+  "79402": "ESPN 3",
   "79968": "Azteca Internacional",
   "80199": "HBO Xtreme",
   "82970": "Hola TV",
@@ -150,7 +150,7 @@
   "118698": "Ginxe Sports",
   "119198": "Kanal de Drama",
   "120767": "MTV 00s",
-  "121144": "Espn 4",
+  "121144": "ESPN 4",
   "123193": "Dreamworks",
   "123604": "Baby First",
   "124934": "Outdoor Channel",
@@ -223,5 +223,9 @@
   "I739.84425.schedulesdirect.org": "Unicable",
   "I754.11118.schedulesdirect.org": "Univision",
   "Win+Futbol.co": "Winsports Plus",
-  "4 de Monterrey": "Canal 34 MTY"
+  "4 de Monterrey": "Canal 34 MTY",
+  "Win Sports HD.co": "Winsports",
+  "I298.30392.schedulesdirect.org": "ESPN 5",
+  "I299.79923.schedulesdirect.org": "ESPN 6",
+  "I300.47374.schedulesdirect.org": "ESPN 7"
 }
