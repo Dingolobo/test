@@ -15,7 +15,8 @@ logger = logging.getLogger(__name__)
 GENERIC_UUID = ["5cc95856-8487-406e-bb67-83f97d24ab5f",
                 "2c841b16-71f5-4e68-886a-63678ae79fb0",
                 "534a757e-5489-4bc2-9915-3c9228482865",
-                "dbd2bcc5-52a1-4b7f-a621-6e05f0f97185"
+                "dbd2bcc5-52a1-4b7f-a621-6e05f0f97185",
+                "19a5d5da-d1cf-4c3d-a586-2c3fab12b809"
                ]
 CHANNEL_URL_PREFIX = "https://edge.prod.ovp.ses.com:9443/xtv-ws-client/api/epgcache/list/"
 
