@@ -19,19 +19,20 @@ options.add_argument('--disable-web-security')
 options.add_argument('--allow-running-insecure-content')
 options.add_argument('--ignore-certificate-errors')
 
-# Iniciar el navegador
+# Iniciar el navegador con timeout mayor para scripts
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver.set_script_timeout(60)  # Aumentar a 60 segundos
 
 try:
     # Paso 1: Navegar a la página de live TV de Tubi para establecer sesión y cookies
     print("Navegando a Tubi Live para establecer sesión...")
-    driver.get('https://tubitv.com/es-mx/live')  # Cambiado a la URL específica
-    time.sleep(5)  # Espera para cargar la página
+    driver.get('https://tubitv.com/es-mx/live')
+    time.sleep(5)
     
-    # Aceptar cookies si aparece (ajusta el selector si es necesario; inspecciona en tu navegador)
+    # Aceptar cookies si aparece
     try:
         accept_button = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Accept') or contains(text(), 'Aceptar') or contains(text(), 'Aceptar todo')]"))  # O usa ID/clase específica como By.ID('cookie-accept')
+            EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Accept') or contains(text(), 'Aceptar') or contains(text(), 'Aceptar todo')]"))
         )
         accept_button.click()
         print("Cookies aceptadas.")
@@ -39,16 +40,23 @@ try:
     except:
         print("No se encontró botón de cookies o ya aceptadas.")
     
-    # Paso 2: Cargar tu HTML desde GitHub Pages (con sesión activa)
+    # Paso 2: Cargar tu HTML desde GitHub Pages
     print("Cargando HTML desde GitHub Pages...")
-    driver.get('https://dingolobo.github.io/tubi_fetch.html')  # Asegúrate de que esté ahí
+    driver.get('https://dingolobo.github.io/test/tubi_fetch.html')  # Ajusta si el repo no es 'test'
     time.sleep(2)
     
     # Verificar carga
     print(f"Título de la página: {driver.title}")
     
-    # Ejecutar el fetch via JS
+    # Ejecutar el fetch via JS con callback
     js_code = """
+    var callback = arguments[arguments.length - 1];
+    fetchData().then(function(data) {
+        callback(data);
+    }).catch(function(error) {
+        callback('Error: ' + error.message);
+    });
+    
     async function fetchData() {
         try {
             const response = await fetch('https://cors-proxy.cooks.fyi/https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=55450647-2a0d-45ab-9d3b-8a8b15432f13&lookahead=1&content_id=400000156,400000122');
@@ -63,7 +71,6 @@ try:
             throw error;
         }
     }
-    return fetchData();
     """
     
     result = driver.execute_async_script(js_code)
