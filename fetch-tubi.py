@@ -2,7 +2,7 @@ import requests
 import json
 
 # URL de la API
-url = "https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=55450647-2a0d-45ab-9d3b-8a8b15432f13&lookahead=1&content_id=400000156,400000122"
+url = "https://cors-proxy.cooks.fyi/https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=55450647-2a0d-45ab-9d3b-8a8b15432f13&lookahead=1&content_id=400000156,400000122"
 
 try:
     # Hacer la solicitud GET
