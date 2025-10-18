@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import json
+import os
 
 # Configurar opciones para headless (útil en servidores como GitHub Actions)
 options = webdriver.ChromeOptions()
@@ -18,8 +19,12 @@ options.add_argument('--disable-gpu')
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 try:
-    # Cargar el HTML local (ajusta la ruta si es necesario)
-    driver.get('file://' + 'tubi_fetch.html')  # Reemplaza con la ruta absoluta
+    # Ruta al HTML en la raíz del repo
+    html_path = os.path.join(os.getcwd(), 'tubi_fetch.html')
+    file_url = f'file://{html_path}'
+    
+    print(f"Cargando: {file_url}")
+    driver.get(file_url)
 
     # Hacer clic en el botón
     button = WebDriverWait(driver, 10).until(
