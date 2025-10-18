@@ -1,52 +1,50 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-import json
 import time
+import json
 
-# Configurar Chrome en modo headless
-options = Options()
-options.add_argument('--headless')
+# Configurar opciones para headless (útil en servidores como GitHub Actions)
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')  # Sin interfaz gráfica
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 options.add_argument('--disable-gpu')
-options.add_argument('--window-size=1920,1080')
 
-# Iniciar el driver
+# Iniciar el navegador
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 try:
-    # Paso 1: Visitar el sitio de Tubi para iniciar sesión y obtener cookies/context
-    driver.get('https://tubi.tv/')
-    time.sleep(5)  # Espera a que cargue (ajusta si es necesario)
+    # Cargar el HTML local (ajusta la ruta si es necesario)
+    driver.get('file://' + 'tubi_fetch.html')  # Reemplaza con la ruta absoluta
 
-    # Opcional: Navega a una página específica de Tubi para más contexto (ej. una página de contenido)
-    # driver.get('https://tubi.tv/live')  # Prueba si ayuda; ajusta la URL
-    # time.sleep(3)
+    # Hacer clic en el botón
+    button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.ID, 'fetchBtn'))
+    )
+    button.click()
 
-    # Paso 2: Navegar a la URL de la API directamente con el navegador
-    url = 'https://epg-cdn.production-public.tubi.io/content/epg/programming?platform=web&device_id=55450647-2a0d-45ab-9d3b-8a8b15432f13&lookahead=1&content_id=400000156,400000122'
-    driver.get(url)
-
-    # Espera a que cargue la respuesta (el JSON)
-    time.sleep(3)
-
-    # Paso 3: Extraer el JSON de la página (debería estar en el body o como texto plano)
-    page_source = driver.page_source
-    # Asume que el JSON está en el body; si no, busca en <pre> o scripts
-    if '<pre>' in page_source:
-        # Extrae de <pre> si se muestra formateado
-        start = page_source.find('<pre>') + 5
-        end = page_source.find('</pre>')
-        json_text = page_source[start:end]
+    # Esperar a que se cargue el resultado en <pre id="output">
+    output_element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, 'output'))
+    )
+    
+    # Extraer el texto (JSON)
+    result_text = output_element.text
+    if result_text.startswith('Error'):
+        print(f"Error en fetch: {result_text}")
     else:
-        # Si es JSON plano, usa el body
-        json_text = page_source.strip()
-
-    # Parsear y imprimir
-    data = json.loads(json_text)
-    print(json.dumps(data, indent=2))
+        # Parsear y procesar el JSON
+        data = json.loads(result_text)
+        print("Datos obtenidos:")
+        print(json.dumps(data, indent=2))
+        
+        # Aquí puedes guardar a un archivo o procesar más
+        with open('tubi_data.json', 'w') as f:
+            json.dump(data, f, indent=2)
 
 finally:
     driver.quit()
