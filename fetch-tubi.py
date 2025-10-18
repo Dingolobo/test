@@ -42,7 +42,7 @@ try:
     
     # Paso 2: Cargar tu HTML desde GitHub Pages
     print("Cargando HTML desde GitHub Pages...")
-    driver.get('https://dingolobo.github.io/test/tubi_fetch.html')  # Ajusta si el repo no es 'test'
+    driver.get('https://dingolobo.github.io/tubi_fetch.html')  # Ajusta si el repo no es 'test'
     time.sleep(2)
     
     # Verificar carga
