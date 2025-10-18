@@ -89,7 +89,10 @@ FILTERS = {
         "I711.63109.schedulesdirect.org",
         "I718.65129.schedulesdirect.org",
         "I739.84425.schedulesdirect.org",
-        "I754.11118.schedulesdirect.org"
+        "I754.11118.schedulesdirect.org",
+        "I298.30392.schedulesdirect.org",
+        "I299.79923.schedulesdirect.org",
+        "I300.47374.schedulesdirect.org"
     ],
     # Filtro para dish
     'https://raw.githubusercontent.com/Dingolobo/test/refs/heads/main/dish.xml': [
