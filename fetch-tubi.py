@@ -38,7 +38,7 @@ try:
     print("Clic en botón realizado.")
     
     # Esperar unos segundos (ajusta si es necesario)
-    time.sleep(5)
+    time.sleep(25)
     
     # Capturar el resultado del <pre id="output">
     output_element = driver.find_element(By.ID, 'output')
