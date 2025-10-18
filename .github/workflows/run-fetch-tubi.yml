@@ -1,7 +1,7 @@
 name: Fetch API Data
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Ejecuta manualmente
 
 jobs:
   fetch-data:
@@ -16,17 +16,15 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install selenium requests webdriver-manager
 
-    - name: Install Chrome
-      run: |
-        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-        echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google.list
-        apt-get update
-        apt-get install -y google-chrome-stable
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: stable  # Instala la versión estable de Chrome
 
     - name: Run script
       run: python fetch-tubi.py
